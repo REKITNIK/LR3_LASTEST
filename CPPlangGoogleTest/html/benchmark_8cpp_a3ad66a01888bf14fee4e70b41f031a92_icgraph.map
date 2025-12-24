@@ -1,0 +1,28 @@
+<map id="print_result" name="print_result">
+<area shape="rect" id="Node000001" title="Форматированно выводит результаты теста в консоль и файл." alt="" coords="360,179,456,204"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#af2a83c6eb51ba5c3e34b7b09e031b7d2" title="Тестирование производительности динамического массива (Array)." alt="" coords="142,5,278,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="395,167,364,104,340,72,311,44,277,29,280,24,313,40,344,68,369,102,400,165"/>
+<area shape="rect" id="Node000004" href="$benchmark_8cpp.html#a4b58f2a36422da0183fbd9dbd9e738a6" title="Тестирование производительности двусвязного списка (DoubleList)." alt="" coords="123,55,297,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="388,169,355,130,334,110,311,94,285,82,287,78,313,89,337,106,359,126,392,166"/>
+<area shape="rect" id="Node000005" href="$benchmark_8cpp.html#a0f7ab8a577d6d9af00b446bf3d2986c4" title="Тестирование производительности односвязного списка (ForwardList)." alt="" coords="121,104,299,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="374,174,311,143,275,132,276,127,313,138,376,169"/>
+<area shape="rect" id="Node000006" href="$benchmark_8cpp.html#acfc5c302221d1aa5aba0aac3799b253f" title="Тестирование производительности полного бинарного дерева (FullBinaryTree)." alt="" coords="108,153,312,179"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="346,186,309,181,310,176,347,181"/>
+<area shape="rect" id="Node000007" href="$benchmark_8cpp.html#ad1196c315efa5bcb26e31eb456a5798c" title="Тестирование производительности хеш&#45;таблицы (HashTable)." alt="" coords="123,203,297,228"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="347,201,297,207,296,202,346,196"/>
+<area shape="rect" id="Node000008" href="$benchmark_8cpp.html#af4c86f76a20755f569e50b1c5d2b6535" title="Тестирование производительности очереди (Queue)." alt="" coords="139,252,281,277"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="374,213,313,242,272,255,270,249,311,237,372,208"/>
+<area shape="rect" id="Node000009" href="$benchmark_8cpp.html#af0c7e15db2d6abbb07fd570b9919e98a" title="Тестирование механизмов сериализации и десериализации." alt="" coords="119,301,301,327"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="392,217,358,255,337,275,313,291,284,304,282,299,311,286,334,270,354,252,387,214"/>
+<area shape="rect" id="Node000010" href="$benchmark_8cpp.html#a1aac222c6e4c4aa57e989adc85f0c397" title="Тестирование производительности стека (Stack)." alt="" coords="141,351,279,376"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="400,218,368,280,344,312,313,340,280,356,278,351,311,336,340,309,363,277,395,216"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,179,60,204"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="130,32,110,44,81,76,60,114,46,151,39,179,34,178,41,149,55,112,76,73,106,40,127,28"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="119,88,110,94,86,113,67,137,42,180,37,177,63,134,83,110,106,89,117,83"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="128,136,109,143,77,161,51,180,48,176,74,157,107,138,127,131"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="108,183,61,190,60,185,107,178"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="109,204,60,198,61,192,110,199"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="131,251,107,242,75,225,49,206,52,202,78,220,109,237,133,246"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="120,298,106,291,83,271,64,248,38,206,42,203,68,245,87,267,110,286,122,294"/>
+<area shape="poly" id="edge16_Node000010_Node000003" title=" " alt="" coords="127,352,106,340,77,308,56,270,42,233,34,205,39,203,47,231,61,267,81,305,110,336,130,348"/>
+</map>

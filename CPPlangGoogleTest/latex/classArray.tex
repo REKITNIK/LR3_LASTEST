@@ -1,0 +1,658 @@
+\doxysection{Array\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classArray}{}\label{classArray}\index{Array$<$ T $>$@{Array$<$ T $>$}}
+
+
+Класс динамического массива с автоматическим изменением ёмкости.  
+
+
+
+
+{\ttfamily \#include $<$Array.\+h$>$}
+
+
+
+Collaboration diagram for Array\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classArray__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArray_ae25f6d485704fca18289aa16e10b2fa8}{Array}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Создает пустой массив с нулевой ёмкостью. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArray_a05bd51b5eb03f91914ceeca9d7d132e1}{Array}} (size\+\_\+t initial\+\_\+capacity)
+\begin{DoxyCompactList}\small\item\em Конструктор с предварительным выделением памяти. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArray_aaec8886474a277e971b394d1b5f1fa8f}{Array}} (const \mbox{\hyperlink{classArray}{Array}} \&other)
+\begin{DoxyCompactList}\small\item\em Копирующий конструктор. Выполняет глубокое копирование данных из другого массива. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArray}{Array}} \& \mbox{\hyperlink{classArray_aea390d6051d25d62683c747d618b2c48}{operator=}} (const \mbox{\hyperlink{classArray}{Array}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор присваивания. Выполняет глубокое копирование с гарантией безопасности исключений (strong exception guarantee). Сначала выделяется новая память, затем освобождается старая. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArray_aab89a85b1ddb86864096acdcc0db439e}{\texorpdfstring{$\sim$}{\string~}\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. Освобождает выделенную память. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_ac5b2023f1035ca2b6fe9fde5131df98e}{add}} (const T \&element)
+\begin{DoxyCompactList}\small\item\em Добавляет элемент в конец массива. Если ёмкости недостаточно, происходит перевыделение памяти. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_aac9b78cc42093d77db2e1a5004da367a}{insert}} (size\+\_\+t index, const T \&element)
+\begin{DoxyCompactList}\small\item\em Вставляет элемент по указанному индексу. Элементы, начиная с index, сдвигаются вправо. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_a83693f57a17e6772b000fb19443b6b59}{remove}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Удаляет элемент по индексу. Элементы после index сдвигаются влево. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classArray_a0bcd4e5fe860a4591e1e645b65b2ee52}{get}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на элемент по индексу (с проверкой). \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classArray_a2ed070903ac1aa9284b04f6de49c67c3}{get}} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Возвращает константную ссылку на элемент по индексу (с проверкой). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_ac113f51a6dfa6f462a949ff1454b07a3}{set}} (size\+\_\+t index, const T \&element)
+\begin{DoxyCompactList}\small\item\em Перезаписывает элемент по индексу. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classArray_a9aded290a9d0f80e2a086e277af39dea}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее количество элементов. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classArray_abfb36b709a234b6cb0aaf2e73cf4bddf}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущую ёмкость буфера. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArray_a6408de37a539222db5c34b83635f1a1a}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, пуст ли массив. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_ac19d187420e7bd8a80c939201e3c2824}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Полностью очищает массив и освобождает память. Размер и ёмкость становятся равными 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_a28b27f4c8973b64c2e4e1701d990e6dd}{print}} () const
+\begin{DoxyCompactList}\small\item\em Выводит содержимое массива в стандартный поток вывода. Формат\+: \mbox{[}elem1, elem2, ...\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_a3087c3fae545ef365ee892b1ef61200a}{serialize}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Сериализация (обертка). По умолчанию вызывает serialize\+Binary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_ae3720036ec6a307ab809470047e2745b}{deserialize}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Десериализация (обертка). По умолчанию вызывает deserialize\+Binary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_a128da9a28e6181bd42714136bd4c2bbf}{serialize\+Binary}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Бинарная сериализация. Записывает размер (size\+\_\+t) и сырые байты данных. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_a1eb96c4271ef37a977f9fe056166e314}{deserialize\+Binary}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Бинарная десериализация. Очищает массив, читает размер и восстанавливает данные. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_ad329a5d2a621985cedd6ae0c2cc2a16a}{serialize\+Text}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Текстовая сериализация. Формат\+: $<$размер$>$ $<$elem1$>$ $<$elem2$>$ ... Элементы разделяются пробелом. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArray_ab7c7da04140e3bfb51be136b2fdd1994}{deserialize\+Text}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Текстовая десериализация. Ожидает формат, совместимый с serialize\+Text. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classArray_a645c72cc1761b32ab007c351d865b3b2}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Оператор доступа по индексу. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classArray_a0ec7e11e98b6f4a6baf6b10c13a7827f}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Оператор доступа по индексу (const). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classArray_acfd2151eae8d092fe1883e91fdddfe0a}{resize}} (size\+\_\+t new\+\_\+capacity)
+\begin{DoxyCompactList}\small\item\em Изменяет ёмкость массива. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classArray_a1ed7a8632e383152e0f03c5eecf7e917}{data}}
+\begin{DoxyCompactList}\small\item\em Указатель на буфер данных \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classArray_a5c4ef5aa09ef05c2b5b67b0248d7c89c}{capacity}}
+\begin{DoxyCompactList}\small\item\em Текущая выделенная ёмкость \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classArray_ab1dd0b3a06b008bf93de58d1194a554a}{size}}
+\begin{DoxyCompactList}\small\item\em Текущее количество элементов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Array$<$ T $>$}
+Класс динамического массива с автоматическим изменением ёмкости. 
+
+Реализует последовательный контейнер с доступом по индексу. Управляет памятью вручную через new/delete.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Тип элементов массива. Должен быть копируемым и конструируемым по умолчанию. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyWarning}{Warning}
+Бинарная сериализация корректна только для тривиально копируемых типов (POD). 
+\end{DoxyWarning}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classArray_ae25f6d485704fca18289aa16e10b2fa8}\label{classArray_ae25f6d485704fca18289aa16e10b2fa8} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classArray}{Array}}$<$ T $>$\mbox{\hyperlink{classArray}{\+::\+Array}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию. Создает пустой массив с нулевой ёмкостью. 
+
+\Hypertarget{classArray_a05bd51b5eb03f91914ceeca9d7d132e1}\label{classArray_a05bd51b5eb03f91914ceeca9d7d132e1} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classArray}{Array}}$<$ T $>$\mbox{\hyperlink{classArray}{\+::\+Array}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{initial\+\_\+capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор с предварительным выделением памяти. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+\_\+capacity} & Начальная ёмкость массива. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classArray_aaec8886474a277e971b394d1b5f1fa8f}\label{classArray_aaec8886474a277e971b394d1b5f1fa8f} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!Array@{Array}}
+\index{Array@{Array}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classArray}{Array}}$<$ T $>$\mbox{\hyperlink{classArray}{\+::\+Array}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classArray}{Array}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Копирующий конструктор. Выполняет глубокое копирование данных из другого массива. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Массив-\/источник. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classArray_aab89a85b1ddb86864096acdcc0db439e}\label{classArray_aab89a85b1ddb86864096acdcc0db439e} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!````~Array@{\texorpdfstring{$\sim$}{\string~}Array}}
+\index{````~Array@{\texorpdfstring{$\sim$}{\string~}Array}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Array()}{\string~Array()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classArray}{Array}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. Освобождает выделенную память. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classArray_ac5b2023f1035ca2b6fe9fde5131df98e}\label{classArray_ac5b2023f1035ca2b6fe9fde5131df98e} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!add@{add}}
+\index{add@{add}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Добавляет элемент в конец массива. Если ёмкости недостаточно, происходит перевыделение памяти. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Элемент для добавления. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classArray_ac5b2023f1035ca2b6fe9fde5131df98e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classArray_ac19d187420e7bd8a80c939201e3c2824}\label{classArray_ac19d187420e7bd8a80c939201e3c2824} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Полностью очищает массив и освобождает память. Размер и ёмкость становятся равными 0. 
+
+\Hypertarget{classArray_ae3720036ec6a307ab809470047e2745b}\label{classArray_ae3720036ec6a307ab809470047e2745b} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::deserialize (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Десериализация (обертка). По умолчанию вызывает deserialize\+Binary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classArray_ae3720036ec6a307ab809470047e2745b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classArray_a1eb96c4271ef37a977f9fe056166e314}\label{classArray_a1eb96c4271ef37a977f9fe056166e314} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!deserializeBinary@{deserializeBinary}}
+\index{deserializeBinary@{deserializeBinary}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeBinary()}{deserializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::deserialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Бинарная десериализация. Очищает массив, читает размер и восстанавливает данные. 
+
+\begin{DoxyWarning}{Warning}
+Перезаписывает память напрямую. Корректно только для POD-\/типов. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classArray_ab7c7da04140e3bfb51be136b2fdd1994}\label{classArray_ab7c7da04140e3bfb51be136b2fdd1994} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!deserializeText@{deserializeText}}
+\index{deserializeText@{deserializeText}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeText()}{deserializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::deserialize\+Text (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Текстовая десериализация. Ожидает формат, совместимый с serialize\+Text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classArray_a0bcd4e5fe860a4591e1e645b65b2ee52}\label{classArray_a0bcd4e5fe860a4591e1e645b65b2ee52} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!get@{get}}
+\index{get@{get}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Возвращает ссылку на элемент по индексу (с проверкой). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс элемента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\& Ссылка на элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classArray_a0bcd4e5fe860a4591e1e645b65b2ee52_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classArray_a2ed070903ac1aa9284b04f6de49c67c3}\label{classArray_a2ed070903ac1aa9284b04f6de49c67c3} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!get@{get}}
+\index{get@{get}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает константную ссылку на элемент по индексу (с проверкой). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс элемента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const T\& Константная ссылка на элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classArray_abfb36b709a234b6cb0aaf2e73cf4bddf}\label{classArray_abfb36b709a234b6cb0aaf2e73cf4bddf} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущую ёмкость буфера. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Ёмкость. 
+\end{DoxyReturn}
+\Hypertarget{classArray_a9aded290a9d0f80e2a086e277af39dea}\label{classArray_a9aded290a9d0f80e2a086e277af39dea} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущее количество элементов. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Размер массива. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classArray_a9aded290a9d0f80e2a086e277af39dea_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classArray_aac9b78cc42093d77db2e1a5004da367a}\label{classArray_aac9b78cc42093d77db2e1a5004da367a} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index,  }\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Вставляет элемент по указанному индексу. Элементы, начиная с index, сдвигаются вправо. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Позиция вставки (от 0 до size). \\
+\hline
+{\em element} & Элемент для вставки. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>} size. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classArray_aac9b78cc42093d77db2e1a5004da367a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classArray_a6408de37a539222db5c34b83635f1a1a}\label{classArray_a6408de37a539222db5c34b83635f1a1a} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, пуст ли массив. 
+
+\begin{DoxyReturn}{Returns}
+true Если массив пуст. 
+
+false Если в массиве есть элементы. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classArray_a6408de37a539222db5c34b83635f1a1a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classArray_aea390d6051d25d62683c747d618b2c48}\label{classArray_aea390d6051d25d62683c747d618b2c48} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classArray}{Array}}$<$ T $>$ \& \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classArray}{Array}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Оператор присваивания. Выполняет глубокое копирование с гарантией безопасности исключений (strong exception guarantee). Сначала выделяется новая память, затем освобождается старая. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Массив-\/источник. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{classArray_a645c72cc1761b32ab007c351d865b3b2}\label{classArray_a645c72cc1761b32ab007c351d865b3b2} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Оператор доступа по индексу. 
+
+\begin{DoxyNote}{Note}
+Выполняет проверку границ (вызывает \doxylink{classArray_a0bcd4e5fe860a4591e1e645b65b2ee52}{get()}). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс элемента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\& Ссылка на элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classArray_a0ec7e11e98b6f4a6baf6b10c13a7827f}\label{classArray_a0ec7e11e98b6f4a6baf6b10c13a7827f} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Оператор доступа по индексу (const). 
+
+\begin{DoxyNote}{Note}
+Выполняет проверку границ (вызывает \doxylink{classArray_a0bcd4e5fe860a4591e1e645b65b2ee52}{get()}). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс элемента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const T\& Константная ссылка на элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classArray_a28b27f4c8973b64c2e4e1701d990e6dd}\label{classArray_a28b27f4c8973b64c2e4e1701d990e6dd} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!print@{print}}
+\index{print@{print}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Выводит содержимое массива в стандартный поток вывода. Формат\+: \mbox{[}elem1, elem2, ...\mbox{]}. 
+
+\Hypertarget{classArray_a83693f57a17e6772b000fb19443b6b59}\label{classArray_a83693f57a17e6772b000fb19443b6b59} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Удаляет элемент по индексу. Элементы после index сдвигаются влево. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс удаляемого элемента. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classArray_a83693f57a17e6772b000fb19443b6b59_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classArray_acfd2151eae8d092fe1883e91fdddfe0a}\label{classArray_acfd2151eae8d092fe1883e91fdddfe0a} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{new\+\_\+capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Изменяет ёмкость массива. 
+
+Выделяет новый буфер, копирует существующие элементы и освобождает старый буфер. Если new\+\_\+capacity меньше текущего размера, массив усекается.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+capacity} & Новая ёмкость буфера. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classArray_a3087c3fae545ef365ee892b1ef61200a}\label{classArray_a3087c3fae545ef365ee892b1ef61200a} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::serialize (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Сериализация (обертка). По умолчанию вызывает serialize\+Binary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classArray_a3087c3fae545ef365ee892b1ef61200a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classArray_a128da9a28e6181bd42714136bd4c2bbf}\label{classArray_a128da9a28e6181bd42714136bd4c2bbf} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!serializeBinary@{serializeBinary}}
+\index{serializeBinary@{serializeBinary}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeBinary()}{serializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::serialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Бинарная сериализация. Записывает размер (size\+\_\+t) и сырые байты данных. 
+
+\begin{DoxyWarning}{Warning}
+Небезопасно для типов с указателями, виртуальными методами и нетривиальной структурой. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classArray_ad329a5d2a621985cedd6ae0c2cc2a16a}\label{classArray_ad329a5d2a621985cedd6ae0c2cc2a16a} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!serializeText@{serializeText}}
+\index{serializeText@{serializeText}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeText()}{serializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::serialize\+Text (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Текстовая сериализация. Формат\+: $<$размер$>$ $<$elem1$>$ $<$elem2$>$ ... Элементы разделяются пробелом. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classArray_ac113f51a6dfa6f462a949ff1454b07a3}\label{classArray_ac113f51a6dfa6f462a949ff1454b07a3} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!set@{set}}
+\index{set@{set}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::set (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index,  }\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Перезаписывает элемент по индексу. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс элемента. \\
+\hline
+{\em element} & Новое значение. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classArray_a5c4ef5aa09ef05c2b5b67b0248d7c89c}\label{classArray_a5c4ef5aa09ef05c2b5b67b0248d7c89c} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::capacity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Текущая выделенная ёмкость 
+
+\Hypertarget{classArray_a1ed7a8632e383152e0f03c5eecf7e917}\label{classArray_a1ed7a8632e383152e0f03c5eecf7e917} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!data@{data}}
+\index{data@{data}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на буфер данных 
+
+\Hypertarget{classArray_ab1dd0b3a06b008bf93de58d1194a554a}\label{classArray_ab1dd0b3a06b008bf93de58d1194a554a} 
+\index{Array$<$ T $>$@{Array$<$ T $>$}!size@{size}}
+\index{size@{size}!Array$<$ T $>$@{Array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classArray}{Array}}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Текущее количество элементов 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Array_8h}{Array.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,60,56"/>
+<area shape="rect" id="Node000002" href="$classArray.html#a9aded290a9d0f80e2a086e277af39dea" title="Возвращает текущее количество элементов." alt="" coords="111,5,223,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,36,97,29,98,34,61,41"/>
+<area shape="rect" id="Node000003" href="$classArray.html#a6408de37a539222db5c34b83635f1a1a" title="Проверяет, пуст ли массив." alt="" coords="108,55,225,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="61,46,95,52,94,57,60,51"/>
+</map>

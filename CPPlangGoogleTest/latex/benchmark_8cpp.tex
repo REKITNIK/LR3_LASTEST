@@ -1,0 +1,409 @@
+\doxysection{benchmark.\+cpp File Reference}
+\hypertarget{benchmark_8cpp}{}\label{benchmark_8cpp}\index{benchmark.cpp@{benchmark.cpp}}
+
+
+Программа для бенчмаркинга и сравнения производительности различных структур данных.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include "{}Array.\+h"{}}\newline
+{\ttfamily \#include "{}Forward\+List.\+h"{}}\newline
+{\ttfamily \#include "{}Double\+List.\+h"{}}\newline
+{\ttfamily \#include "{}Queue.\+h"{}}\newline
+{\ttfamily \#include "{}Stack.\+h"{}}\newline
+{\ttfamily \#include "{}Hash\+Table.\+h"{}}\newline
+{\ttfamily \#include "{}Full\+Binary\+Tree.\+h"{}}\newline
+Include dependency graph for benchmark.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBenchmarkTimer}{Benchmark\+Timer}}
+\begin{DoxyCompactList}\small\item\em Класс для измерения времени выполнения операций. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ofstream \mbox{\hyperlink{benchmark_8cpp_a65c1528308af9504cc4afd5122df9285}{results\+File}} ("{}benchmark\+\_\+results.\+txt"{})
+\begin{DoxyCompactList}\small\item\em Глобальный поток вывода в файл. Инициализируется при запуске программы. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_a2a10ff76e86dd41833b8c23edf05af74}{print\+\_\+header}} (const std\+::string \&structure\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Выводит заголовок секции бенчмарка в консоль и файл. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_a3ad66a01888bf14fee4e70b41f031a92}{print\+\_\+result}} (const std\+::string \&operation, double time\+\_\+ms, int operations)
+\begin{DoxyCompactList}\small\item\em Форматированно выводит результаты теста в консоль и файл. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_af2a83c6eb51ba5c3e34b7b09e031b7d2}{benchmark\+\_\+array}} ()
+\begin{DoxyCompactList}\small\item\em Тестирование производительности динамического массива (\doxylink{classArray}{Array}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_a0f7ab8a577d6d9af00b446bf3d2986c4}{benchmark\+\_\+forward\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em Тестирование производительности односвязного списка (\doxylink{classForwardList}{Forward\+List}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_a4b58f2a36422da0183fbd9dbd9e738a6}{benchmark\+\_\+double\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em Тестирование производительности двусвязного списка (\doxylink{classDoubleList}{Double\+List}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_af4c86f76a20755f569e50b1c5d2b6535}{benchmark\+\_\+queue}} ()
+\begin{DoxyCompactList}\small\item\em Тестирование производительности очереди (\doxylink{classQueue}{Queue}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_a1aac222c6e4c4aa57e989adc85f0c397}{benchmark\+\_\+stack}} ()
+\begin{DoxyCompactList}\small\item\em Тестирование производительности стека (\doxylink{classStack}{Stack}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_ad1196c315efa5bcb26e31eb456a5798c}{benchmark\+\_\+hash\+\_\+table}} ()
+\begin{DoxyCompactList}\small\item\em Тестирование производительности хеш-\/таблицы (\doxylink{classHashTable}{Hash\+Table}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_acfc5c302221d1aa5aba0aac3799b253f}{benchmark\+\_\+full\+\_\+binary\+\_\+tree}} ()
+\begin{DoxyCompactList}\small\item\em Тестирование производительности полного бинарного дерева (\doxylink{classFullBinaryTree}{Full\+Binary\+Tree}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_af0c7e15db2d6abbb07fd570b9919e98a}{benchmark\+\_\+serialization}} ()
+\begin{DoxyCompactList}\small\item\em Тестирование механизмов сериализации и десериализации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8cpp_ab8938b2f0483f93c622999d595bab7e4}{print\+\_\+comparison\+\_\+summary}} ()
+\begin{DoxyCompactList}\small\item\em Выводит сводную таблицу сравнения структур данных. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{benchmark_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Точка входа в программу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Программа для бенчмаркинга и сравнения производительности различных структур данных. 
+
+Файл содержит набор тестов производительности для массива, списков, очередей, стека, хеш-\/таблицы и бинарного дерева. Результаты выводятся в консоль и дублируются в файл benchmark\+\_\+results.\+txt. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{benchmark_8cpp_af2a83c6eb51ba5c3e34b7b09e031b7d2}\label{benchmark_8cpp_af2a83c6eb51ba5c3e34b7b09e031b7d2} 
+\index{benchmark.cpp@{benchmark.cpp}!benchmark\_array@{benchmark\_array}}
+\index{benchmark\_array@{benchmark\_array}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{benchmark\_array()}{benchmark\_array()}}
+{\footnotesize\ttfamily void benchmark\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тестирование производительности динамического массива (\doxylink{classArray}{Array}). 
+
+Проверяет операции вставки, случайного доступа, линейного поиска и удаления. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_af2a83c6eb51ba5c3e34b7b09e031b7d2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{benchmark_8cpp_af2a83c6eb51ba5c3e34b7b09e031b7d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_a4b58f2a36422da0183fbd9dbd9e738a6}\label{benchmark_8cpp_a4b58f2a36422da0183fbd9dbd9e738a6} 
+\index{benchmark.cpp@{benchmark.cpp}!benchmark\_double\_list@{benchmark\_double\_list}}
+\index{benchmark\_double\_list@{benchmark\_double\_list}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{benchmark\_double\_list()}{benchmark\_double\_list()}}
+{\footnotesize\ttfamily void benchmark\+\_\+double\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тестирование производительности двусвязного списка (\doxylink{classDoubleList}{Double\+List}). 
+
+Проверяет вставку в конец, последовательный доступ, поиск и удаление с конца. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_a4b58f2a36422da0183fbd9dbd9e738a6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{benchmark_8cpp_a4b58f2a36422da0183fbd9dbd9e738a6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_a0f7ab8a577d6d9af00b446bf3d2986c4}\label{benchmark_8cpp_a0f7ab8a577d6d9af00b446bf3d2986c4} 
+\index{benchmark.cpp@{benchmark.cpp}!benchmark\_forward\_list@{benchmark\_forward\_list}}
+\index{benchmark\_forward\_list@{benchmark\_forward\_list}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{benchmark\_forward\_list()}{benchmark\_forward\_list()}}
+{\footnotesize\ttfamily void benchmark\+\_\+forward\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тестирование производительности односвязного списка (\doxylink{classForwardList}{Forward\+List}). 
+
+Проверяет вставку в начало, последовательный доступ, поиск и удаление из начала. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_a0f7ab8a577d6d9af00b446bf3d2986c4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{benchmark_8cpp_a0f7ab8a577d6d9af00b446bf3d2986c4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_acfc5c302221d1aa5aba0aac3799b253f}\label{benchmark_8cpp_acfc5c302221d1aa5aba0aac3799b253f} 
+\index{benchmark.cpp@{benchmark.cpp}!benchmark\_full\_binary\_tree@{benchmark\_full\_binary\_tree}}
+\index{benchmark\_full\_binary\_tree@{benchmark\_full\_binary\_tree}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{benchmark\_full\_binary\_tree()}{benchmark\_full\_binary\_tree()}}
+{\footnotesize\ttfamily void benchmark\+\_\+full\+\_\+binary\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тестирование производительности полного бинарного дерева (\doxylink{classFullBinaryTree}{Full\+Binary\+Tree}). 
+
+Проверяет вставку, поиск, проверку инварианта и удаление. Размер выборки меньше (N=1000) из-\/за сложности операций с деревом. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_acfc5c302221d1aa5aba0aac3799b253f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{benchmark_8cpp_acfc5c302221d1aa5aba0aac3799b253f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_ad1196c315efa5bcb26e31eb456a5798c}\label{benchmark_8cpp_ad1196c315efa5bcb26e31eb456a5798c} 
+\index{benchmark.cpp@{benchmark.cpp}!benchmark\_hash\_table@{benchmark\_hash\_table}}
+\index{benchmark\_hash\_table@{benchmark\_hash\_table}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{benchmark\_hash\_table()}{benchmark\_hash\_table()}}
+{\footnotesize\ttfamily void benchmark\+\_\+hash\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тестирование производительности хеш-\/таблицы (\doxylink{classHashTable}{Hash\+Table}). 
+
+Проверяет вставку, поиск, доступ по ключу и удаление. Использует try-\/catch для обработки отсутствующих ключей при случайном доступе. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_ad1196c315efa5bcb26e31eb456a5798c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{benchmark_8cpp_ad1196c315efa5bcb26e31eb456a5798c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_af4c86f76a20755f569e50b1c5d2b6535}\label{benchmark_8cpp_af4c86f76a20755f569e50b1c5d2b6535} 
+\index{benchmark.cpp@{benchmark.cpp}!benchmark\_queue@{benchmark\_queue}}
+\index{benchmark\_queue@{benchmark\_queue}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{benchmark\_queue()}{benchmark\_queue()}}
+{\footnotesize\ttfamily void benchmark\+\_\+queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тестирование производительности очереди (\doxylink{classQueue}{Queue}). 
+
+Проверяет операции enqueue, dequeue и доступ к элементам. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_af4c86f76a20755f569e50b1c5d2b6535_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{benchmark_8cpp_af4c86f76a20755f569e50b1c5d2b6535_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_af0c7e15db2d6abbb07fd570b9919e98a}\label{benchmark_8cpp_af0c7e15db2d6abbb07fd570b9919e98a} 
+\index{benchmark.cpp@{benchmark.cpp}!benchmark\_serialization@{benchmark\_serialization}}
+\index{benchmark\_serialization@{benchmark\_serialization}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{benchmark\_serialization()}{benchmark\_serialization()}}
+{\footnotesize\ttfamily void benchmark\+\_\+serialization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тестирование механизмов сериализации и десериализации. 
+
+Проверяет сохранение и восстановление состояния для \doxylink{classArray}{Array}, \doxylink{classHashTable}{Hash\+Table} и \doxylink{classFullBinaryTree}{Full\+Binary\+Tree}. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_af0c7e15db2d6abbb07fd570b9919e98a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{benchmark_8cpp_af0c7e15db2d6abbb07fd570b9919e98a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_a1aac222c6e4c4aa57e989adc85f0c397}\label{benchmark_8cpp_a1aac222c6e4c4aa57e989adc85f0c397} 
+\index{benchmark.cpp@{benchmark.cpp}!benchmark\_stack@{benchmark\_stack}}
+\index{benchmark\_stack@{benchmark\_stack}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{benchmark\_stack()}{benchmark\_stack()}}
+{\footnotesize\ttfamily void benchmark\+\_\+stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тестирование производительности стека (\doxylink{classStack}{Stack}). 
+
+Проверяет операции push, pop и доступ к вершине. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_a1aac222c6e4c4aa57e989adc85f0c397_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{benchmark_8cpp_a1aac222c6e4c4aa57e989adc85f0c397_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{benchmark_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{benchmark.cpp@{benchmark.cpp}!main@{main}}
+\index{main@{main}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Точка входа в программу. 
+
+Запускает последовательность бенчмарков и выводит результаты в консоль и файл. \begin{DoxyReturn}{Returns}
+Код возврата (0 при успехе). 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{benchmark_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_ab8938b2f0483f93c622999d595bab7e4}\label{benchmark_8cpp_ab8938b2f0483f93c622999d595bab7e4} 
+\index{benchmark.cpp@{benchmark.cpp}!print\_comparison\_summary@{print\_comparison\_summary}}
+\index{print\_comparison\_summary@{print\_comparison\_summary}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_comparison\_summary()}{print\_comparison\_summary()}}
+{\footnotesize\ttfamily void print\+\_\+comparison\+\_\+summary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Выводит сводную таблицу сравнения структур данных. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{benchmark_8cpp_ab8938b2f0483f93c622999d595bab7e4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{benchmark_8cpp_ab8938b2f0483f93c622999d595bab7e4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_a2a10ff76e86dd41833b8c23edf05af74}\label{benchmark_8cpp_a2a10ff76e86dd41833b8c23edf05af74} 
+\index{benchmark.cpp@{benchmark.cpp}!print\_header@{print\_header}}
+\index{print\_header@{print\_header}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_header()}{print\_header()}}
+{\footnotesize\ttfamily void print\+\_\+header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{structure\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Выводит заголовок секции бенчмарка в консоль и файл. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure\+\_\+name} & Название тестируемой структуры данных. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{benchmark_8cpp_a2a10ff76e86dd41833b8c23edf05af74_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_a2a10ff76e86dd41833b8c23edf05af74_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_a3ad66a01888bf14fee4e70b41f031a92}\label{benchmark_8cpp_a3ad66a01888bf14fee4e70b41f031a92} 
+\index{benchmark.cpp@{benchmark.cpp}!print\_result@{print\_result}}
+\index{print\_result@{print\_result}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_result()}{print\_result()}}
+{\footnotesize\ttfamily void print\+\_\+result (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{operation,  }\item[{double}]{time\+\_\+ms,  }\item[{int}]{operations }\end{DoxyParamCaption})}
+
+
+
+Форматированно выводит результаты теста в консоль и файл. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation} & Название операции (например, "{}\+Insert"{}, "{}\+Find"{}). \\
+\hline
+{\em time\+\_\+ms} & Затраченное время в миллисекундах. \\
+\hline
+{\em operations} & Количество выполненных операций. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{benchmark_8cpp_a3ad66a01888bf14fee4e70b41f031a92_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_a3ad66a01888bf14fee4e70b41f031a92_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{benchmark_8cpp_a65c1528308af9504cc4afd5122df9285}\label{benchmark_8cpp_a65c1528308af9504cc4afd5122df9285} 
+\index{benchmark.cpp@{benchmark.cpp}!resultsFile@{resultsFile}}
+\index{resultsFile@{resultsFile}!benchmark.cpp@{benchmark.cpp}}
+\doxysubsubsection{\texorpdfstring{resultsFile()}{resultsFile()}}
+{\footnotesize\ttfamily std\+::ofstream results\+File (\begin{DoxyParamCaption}\item[{"{}benchmark\+\_\+results.\+txt"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Глобальный поток вывода в файл. Инициализируется при запуске программы. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{benchmark_8cpp_a65c1528308af9504cc4afd5122df9285_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,460 @@
+\doxysection{Double\+List.\+h}
+\hypertarget{DoubleList_8h_source}{}\label{DoubleList_8h_source}\mbox{\hyperlink{DoubleList_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDoubleList}{DoubleList}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structDoubleList_1_1Node}{Node}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ \mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ \mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node_a85b80fe89dff55b6f0923ec8987b80ee}{Node}}(\textcolor{keyword}{const}\ T\&\ value)\ :\ \mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}}(value),\ \mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}(nullptr),\ \mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}(nullptr)\ \{\}}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ \mbox{\hyperlink{classDoubleList_aaad845e1d6f481a6d8117760482ac4d8}{head}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ \mbox{\hyperlink{classDoubleList_a9877c1d12a34d1febcf24ba1647dd962}{tail}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classDoubleList_adb35f02dc786dd9e59fa7a92edcdb3a6}{size}};\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classDoubleList_a5e2a099111bd3d429bdcadc166c47dfb}{DoubleList}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classDoubleList_a5e2a099111bd3d429bdcadc166c47dfb}{DoubleList}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDoubleList}{DoubleList}}\&\ other);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classDoubleList}{DoubleList}}\&\ \mbox{\hyperlink{classDoubleList_a2cf2f59a7089788e12a630074135291d}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDoubleList}{DoubleList}}\&\ other);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classDoubleList_a39f16115b9244cc93a28abc0c980e794}{\string~DoubleList}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_aa82b1d2319bb8c6dd02cda8ee33d8e15}{pushFront}}(\textcolor{keyword}{const}\ T\&\ element);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a0120f6c04110c280165197693f895d3f}{pushBack}}(\textcolor{keyword}{const}\ T\&\ element);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a1690b042ab1a2779f622ddcfb8896bc2}{insert}}(\textcolor{keywordtype}{size\_t}\ index,\ \textcolor{keyword}{const}\ T\&\ element);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a04d9764efa59df8d9b88d583b5368542}{popFront}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a6e11f42f6814204e5892f473069e7a68}{popBack}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a0524c6320cbce0b26c9385c332d646e3}{remove}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_aa39a5dbfefc861a748ace6e684b38c8c}{removeValue}}(\textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00125\ \ \ \ \ T\&\ \mbox{\hyperlink{classDoubleList_a1218078c499df15767a2be3c2329d3cd}{get}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classDoubleList_a1218078c499df15767a2be3c2329d3cd}{get}}(\textcolor{keywordtype}{size\_t}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00142\ \ \ \ \ T\&\ \mbox{\hyperlink{classDoubleList_a93697f44852ce8c2ab37cbd9734186e7}{front}}();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classDoubleList_a93697f44852ce8c2ab37cbd9734186e7}{front}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00156\ \ \ \ \ T\&\ \mbox{\hyperlink{classDoubleList_a3ebdcd207ea924f2d3affd6fbac166ee}{back}}();}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classDoubleList_a3ebdcd207ea924f2d3affd6fbac166ee}{back}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classDoubleList_a4313b534733d4e98e3363c0ad5b1ae8b}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDoubleList_ac1de2b21ebd85ec87f2b940232b482f0}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a62436a8284f2fe053658314c12115e88}{clear}}();}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDoubleList_ad5971476ec3dcec2de5944169cc28cdb}{find}}(\textcolor{keyword}{const}\ T\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a2a92f1544576bf4e7cb2826cb6ab7f19}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a39ff9cfeb0f9900f7cf52189be811171}{printReverse}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a1115147f713f6de7b12604b7caeda3bf}{serialize}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a8da91422eeb41da6b0882ad14b514a9d}{deserialize}}(std::istream\&\ in);}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a057d2a0791ce1bc4c64c1b07574afb15}{serializeBinary}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a47bbcf20e9ec0ede31eab2841232d483}{deserializeBinary}}(std::istream\&\ in);}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a4756aba60e436a86aeed834309869b02}{serializeText}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a564b57a67a700eff9a98ceaecee02b5d}{deserializeText}}(std::istream\&\ in);}
+\DoxyCodeLine{00250\ \};}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00253\ \mbox{\hyperlink{classDoubleList_a5e2a099111bd3d429bdcadc166c47dfb}{DoubleList<T>::DoubleList}}()\ :\ head(nullptr),\ tail(nullptr),\ size(0)\ \{\}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00256\ \mbox{\hyperlink{classDoubleList_a5e2a099111bd3d429bdcadc166c47dfb}{DoubleList<T>::DoubleList}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDoubleList}{DoubleList}}\&\ other)\ :\ head(nullptr),\ tail(nullptr),\ size(0)\ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current\ =\ other.\mbox{\hyperlink{classDoubleList_aaad845e1d6f481a6d8117760482ac4d8}{head}};}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDoubleList_a0120f6c04110c280165197693f895d3f}{pushBack}}(current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}});}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00261\ \ \ \ \ \}}
+\DoxyCodeLine{00262\ \}}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00265\ \mbox{\hyperlink{classDoubleList}{DoubleList<T>}}\&\ \mbox{\hyperlink{classDoubleList_a2cf2f59a7089788e12a630074135291d}{DoubleList<T>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDoubleList}{DoubleList}}\&\ other)\ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Создаем\ копию\ во\ временном\ объекте\ (Copy-\/and-\/Swap\ idiom)}}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Если\ здесь\ вылетит\ исключение,\ текущий\ объект\ (this)\ не\ пострадает}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDoubleList}{DoubleList}}\ temp(other);}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Меняем\ местами\ указатели\ и\ размер\ текущего\ объекта\ и\ временного}}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ tHead\ =\ head;\ head\ =\ temp.\mbox{\hyperlink{classDoubleList_aaad845e1d6f481a6d8117760482ac4d8}{head}};\ temp.\mbox{\hyperlink{classDoubleList_aaad845e1d6f481a6d8117760482ac4d8}{head}}\ =\ tHead;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ tTail\ =\ tail;\ tail\ =\ temp.\mbox{\hyperlink{classDoubleList_a9877c1d12a34d1febcf24ba1647dd962}{tail}};\ temp.\mbox{\hyperlink{classDoubleList_a9877c1d12a34d1febcf24ba1647dd962}{tail}}\ =\ tTail;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ tSize\ =\ size;\ size\ =\ temp.\mbox{\hyperlink{classDoubleList_adb35f02dc786dd9e59fa7a92edcdb3a6}{size}};\ temp.\mbox{\hyperlink{classDoubleList_adb35f02dc786dd9e59fa7a92edcdb3a6}{size}}\ =\ tSize;}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Деструктор\ temp\ очистит\ старые\ данные\ this}}
+\DoxyCodeLine{00277\ \ \ \ \ \}}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00279\ \}}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00282\ \mbox{\hyperlink{classDoubleList_a39f16115b9244cc93a28abc0c980e794}{DoubleList<T>::\string~DoubleList}}()\ \{}
+\DoxyCodeLine{00283\ \ \ \ \ clear();}
+\DoxyCodeLine{00284\ \}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00287\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_aa82b1d2319bb8c6dd02cda8ee33d8e15}{DoubleList<T>::pushFront}}(\textcolor{keyword}{const}\ T\&\ element)\ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}(element);}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordflow}{if}\ (!head)\ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ head\ =\ tail\ =\ newNode;}
+\DoxyCodeLine{00291\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ newNode-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}\ =\ head;}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ head-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}\ =\ newNode;}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ head\ =\ newNode;}
+\DoxyCodeLine{00295\ \ \ \ \ \}}
+\DoxyCodeLine{00296\ \ \ \ \ ++size;}
+\DoxyCodeLine{00297\ \}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00300\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a0120f6c04110c280165197693f895d3f}{DoubleList<T>::pushBack}}(\textcolor{keyword}{const}\ T\&\ element)\ \{}
+\DoxyCodeLine{00301\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}(element);}
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{keywordflow}{if}\ (!tail)\ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ head\ =\ tail\ =\ newNode;}
+\DoxyCodeLine{00304\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ tail-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}\ =\ newNode;}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ newNode-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}\ =\ tail;}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ tail\ =\ newNode;}
+\DoxyCodeLine{00308\ \ \ \ \ \}}
+\DoxyCodeLine{00309\ \ \ \ \ ++size;}
+\DoxyCodeLine{00310\ \}}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00313\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a1690b042ab1a2779f622ddcfb8896bc2}{DoubleList<T>::insert}}(\textcolor{keywordtype}{size\_t}\ index,\ \textcolor{keyword}{const}\ T\&\ element)\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >\ size)\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Index\ out\ of\ range"{}});}
+\DoxyCodeLine{00316\ \ \ \ \ \}}
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ ==\ 0)\ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ pushFront(element);}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00320\ \ \ \ \ \}}
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ ==\ size)\ \{}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ pushBack(element);}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00324\ \ \ \ \ \}}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}(element);}
+\DoxyCodeLine{00327\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current;}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <=\ size\ /\ 2)\ \{}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ current\ =\ head;}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ index;\ ++i)\ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00334\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ current\ =\ tail;}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Идем\ с\ конца:\ нам\ нужен\ элемент,\ который\ СЕЙЧАС\ стоит\ на\ позиции\ index.}}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tail\ имеет\ индекс\ size-\/1.\ Чтобы\ попасть\ на\ index,\ нужно\ сделать\ (size\ -\/\ 1\ -\/\ index)\ шагов\ назад.}}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ size\ -\/\ 1\ -\/\ index;\ ++i)\ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00341\ \ \ \ \ \}}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \ \ newNode-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}\ =\ current;}
+\DoxyCodeLine{00344\ \ \ \ \ newNode-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00345\ \ \ \ \ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}\ =\ newNode;}
+\DoxyCodeLine{00346\ \ \ \ \ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}\ =\ newNode;}
+\DoxyCodeLine{00347\ \ \ \ \ ++size;}
+\DoxyCodeLine{00348\ \}}
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00350\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00351\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a04d9764efa59df8d9b88d583b5368542}{DoubleList<T>::popFront}}()\ \{}
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keywordflow}{if}\ (!head)\ \{}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}List\ is\ empty"{}});}
+\DoxyCodeLine{00354\ \ \ \ \ \}}
+\DoxyCodeLine{00355\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ temp\ =\ head;}
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ ==\ tail)\ \{}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ head\ =\ tail\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00358\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ head\ =\ head-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ head-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00361\ \ \ \ \ \}}
+\DoxyCodeLine{00362\ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00363\ \ \ \ \ -\/-\/size;}
+\DoxyCodeLine{00364\ \}}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00367\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a6e11f42f6814204e5892f473069e7a68}{DoubleList<T>::popBack}}()\ \{}
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{keywordflow}{if}\ (!tail)\ \{}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}List\ is\ empty"{}});}
+\DoxyCodeLine{00370\ \ \ \ \ \}}
+\DoxyCodeLine{00371\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ temp\ =\ tail;}
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ ==\ tail)\ \{}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ head\ =\ tail\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00374\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ tail\ =\ tail-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ tail-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00377\ \ \ \ \ \}}
+\DoxyCodeLine{00378\ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00379\ \ \ \ \ -\/-\/size;}
+\DoxyCodeLine{00380\ \}}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00383\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a0524c6320cbce0b26c9385c332d646e3}{DoubleList<T>::remove}}(\textcolor{keywordtype}{size\_t}\ index)\ \{}
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ size)\ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Index\ out\ of\ range"{}});}
+\DoxyCodeLine{00386\ \ \ \ \ \}}
+\DoxyCodeLine{00387\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ ==\ 0)\ \{}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ popFront();}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00390\ \ \ \ \ \}}
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ ==\ size\ -\/\ 1)\ \{}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ popBack();}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00394\ \ \ \ \ \}}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current;}
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <=\ size\ /\ 2)\ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ current\ =\ head;}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ index;\ ++i)\ \{}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00402\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ current\ =\ tail;}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ size\ -\/\ 1\ -\/\ index;\ ++i)\ \{}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00407\ \ \ \ \ \}}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \ \ \ \ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00410\ \ \ \ \ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keyword}{delete}\ current;}
+\DoxyCodeLine{00412\ \ \ \ \ -\/-\/size;}
+\DoxyCodeLine{00413\ \}}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00415\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00416\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_aa39a5dbfefc861a748ace6e684b38c8c}{DoubleList<T>::removeValue}}(\textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00417\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00418\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}}\ ==\ value)\ \{}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ temp\ =\ current;}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (temp\ ==\ head\ \&\&\ temp\ ==\ tail)\ \{}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ head\ =\ tail\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (temp\ ==\ head)\ \{}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ head\ =\ head-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ head-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (temp\ ==\ tail)\ \{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tail\ =\ tail-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tail-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}\ =\ temp-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}}-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}}\ =\ temp-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ -\/-\/size;}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00440\ \ \ \ \ \}}
+\DoxyCodeLine{00441\ \}}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00443\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00444\ T\&\ \mbox{\hyperlink{classDoubleList_a1218078c499df15767a2be3c2329d3cd}{DoubleList<T>::get}}(\textcolor{keywordtype}{size\_t}\ index)\ \{}
+\DoxyCodeLine{00445\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ size)\ \{}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Index\ out\ of\ range"{}});}
+\DoxyCodeLine{00447\ \ \ \ \ \}}
+\DoxyCodeLine{00448\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current;}
+\DoxyCodeLine{00449\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <=\ size\ /\ 2)\ \{}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ current\ =\ head;}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ index;\ ++i)\ \{}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00454\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ current\ =\ tail;}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ size\ -\/\ 1\ -\/\ index;\ ++i)\ \{}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00459\ \ \ \ \ \}}
+\DoxyCodeLine{00460\ \ \ \ \ \textcolor{keywordflow}{return}\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}};}
+\DoxyCodeLine{00461\ \}}
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00463\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00464\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classDoubleList_a1218078c499df15767a2be3c2329d3cd}{DoubleList<T>::get}}(\textcolor{keywordtype}{size\_t}\ index)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00465\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ size)\ \{}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Index\ out\ of\ range"{}});}
+\DoxyCodeLine{00467\ \ \ \ \ \}}
+\DoxyCodeLine{00468\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current;}
+\DoxyCodeLine{00469\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <=\ size\ /\ 2)\ \{}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ current\ =\ head;}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ index;\ ++i)\ \{}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00474\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ current\ =\ tail;}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ size\ -\/\ 1\ -\/\ index;\ ++i)\ \{}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00479\ \ \ \ \ \}}
+\DoxyCodeLine{00480\ \ \ \ \ \textcolor{keywordflow}{return}\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}};}
+\DoxyCodeLine{00481\ \}}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00484\ T\&\ \mbox{\hyperlink{classDoubleList_a93697f44852ce8c2ab37cbd9734186e7}{DoubleList<T>::front}}()\ \{}
+\DoxyCodeLine{00485\ \ \ \ \ \textcolor{keywordflow}{if}\ (!head)\ \{}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}List\ is\ empty"{}});}
+\DoxyCodeLine{00487\ \ \ \ \ \}}
+\DoxyCodeLine{00488\ \ \ \ \ \textcolor{keywordflow}{return}\ head-\/>data;}
+\DoxyCodeLine{00489\ \}}
+\DoxyCodeLine{00490\ }
+\DoxyCodeLine{00491\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00492\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classDoubleList_a93697f44852ce8c2ab37cbd9734186e7}{DoubleList<T>::front}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00493\ \ \ \ \ \textcolor{keywordflow}{if}\ (!head)\ \{}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}List\ is\ empty"{}});}
+\DoxyCodeLine{00495\ \ \ \ \ \}}
+\DoxyCodeLine{00496\ \ \ \ \ \textcolor{keywordflow}{return}\ head-\/>data;}
+\DoxyCodeLine{00497\ \}}
+\DoxyCodeLine{00498\ }
+\DoxyCodeLine{00499\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00500\ T\&\ \mbox{\hyperlink{classDoubleList_a3ebdcd207ea924f2d3affd6fbac166ee}{DoubleList<T>::back}}()\ \{}
+\DoxyCodeLine{00501\ \ \ \ \ \textcolor{keywordflow}{if}\ (!tail)\ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}List\ is\ empty"{}});}
+\DoxyCodeLine{00503\ \ \ \ \ \}}
+\DoxyCodeLine{00504\ \ \ \ \ \textcolor{keywordflow}{return}\ tail-\/>data;}
+\DoxyCodeLine{00505\ \}}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00507\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00508\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classDoubleList_a3ebdcd207ea924f2d3affd6fbac166ee}{DoubleList<T>::back}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{keywordflow}{if}\ (!tail)\ \{}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}List\ is\ empty"{}});}
+\DoxyCodeLine{00511\ \ \ \ \ \}}
+\DoxyCodeLine{00512\ \ \ \ \ \textcolor{keywordflow}{return}\ tail-\/>data;}
+\DoxyCodeLine{00513\ \}}
+\DoxyCodeLine{00514\ }
+\DoxyCodeLine{00515\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00516\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classDoubleList_a4313b534733d4e98e3363c0ad5b1ae8b}{DoubleList<T>::getSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00517\ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{00518\ \}}
+\DoxyCodeLine{00519\ }
+\DoxyCodeLine{00520\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00521\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDoubleList_ac1de2b21ebd85ec87f2b940232b482f0}{DoubleList<T>::isEmpty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00522\ \ \ \ \ \textcolor{keywordflow}{return}\ size\ ==\ 0;}
+\DoxyCodeLine{00523\ \}}
+\DoxyCodeLine{00524\ }
+\DoxyCodeLine{00525\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00526\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a62436a8284f2fe053658314c12115e88}{DoubleList<T>::clear}}()\ \{}
+\DoxyCodeLine{00527\ \ \ \ \ \textcolor{keywordflow}{while}\ (head)\ \{}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ temp\ =\ head;}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ head\ =\ head-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00531\ \ \ \ \ \}}
+\DoxyCodeLine{00532\ \ \ \ \ head\ =\ tail\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00533\ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{00534\ \}}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00537\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDoubleList_ad5971476ec3dcec2de5944169cc28cdb}{DoubleList<T>::find}}(\textcolor{keyword}{const}\ T\&\ value)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00538\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00539\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}}\ ==\ value)\ \{}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00544\ \ \ \ \ \}}
+\DoxyCodeLine{00545\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00546\ \}}
+\DoxyCodeLine{00547\ }
+\DoxyCodeLine{00548\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00549\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a2a92f1544576bf4e7cb2826cb6ab7f19}{DoubleList<T>::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00550\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00551\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00552\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ std::cout\ <<\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}};}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}})\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ <-\/>\ "{}};}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00556\ \ \ \ \ \}}
+\DoxyCodeLine{00557\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00558\ \}}
+\DoxyCodeLine{00559\ }
+\DoxyCodeLine{00560\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00561\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a39ff9cfeb0f9900f7cf52189be811171}{DoubleList<T>::printReverse}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00562\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00563\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current\ =\ tail;}
+\DoxyCodeLine{00564\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ std::cout\ <<\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}};}
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}})\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ <-\/>\ "{}};}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa83355c36e6e3a5068eb4a9d13709484}{prev}};}
+\DoxyCodeLine{00568\ \ \ \ \ \}}
+\DoxyCodeLine{00569\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00570\ \}}
+\DoxyCodeLine{00571\ }
+\DoxyCodeLine{00572\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00573\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a1115147f713f6de7b12604b7caeda3bf}{DoubleList<T>::serialize}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00574\ \ \ \ \ serializeBinary(out);}
+\DoxyCodeLine{00575\ \}}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00578\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a8da91422eeb41da6b0882ad14b514a9d}{DoubleList<T>::deserialize}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00579\ \ \ \ \ deserializeBinary(in);}
+\DoxyCodeLine{00580\ \}}
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ \textcolor{comment}{//\ Важно:\ бинарная\ сериализация\ корректна\ только\ для\ тривиально\ копируемых\ типов}}
+\DoxyCodeLine{00583\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00584\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a057d2a0791ce1bc4c64c1b07574afb15}{DoubleList<T>::serializeBinary}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00585\ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&size),\ \textcolor{keyword}{sizeof}(size));}
+\DoxyCodeLine{00586\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00587\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}}),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00590\ \ \ \ \ \}}
+\DoxyCodeLine{00591\ \}}
+\DoxyCodeLine{00592\ }
+\DoxyCodeLine{00593\ \textcolor{comment}{//\ Важно:\ бинарная\ десериализация\ корректна\ только\ для\ тривиально\ копируемых\ типов}}
+\DoxyCodeLine{00594\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00595\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a47bbcf20e9ec0ede31eab2841232d483}{DoubleList<T>::deserializeBinary}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00596\ \ \ \ \ clear();}
+\DoxyCodeLine{00597\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size;}
+\DoxyCodeLine{00598\ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&new\_size),\ \textcolor{keyword}{sizeof}(new\_size));}
+\DoxyCodeLine{00599\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ new\_size;\ ++i)\ \{}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ T\ value;}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&value),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ pushBack(value);}
+\DoxyCodeLine{00603\ \ \ \ \ \}}
+\DoxyCodeLine{00604\ \}}
+\DoxyCodeLine{00605\ }
+\DoxyCodeLine{00606\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00607\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a4756aba60e436a86aeed834309869b02}{DoubleList<T>::serializeText}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00608\ \ \ \ \ out\ <<\ size\ <<\ std::endl;}
+\DoxyCodeLine{00609\ \ \ \ \ \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00610\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00611\ \ \ \ \ \ \ \ \ out\ <<\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_a67952bdd7f3878ae3a63307f01638313}{data}};}
+\DoxyCodeLine{00612\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}})\ out\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00613\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structDoubleList_1_1Node_aa3fa4dda629c331b98982483c9c9593d}{next}};}
+\DoxyCodeLine{00614\ \ \ \ \ \}}
+\DoxyCodeLine{00615\ \ \ \ \ out\ <<\ std::endl;}
+\DoxyCodeLine{00616\ \}}
+\DoxyCodeLine{00617\ }
+\DoxyCodeLine{00618\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00619\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDoubleList_a564b57a67a700eff9a98ceaecee02b5d}{DoubleList<T>::deserializeText}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00620\ \ \ \ \ clear();}
+\DoxyCodeLine{00621\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size;}
+\DoxyCodeLine{00622\ \ \ \ \ in\ >>\ new\_size;}
+\DoxyCodeLine{00623\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ new\_size;\ ++i)\ \{}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ T\ value;}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ in\ >>\ value;}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ pushBack(value);}
+\DoxyCodeLine{00627\ \ \ \ \ \}}
+\DoxyCodeLine{00628\ \}}
+
+\end{DoxyCode}

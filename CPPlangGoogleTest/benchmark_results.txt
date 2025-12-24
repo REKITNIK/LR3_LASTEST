@@ -1,0 +1,81 @@
+Starting comprehensive performance benchmarks...
+Note: Times may vary based on system performance
+
+=== ARRAY BENCHMARK ===
+      Operation      Time (ms)        Ops/sec
+---------------------------------------------
+         Insert          0.080      125000000
+  Random Access          0.217       46082949
+           Find          0.934        1070664
+         Remove          0.002      500000000
+
+=== FORWARD LIST BENCHMARK ===
+      Operation      Time (ms)        Ops/sec
+---------------------------------------------
+   Insert Front          0.279       35842294
+Sequential Access          0.671        1490313
+           Find         24.102          41490
+   Remove Front          0.012       83333333
+
+=== DOUBLE LIST BENCHMARK ===
+      Operation      Time (ms)        Ops/sec
+---------------------------------------------
+    Insert Back          0.258       38759690
+Sequential Access          0.645        1550388
+           Find          0.624        1602564
+    Remove Back          0.012       83333333
+
+=== QUEUE BENCHMARK ===
+      Operation      Time (ms)        Ops/sec
+---------------------------------------------
+        Enqueue          0.312       32051282
+         Access          0.002     1000000000
+        Dequeue          0.017       58823529
+
+=== STACK BENCHMARK ===
+      Operation      Time (ms)        Ops/sec
+---------------------------------------------
+           Push          0.252       39682540
+     Top Access          0.001     1000000000
+            Pop          0.013       76923077
+
+=== HASH TABLE BENCHMARK ===
+      Operation      Time (ms)        Ops/sec
+---------------------------------------------
+         Insert          0.696       14367816
+           Find          1.147        8718396
+         Access          0.057       17543860
+         Remove          0.109        9174312
+
+=== FULL BINARY TREE BENCHMARK ===
+      Operation      Time (ms)        Ops/sec
+---------------------------------------------
+         Insert         77.183          12956
+           Find        114.619           8725
+Invariant Check          0.009         111111
+Tree is full binary tree: YES
+Tree size: 1999
+         Remove         21.863           4574
+
+=== SERIALIZATION BENCHMARK ===
+      Operation      Time (ms)        Ops/sec
+---------------------------------------------
+Array Serialize          0.057          17544
+Array Deserialize          0.105           9524
+HashTable Serialize          0.109           9174
+HashTable Deserialize          0.159           6289
+ Tree Serialize          0.033          30303
+Tree Deserialize          0.027          37037
+
+=== PERFORMANCE COMPARISON SUMMARY ===
+Data Structure    | Best Use Case
+--------------------------------------------------
+Array             | Random access, cache-friendly operations
+ForwardList       | Frequent front insertions, memory efficiency
+DoubleList        | Bidirectional traversal, front/back operations
+Queue             | FIFO operations, producer-consumer patterns
+Stack             | LIFO operations, recursion simulation
+HashTable         | Fast key-value lookups, O(1) average access
+FullBinaryTree    | Hierarchical data with full binary constraint
+
+Benchmark completed successfully!

@@ -1,0 +1,7 @@
+<map id="DoubleList::front" name="DoubleList::front">
+<area shape="rect" id="Node000001" title="Возвращает первый элемент." alt="" coords="108,31,239,56"/>
+<area shape="rect" id="Node000002" href="$tests__oop__gtest_8cpp.html#a0c78a9d034b8a5176e9a9907459c627e" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,32,60,25,61,20,95,26"/>
+<area shape="rect" id="Node000003" href="$tests__oop__gtest_8cpp.html#a86342bb072d2b1f1caa70123f9179e44" title=" " alt="" coords="5,55,60,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="95,59,61,65,60,60,94,54"/>
+</map>

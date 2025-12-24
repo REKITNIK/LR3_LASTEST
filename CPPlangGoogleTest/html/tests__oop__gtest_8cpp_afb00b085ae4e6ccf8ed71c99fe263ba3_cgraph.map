@@ -1,0 +1,13 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,60,129"/>
+<area shape="rect" id="Node000002" href="$classHashTable.html#a9129023e7811d55152ca87391a6149f3" title="Универсальная десериализация. По умолчанию делегирует вызов бинарной десериализации." alt="" coords="108,5,276,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="41,102,68,71,107,40,119,33,121,38,109,44,72,75,46,105"/>
+<area shape="rect" id="Node000003" href="$classHashTable.html#a6793afcbf7247e7ccfb7bc3e4c21d116" title="Получает доступ к значению по ключу (для чтения и записи)." alt="" coords="133,55,251,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="59,105,107,89,132,81,133,86,109,94,61,110"/>
+<area shape="rect" id="Node000004" href="$classHashTable.html#a274d09a6cd9ae51f693c23109706bbdd" title="Возвращает текущее количество элементов." alt="" coords="119,104,265,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="60,114,105,114,105,119,60,119"/>
+<area shape="rect" id="Node000005" href="$classHashTable.html#af52ef1459bd66438145bee59ac4f25ac" title="Вставляет или обновляет пару ключ&#45;значение. Если ключ уже существует, его значение обновляется...." alt="" coords="125,153,259,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="61,123,109,138,136,147,135,152,107,143,60,128"/>
+<area shape="rect" id="Node000006" href="$classHashTable.html#afb3a7fb53385c7229c976c6120f1cfd7" title="Универсальная сериализация. По умолчанию делегирует вызов бинарной сериализации." alt="" coords="116,203,268,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="46,128,72,158,109,188,124,195,122,200,107,192,69,162,42,131"/>
+</map>

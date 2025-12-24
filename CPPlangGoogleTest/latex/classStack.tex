@@ -1,0 +1,450 @@
+\doxysection{Stack\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classStack}{}\label{classStack}\index{Stack$<$ T $>$@{Stack$<$ T $>$}}
+
+
+Шаблонный класс Стека (\doxylink{classStack}{Stack}).  
+
+
+
+
+{\ttfamily \#include $<$Stack.\+h$>$}
+
+
+
+Collaboration diagram for Stack\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classStack__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structStack_1_1Node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Создает пустой стек. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStack_a84ed303fcc02f090d439722515c341e6}{Stack}} (const \mbox{\hyperlink{classStack}{Stack}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. Создает глубокую копию стека, сохраняя исходный порядок элементов. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStack}{Stack}} \& \mbox{\hyperlink{classStack_ae97cf63b6401d8af940644fa735d9412}{operator=}} (const \mbox{\hyperlink{classStack}{Stack}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор присваивания. Обеспечивает строгую гарантию безопасности исключений. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStack_a9e7a00875aefbdac560ab189b7bc61d1}{\texorpdfstring{$\sim$}{\string~}\+Stack}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. Освобождает память. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_a3454655ab059b315d9ef24d074734f01}{push}} (const T \&element)
+\begin{DoxyCompactList}\small\item\em Помещает элемент на вершину стека (push). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_a2723aec5c7e2611b97fcffeb7709de33}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет элемент с вершины стека (pop). \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classStack_a8e99bab8b8f969fe5e029934ac14408a}{top}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на элемент на вершине стека. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classStack_acd57bc797300d4cbae9ea22368f428eb}{top}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает константную ссылку на элемент на вершине стека. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classStack_a4447f5eba0e8a0eae097aa3f471788f3}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее количество элементов. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStack_a01e885dfcc4ee3282ce581e178354310}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, пуст ли стек. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_a0992f5d5b74abd9c717e108ecd6dbb9c}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Полностью очищает стек. Удаляет все узлы. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_adf50f058313f2b2885a8ca8e2bcccf59}{print}} () const
+\begin{DoxyCompactList}\small\item\em Выводит содержимое стека в консоль (от вершины к дну). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_a307ee1d95dc1e4f6d8341a5ffc862df1}{serialize}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Универсальная сериализация. По умолчанию вызывает бинарную сериализацию. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_a57cfdd1660ad22dea4b07147653ed1f5}{deserialize}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Универсальная десериализация. По умолчанию вызывает бинарную десериализацию. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_a4118142a5a9902b949ad0c25ad469d04}{serialize\+Binary}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Бинарная сериализация. Сохраняет элементы в порядке, позволяющем восстановить стек (от дна к вершине). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_acdbe375224a9c4bbff97460ee627b84f}{deserialize\+Binary}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Бинарная десериализация. Восстанавливает стек из бинарного формата. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_a8a99e2d5e9a1459a978be907f0078c58}{serialize\+Text}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Текстовая сериализация. Сохраняет элементы через пробел. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_a84257c93b106d75db1fcb26a33524a1d}{deserialize\+Text}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Текстовая десериализация. Считывает элементы из текстового потока. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structStack_1_1Node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classStack_adba0b21bb92c035dcff3dd48d9242984}{top\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em Указатель на верхний элемент стека \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classStack_ad0ed9652e70553140504ad6c43c47c46}{size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Stack$<$ T $>$}
+Шаблонный класс Стека (\doxylink{classStack}{Stack}). 
+
+Реализует структуру данных LIFO (Last In, First Out) на основе односвязного списка. Элементы добавляются на "{}вершину"{} и извлекаются с "{}вершины"{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Тип хранимых данных. Должен иметь конструктор по умолчанию (для внутренних операций копирования). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStack_aefee698059467258bbd79045aca62a63}\label{classStack_aefee698059467258bbd79045aca62a63} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\mbox{\hyperlink{classStack}{\+::\+Stack}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию. Создает пустой стек. 
+
+\Hypertarget{classStack_a84ed303fcc02f090d439722515c341e6}\label{classStack_a84ed303fcc02f090d439722515c341e6} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\mbox{\hyperlink{classStack}{\+::\+Stack}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Конструктор копирования. Создает глубокую копию стека, сохраняя исходный порядок элементов. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Стек для копирования. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{classStack_a84ed303fcc02f090d439722515c341e6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStack_a9e7a00875aefbdac560ab189b7bc61d1}\label{classStack_a9e7a00875aefbdac560ab189b7bc61d1} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!````~Stack@{\texorpdfstring{$\sim$}{\string~}Stack}}
+\index{````~Stack@{\texorpdfstring{$\sim$}{\string~}Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Stack()}{\string~Stack()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classStack}{Stack}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. Освобождает память. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStack_a0992f5d5b74abd9c717e108ecd6dbb9c}\label{classStack_a0992f5d5b74abd9c717e108ecd6dbb9c} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Полностью очищает стек. Удаляет все узлы. 
+
+\Hypertarget{classStack_a57cfdd1660ad22dea4b07147653ed1f5}\label{classStack_a57cfdd1660ad22dea4b07147653ed1f5} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::deserialize (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Универсальная десериализация. По умолчанию вызывает бинарную десериализацию. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classStack_a57cfdd1660ad22dea4b07147653ed1f5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStack_acdbe375224a9c4bbff97460ee627b84f}\label{classStack_acdbe375224a9c4bbff97460ee627b84f} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!deserializeBinary@{deserializeBinary}}
+\index{deserializeBinary@{deserializeBinary}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeBinary()}{deserializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::deserialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Бинарная десериализация. Восстанавливает стек из бинарного формата. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStack_a84257c93b106d75db1fcb26a33524a1d}\label{classStack_a84257c93b106d75db1fcb26a33524a1d} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!deserializeText@{deserializeText}}
+\index{deserializeText@{deserializeText}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeText()}{deserializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::deserialize\+Text (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Текстовая десериализация. Считывает элементы из текстового потока. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStack_a4447f5eba0e8a0eae097aa3f471788f3}\label{classStack_a4447f5eba0e8a0eae097aa3f471788f3} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущее количество элементов. 
+
+\begin{DoxyReturn}{Returns}
+Размер стека. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStack_a4447f5eba0e8a0eae097aa3f471788f3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStack_a01e885dfcc4ee3282ce581e178354310}\label{classStack_a01e885dfcc4ee3282ce581e178354310} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, пуст ли стек. 
+
+\begin{DoxyReturn}{Returns}
+true, если элементов нет, иначе false. 
+\end{DoxyReturn}
+\Hypertarget{classStack_ae97cf63b6401d8af940644fa735d9412}\label{classStack_ae97cf63b6401d8af940644fa735d9412} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classStack}{Stack}}$<$ T $>$ \& \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Оператор присваивания. Обеспечивает строгую гарантию безопасности исключений. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Стек, содержимое которого присваивается. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{classStack_a2723aec5c7e2611b97fcffeb7709de33}\label{classStack_a2723aec5c7e2611b97fcffeb7709de33} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!pop@{pop}}
+\index{pop@{pop}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Удаляет элемент с вершины стека (pop). 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если стек пуст. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStack_a2723aec5c7e2611b97fcffeb7709de33_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStack_adf50f058313f2b2885a8ca8e2bcccf59}\label{classStack_adf50f058313f2b2885a8ca8e2bcccf59} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!print@{print}}
+\index{print@{print}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Выводит содержимое стека в консоль (от вершины к дну). 
+
+\Hypertarget{classStack_a3454655ab059b315d9ef24d074734f01}\label{classStack_a3454655ab059b315d9ef24d074734f01} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!push@{push}}
+\index{push@{push}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Помещает элемент на вершину стека (push). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Значение для вставки. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStack_a3454655ab059b315d9ef24d074734f01_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStack_a307ee1d95dc1e4f6d8341a5ffc862df1}\label{classStack_a307ee1d95dc1e4f6d8341a5ffc862df1} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::serialize (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Универсальная сериализация. По умолчанию вызывает бинарную сериализацию. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classStack_a307ee1d95dc1e4f6d8341a5ffc862df1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStack_a4118142a5a9902b949ad0c25ad469d04}\label{classStack_a4118142a5a9902b949ad0c25ad469d04} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!serializeBinary@{serializeBinary}}
+\index{serializeBinary@{serializeBinary}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeBinary()}{serializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::serialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Бинарная сериализация. Сохраняет элементы в порядке, позволяющем восстановить стек (от дна к вершине). 
+
+\begin{DoxyNote}{Note}
+Корректно работает только с тривиально копируемыми типами (POD). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStack_a8a99e2d5e9a1459a978be907f0078c58}\label{classStack_a8a99e2d5e9a1459a978be907f0078c58} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!serializeText@{serializeText}}
+\index{serializeText@{serializeText}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeText()}{serializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::serialize\+Text (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Текстовая сериализация. Сохраняет элементы через пробел. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStack_a8e99bab8b8f969fe5e029934ac14408a}\label{classStack_a8e99bab8b8f969fe5e029934ac14408a} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!top@{top}}
+\index{top@{top}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает ссылку на элемент на вершине стека. 
+
+\begin{DoxyReturn}{Returns}
+Ссылка на верхний элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если стек пуст. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStack_a8e99bab8b8f969fe5e029934ac14408a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStack_acd57bc797300d4cbae9ea22368f428eb}\label{classStack_acd57bc797300d4cbae9ea22368f428eb} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!top@{top}}
+\index{top@{top}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает константную ссылку на элемент на вершине стека. 
+
+\begin{DoxyReturn}{Returns}
+Константная ссылка на верхний элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если стек пуст. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classStack_ad0ed9652e70553140504ad6c43c47c46}\label{classStack_ad0ed9652e70553140504ad6c43c47c46} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!size@{size}}
+\index{size@{size}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classStack_adba0b21bb92c035dcff3dd48d9242984}\label{classStack_adba0b21bb92c035dcff3dd48d9242984} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!top\_node@{top\_node}}
+\index{top\_node@{top\_node}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{top\_node}{top\_node}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structStack_1_1Node}{Node}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::top\+\_\+node\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на верхний элемент стека 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Stack_8h}{Stack.\+h}}\end{DoxyCompactItemize}

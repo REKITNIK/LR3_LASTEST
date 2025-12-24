@@ -1,0 +1,9 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,60,80"/>
+<area shape="rect" id="Node000002" href="$classStack.html#a4447f5eba0e8a0eae097aa3f471788f3" title="Возвращает текущее количество элементов." alt="" coords="108,5,223,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,55,117,33,118,38,61,60"/>
+<area shape="rect" id="Node000003" href="$classStack.html#a3454655ab059b315d9ef24d074734f01" title="Помещает элемент на вершину стека (push)." alt="" coords="117,55,214,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,65,103,65,103,70,60,70"/>
+<area shape="rect" id="Node000004" href="$classStack.html#a8e99bab8b8f969fe5e029934ac14408a" title="Возвращает ссылку на элемент на вершине стека." alt="" coords="122,104,209,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="61,75,118,97,117,102,59,80"/>
+</map>

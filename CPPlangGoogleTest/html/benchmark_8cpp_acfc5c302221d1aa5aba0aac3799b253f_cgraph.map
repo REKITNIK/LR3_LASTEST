@@ -1,0 +1,25 @@
+<map id="benchmark_full_binary_tree" name="benchmark_full_binary_tree">
+<area shape="rect" id="Node000001" title="Тестирование производительности полного бинарного дерева (FullBinaryTree)." alt="" coords="5,228,209,253"/>
+<area shape="rect" id="Node000002" href="$classFullBinaryTree.html#a3f6b24ac9a399db225f4251166d3d8df" title="Ищет значение в дереве." alt="" coords="297,5,443,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,227,130,189,161,138,203,85,228,60,256,40,282,27,284,32,259,44,232,65,207,88,166,141,135,192,117,229"/>
+<area shape="rect" id="Node000003" href="$classFullBinaryTree.html#aec51f1cc7085c2fea0368a7eb50a11fe" title="Возвращает текущее количество узлов." alt="" coords="285,55,455,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,226,169,160,209,121,256,89,270,82,272,87,259,94,213,125,173,164,119,230"/>
+<area shape="rect" id="Node000004" href="$classFullBinaryTree.html#a7e8c5f7034a2246a2e89d58236589679" title="Вставляет значение в дерево. Алгоритм ищет первый свободный лист (в порядке обхода в ширину) и добавл..." alt="" coords="291,104,449,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="122,226,178,183,216,159,256,138,277,131,279,136,258,143,219,163,182,187,125,230"/>
+<area shape="rect" id="Node000005" href="$classFullBinaryTree.html#a1654d58fe495a41954ed12a2019e423a" title="Проверяет корректность структуры полного бинарного дерева." alt="" coords="257,153,483,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="142,225,257,187,290,179,291,184,258,193,143,230"/>
+<area shape="rect" id="Node000006" href="$benchmark_8cpp.html#a2a10ff76e86dd41833b8c23edf05af74" title="Выводит заголовок секции бенчмарка в консоль и файл." alt="" coords="318,203,422,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="209,228,304,219,305,224,210,233"/>
+<area shape="rect" id="Node000007" href="$benchmark_8cpp.html#a65c1528308af9504cc4afd5122df9285" title="Глобальный поток вывода в файл. Инициализируется при запуске программы." alt="" coords="531,253,620,279"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="210,244,517,260,517,266,209,249"/>
+<area shape="rect" id="Node000008" href="$benchmark_8cpp.html#a3ad66a01888bf14fee4e70b41f031a92" title="Форматированно выводит результаты теста в консоль и файл." alt="" coords="322,304,418,329"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="152,251,258,282,312,298,311,303,257,287,151,256"/>
+<area shape="rect" id="Node000009" href="$classFullBinaryTree.html#aca496e711fc6a66705f6312149df9d2c" title="Удаляет значение из дерева. Если удаляемый узел — лист, удаляется также его &quot;брат&quot;...." alt="" coords="284,353,456,379"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="125,251,182,294,219,318,258,338,283,347,281,352,256,343,216,323,179,299,122,256"/>
+<area shape="rect" id="Node000010" href="$classBenchmarkTimer.html#a7c05d8aa12448ca657a52449cd6e592e" title="Запускает или перезапускает таймер." alt="" coords="284,403,456,428"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="119,252,173,318,213,356,259,388,276,396,274,401,256,392,210,360,169,321,115,255"/>
+<area shape="rect" id="Node000011" href="$classBenchmarkTimer.html#a4ff66784d731157d09dbbc0d0a65cfd3" title="Останавливает таймер и возвращает прошедшее время." alt="" coords="285,452,455,477"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="117,252,135,289,166,340,207,393,232,417,259,437,273,445,270,450,256,442,228,421,203,396,161,343,131,292,112,255"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="423,226,518,249,517,254,422,231"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="418,302,516,278,518,283,419,308"/>
+</map>

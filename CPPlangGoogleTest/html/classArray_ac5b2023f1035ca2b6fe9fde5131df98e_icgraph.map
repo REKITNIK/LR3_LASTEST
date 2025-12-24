@@ -1,0 +1,26 @@
+<map id="Array::add" name="Array::add">
+<area shape="rect" id="Node000001" title="Добавляет элемент в конец массива. Если ёмкости недостаточно, происходит перевыделение памяти." alt="" coords="339,228,427,253"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#af2a83c6eb51ba5c3e34b7b09e031b7d2" title="Тестирование производительности динамического массива (Array)." alt="" coords="131,5,267,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="374,215,365,177,348,130,323,84,307,62,289,44,266,31,269,26,292,40,311,59,328,81,353,128,370,175,379,214"/>
+<area shape="rect" id="Node000004" href="$benchmark_8cpp.html#af0c7e15db2d6abbb07fd570b9919e98a" title="Тестирование механизмов сериализации и десериализации." alt="" coords="108,55,291,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="370,216,341,154,318,121,289,93,269,82,272,78,292,89,322,118,345,151,375,214"/>
+<area shape="rect" id="Node000005" href="$tests__oop__gtest_8cpp.html#a0671806bbaf40bb610b0f2fcee6dd274" title=" " alt="" coords="172,104,227,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="363,218,332,179,312,159,289,143,258,129,226,122,228,117,259,124,292,138,315,155,336,175,368,215"/>
+<area shape="rect" id="Node000006" href="$tests__oop__gtest_8cpp.html#a06aeb388ae1ee1e95d3ddd8980757da9" title=" " alt="" coords="172,153,227,179"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="349,223,290,192,226,174,228,169,292,188,352,218"/>
+<area shape="rect" id="Node000007" href="$tests__oop__gtest_8cpp.html#afc4ab9011faf1bfa6ea8d1c8283f0dfd" title=" " alt="" coords="172,203,227,228"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="325,235,227,222,227,216,325,230"/>
+<area shape="rect" id="Node000008" href="$tests__oop__gtest_8cpp.html#a2ce3e8ca2d4cb3f3ec5aeab4738d9912" title=" " alt="" coords="172,252,227,277"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="325,251,227,264,227,259,325,246"/>
+<area shape="rect" id="Node000009" href="$tests__oop__gtest_8cpp.html#ad6fe00e0ad2c81e270d5d90cc78be99b" title=" " alt="" coords="172,301,227,327"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="350,263,292,291,228,311,226,306,290,286,347,258"/>
+<area shape="rect" id="Node000010" href="$tests__oop__gtest_8cpp.html#a9a76b270f496e0fced74951ff4804567" title=" " alt="" coords="172,351,227,376"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="367,266,335,304,292,340,259,355,228,362,226,357,258,350,289,336,331,301,363,263"/>
+<area shape="rect" id="Node000011" href="$tests__oop__gtest_8cpp.html#aa1ad6552024b0ec9dee89f1ff0f058c5" title=" " alt="" coords="172,400,227,425"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="375,268,344,329,321,362,292,390,260,406,228,413,226,408,258,401,289,385,317,358,340,326,370,265"/>
+<area shape="rect" id="Node000012" href="$tests__oop__gtest_8cpp.html#a5034e5934603418e1d2c77c54623d1e7" title=" " alt="" coords="172,449,227,475"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="379,268,369,306,352,352,327,399,292,439,260,456,228,463,226,458,259,451,289,435,323,396,348,350,364,304,374,266"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,31,60,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,33,61,42,60,37,117,28"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="97,55,60,50,61,45,98,50"/>
+</map>

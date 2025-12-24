@@ -1,0 +1,7 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,60,56"/>
+<area shape="rect" id="Node000002" href="$classForwardList.html#a4ff5eebc880e9849b7282d9bc2b6ae67" title="Проверяет наличие значения в списке." alt="" coords="127,5,257,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,36,113,28,114,33,61,42"/>
+<area shape="rect" id="Node000003" href="$classForwardList.html#a735c434c283ebe30faa46794fcd35a04" title="Добавляет элемент в конец списка. Сложность: O(N), так как требуется проход до последнего элемента." alt="" coords="108,55,276,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="61,45,95,50,94,55,60,50"/>
+</map>

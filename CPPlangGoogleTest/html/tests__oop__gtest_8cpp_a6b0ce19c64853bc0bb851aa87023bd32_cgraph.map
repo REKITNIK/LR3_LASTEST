@@ -1,0 +1,11 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,60,105"/>
+<area shape="rect" id="Node000002" href="$classStack.html#a4447f5eba0e8a0eae097aa3f471788f3" title="Возвращает текущее количество элементов." alt="" coords="108,5,223,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="50,77,107,40,117,34,120,39,109,44,52,82"/>
+<area shape="rect" id="Node000003" href="$classStack.html#a2723aec5c7e2611b97fcffeb7709de33" title="Удаляет элемент с вершины стека (pop)." alt="" coords="120,55,211,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,85,106,76,107,81,61,90"/>
+<area shape="rect" id="Node000004" href="$classStack.html#a3454655ab059b315d9ef24d074734f01" title="Помещает элемент на вершину стека (push)." alt="" coords="117,104,214,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="61,95,103,103,102,108,60,100"/>
+<area shape="rect" id="Node000005" href="$classStack.html#a8e99bab8b8f969fe5e029934ac14408a" title="Возвращает ссылку на элемент на вершине стека." alt="" coords="122,153,209,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="54,103,109,138,122,145,120,150,107,143,51,108"/>
+</map>

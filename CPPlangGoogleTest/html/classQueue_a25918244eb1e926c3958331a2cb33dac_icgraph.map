@@ -1,0 +1,9 @@
+<map id="Queue::dequeue" name="Queue::dequeue">
+<area shape="rect" id="Node000001" title="Удаляет элемент из начала очереди (dequeue)." alt="" coords="299,31,427,56"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#af4c86f76a20755f569e50b1c5d2b6535" title="Тестирование производительности очереди (Queue)." alt="" coords="108,5,251,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="285,35,251,31,252,25,286,30"/>
+<area shape="rect" id="Node000004" href="$tests__oop__gtest_8cpp.html#aa8492eebfc4447598e0531874d655d3e" title=" " alt="" coords="152,55,207,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="286,56,207,66,207,61,285,51"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

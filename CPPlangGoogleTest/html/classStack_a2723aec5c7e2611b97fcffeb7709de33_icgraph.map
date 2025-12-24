@@ -1,0 +1,9 @@
+<map id="Stack::pop" name="Stack::pop">
+<area shape="rect" id="Node000001" title="Удаляет элемент с вершины стека (pop)." alt="" coords="293,31,384,56"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#a1aac222c6e4c4aa57e989adc85f0c397" title="Тестирование производительности стека (Stack)." alt="" coords="108,5,245,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="279,37,245,31,246,26,280,32"/>
+<area shape="rect" id="Node000004" href="$tests__oop__gtest_8cpp.html#a6b0ce19c64853bc0bb851aa87023bd32" title=" " alt="" coords="149,55,204,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="280,55,205,66,204,61,279,49"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

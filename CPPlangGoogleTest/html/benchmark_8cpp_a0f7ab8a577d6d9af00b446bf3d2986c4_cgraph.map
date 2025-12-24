@@ -1,0 +1,24 @@
+<map id="benchmark_forward_list" name="benchmark_forward_list">
+<area shape="rect" id="Node000001" title="Тестирование производительности односвязного списка (ForwardList)." alt="" coords="5,203,184,228"/>
+<area shape="rect" id="Node000002" href="$classForwardList.html#a4ff5eebc880e9849b7282d9bc2b6ae67" title="Проверяет наличие значения в списке." alt="" coords="253,5,383,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,201,118,169,147,125,185,79,230,40,240,34,243,39,234,44,188,83,151,128,123,172,105,204"/>
+<area shape="rect" id="Node000003" href="$classForwardList.html#aef4d867a98cc017739687e2f7a0df6a2" title="Возвращает ссылку на элемент по индексу. Линейный поиск от головы списка." alt="" coords="255,55,381,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,201,155,147,191,116,231,89,244,82,247,87,233,94,194,120,159,151,108,204"/>
+<area shape="rect" id="Node000004" href="$classForwardList.html#a437bf2f19361585506c6599cf2ab6848" title="Возвращает текущее количество элементов." alt="" coords="241,104,395,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="115,200,166,170,231,138,251,131,253,136,233,143,169,174,117,205"/>
+<area shape="rect" id="Node000005" href="$classForwardList.html#adb4ced17af38bb83137cc4739f52ef9f" title="Удаляет первый элемент списка. Сложность: O(1)." alt="" coords="237,153,399,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="152,200,246,179,247,184,153,205"/>
+<area shape="rect" id="Node000006" href="$benchmark_8cpp.html#a2a10ff76e86dd41833b8c23edf05af74" title="Выводит заголовок секции бенчмарка в консоль и файл." alt="" coords="266,203,370,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="184,213,252,213,252,218,184,218"/>
+<area shape="rect" id="Node000008" href="$benchmark_8cpp.html#a3ad66a01888bf14fee4e70b41f031a92" title="Форматированно выводит результаты теста в консоль и файл." alt="" coords="270,252,366,277"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="153,225,257,249,256,254,152,231"/>
+<area shape="rect" id="Node000009" href="$classForwardList.html#ab04509efbd050c6237beecd3485ce45c" title="Добавляет элемент в начало списка. Сложность: O(1)." alt="" coords="233,301,403,327"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="118,226,169,255,233,286,256,295,254,300,231,291,167,260,115,230"/>
+<area shape="rect" id="Node000010" href="$classBenchmarkTimer.html#a7c05d8aa12448ca657a52449cd6e592e" title="Запускает или перезапускает таймер." alt="" coords="232,351,404,376"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="109,226,159,279,194,309,233,336,250,343,247,348,231,340,191,314,155,283,105,230"/>
+<area shape="rect" id="Node000011" href="$classBenchmarkTimer.html#a4ff66784d731157d09dbbc0d0a65cfd3" title="Останавливает таймер и возвращает прошедшее время." alt="" coords="233,400,403,425"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="105,227,123,259,152,302,189,347,234,385,246,392,243,397,230,390,185,350,147,305,119,262,100,230"/>
+<area shape="rect" id="Node000007" href="$benchmark_8cpp.html#a65c1528308af9504cc4afd5122df9285" title="Глобальный поток вывода в файл. Инициализируется при запуске программы." alt="" coords="452,228,541,253"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="371,220,439,230,438,235,370,225"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="366,256,438,246,439,251,366,261"/>
+</map>

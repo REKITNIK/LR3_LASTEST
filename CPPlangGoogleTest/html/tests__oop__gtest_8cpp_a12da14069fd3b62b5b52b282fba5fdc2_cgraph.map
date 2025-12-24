@@ -1,0 +1,7 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,60,56"/>
+<area shape="rect" id="Node000002" href="$classDoubleList.html#a1218078c499df15767a2be3c2329d3cd" title="Возвращает ссылку на элемент по индексу. Оптимизирован: выбирает направление перебора (от начала или ..." alt="" coords="129,5,249,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,36,115,27,116,33,61,42"/>
+<area shape="rect" id="Node000003" href="$classDoubleList.html#a0120f6c04110c280165197693f895d3f" title="Добавляет элемент в конец списка. Сложность: O(1)." alt="" coords="108,55,271,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="61,45,95,50,94,55,60,50"/>
+</map>

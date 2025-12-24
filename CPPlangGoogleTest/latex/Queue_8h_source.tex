@@ -1,0 +1,248 @@
+\doxysection{Queue.\+h}
+\hypertarget{Queue_8h_source}{}\label{Queue_8h_source}\mbox{\hyperlink{Queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}\ \ \textcolor{comment}{//\ Явно\ включено\ для\ поддержки\ std::string}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <utility>}\ \textcolor{comment}{//\ Для\ std::swap}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQueue}{Queue}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structQueue_1_1Node}{Node}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{structQueue_1_1Node_a829a6e3913781978a86848efd6e2b9bb}{data}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node}{Node}}*\ \mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node_a2cec5865579bd7b43f878c1eb4939c65}{Node}}(\textcolor{keyword}{const}\ T\&\ value)\ :\ \mbox{\hyperlink{structQueue_1_1Node_a829a6e3913781978a86848efd6e2b9bb}{data}}(value),\ \mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}}(nullptr)\ \{\}}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node}{Node}}*\ \mbox{\hyperlink{classQueue_ab19b627930ab2f2edae749bc870a9f64}{front\_node}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node}{Node}}*\ \mbox{\hyperlink{classQueue_a88d25b953295bd4923ec09afcb0b08eb}{back\_node}};\ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classQueue_ac200b8623f444bfa320836811f83f03a}{size}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classQueue_af73bb29c868f7b37f369c668f114bd9f}{Queue}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classQueue_af73bb29c868f7b37f369c668f114bd9f}{Queue}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQueue}{Queue}}\&\ other);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{classQueue}{Queue}}\&\ \mbox{\hyperlink{classQueue_ac0d0636575a2ac8ba8e9a7e4589ac075}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQueue}{Queue}}\&\ other);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classQueue_aa7eef1b427e24555780505de20e9acbc}{\string~Queue}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a528a3209c79384eac2afbdf6aa6eaf51}{enqueue}}(\textcolor{keyword}{const}\ T\&\ element);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a25918244eb1e926c3958331a2cb33dac}{dequeue}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ T\&\ \mbox{\hyperlink{classQueue_ae725ac8696b74e70f24a0f372314e220}{front}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classQueue_ae725ac8696b74e70f24a0f372314e220}{front}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ T\&\ \mbox{\hyperlink{classQueue_ab7283c5c4968ff966a1aacc4c131d64f}{back}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classQueue_ab7283c5c4968ff966a1aacc4c131d64f}{back}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classQueue_a50ca34ace10ec07e61a849a2c6da4d18}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQueue_a225f5d08888ea72a4dfe73f235761e5d}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_acb12e3d108397a77e412d43cdd0b2836}{clear}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a3ebc93d6f3dfdb6e866ce47dcf5560b4}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a040f8ac478b7fda3717652fc5e814106}{serialize}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a1bab4df76141781dd76bead18485b58b}{deserialize}}(std::istream\&\ in);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a9896f9fa62d9b265573498626d238ea6}{serializeBinary}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a424d92ada522e7d712010e882e5b2cf4}{deserializeBinary}}(std::istream\&\ in);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_ad91a2741646a2b370b077bb567c34f8f}{serializeText}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_aa238cf6bba18150cf4d8ecaa75a320b6}{deserializeText}}(std::istream\&\ in);}
+\DoxyCodeLine{00159\ \};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00162\ \mbox{\hyperlink{classQueue_af73bb29c868f7b37f369c668f114bd9f}{Queue<T>::Queue}}()\ :\ front\_node(nullptr),\ back\_node(nullptr),\ size(0)\ \{\}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00165\ \mbox{\hyperlink{classQueue_af73bb29c868f7b37f369c668f114bd9f}{Queue<T>::Queue}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQueue}{Queue}}\&\ other)\ :\ front\_node(nullptr),\ back\_node(nullptr),\ size(0)\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node}{Node}}*\ current\ =\ other.\mbox{\hyperlink{classQueue_ab19b627930ab2f2edae749bc870a9f64}{front\_node}};}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classQueue_a528a3209c79384eac2afbdf6aa6eaf51}{enqueue}}(current-\/>\mbox{\hyperlink{structQueue_1_1Node_a829a6e3913781978a86848efd6e2b9bb}{data}});}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}};}
+\DoxyCodeLine{00170\ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00174\ \mbox{\hyperlink{classQueue}{Queue<T>}}\&\ \mbox{\hyperlink{classQueue_ac0d0636575a2ac8ba8e9a7e4589ac075}{Queue<T>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQueue}{Queue}}\&\ other)\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Использование\ идиомы\ Copy-\/and-\/Swap.}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 1.\ Создаем\ временную\ копию.\ Если\ вылетит\ исключение,\ 'this'\ не\ пострадает.}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classQueue}{Queue<T>}}\ temp(other);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 2.\ Меняем\ внутреннее\ состояние\ текущего\ объекта\ и\ временного.}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ std::swap(front\_node,\ temp.\mbox{\hyperlink{classQueue_ab19b627930ab2f2edae749bc870a9f64}{front\_node}});}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ std::swap(back\_node,\ temp.\mbox{\hyperlink{classQueue_a88d25b953295bd4923ec09afcb0b08eb}{back\_node}});}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ std::swap(size,\ temp.\mbox{\hyperlink{classQueue_ac200b8623f444bfa320836811f83f03a}{size}});}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3.\ temp\ удалится\ автоматически\ вместе\ со\ старыми\ данными\ 'this'.}}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00188\ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00191\ \mbox{\hyperlink{classQueue_aa7eef1b427e24555780505de20e9acbc}{Queue<T>::\string~Queue}}()\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ clear();}
+\DoxyCodeLine{00193\ \}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00196\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a528a3209c79384eac2afbdf6aa6eaf51}{Queue<T>::enqueue}}(\textcolor{keyword}{const}\ T\&\ element)\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structQueue_1_1Node}{Node}}(element);}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordflow}{if}\ (!back\_node)\ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ front\_node\ =\ back\_node\ =\ newNode;}
+\DoxyCodeLine{00200\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ back\_node-\/>\mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}}\ =\ newNode;}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ back\_node\ =\ newNode;}
+\DoxyCodeLine{00203\ \ \ \ \ \}}
+\DoxyCodeLine{00204\ \ \ \ \ ++size;}
+\DoxyCodeLine{00205\ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00208\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a25918244eb1e926c3958331a2cb33dac}{Queue<T>::dequeue}}()\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{if}\ (!front\_node)\ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Queue\ is\ empty"{}});}
+\DoxyCodeLine{00211\ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node}{Node}}*\ temp\ =\ front\_node;}
+\DoxyCodeLine{00213\ \ \ \ \ front\_node\ =\ front\_node-\/>\mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}};}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{if}\ (!front\_node)\ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ back\_node\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00216\ \ \ \ \ \}}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00218\ \ \ \ \ -\/-\/size;}
+\DoxyCodeLine{00219\ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00222\ T\&\ \mbox{\hyperlink{classQueue_ae725ac8696b74e70f24a0f372314e220}{Queue<T>::front}}()\ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordflow}{if}\ (!front\_node)\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Queue\ is\ empty"{}});}
+\DoxyCodeLine{00225\ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{return}\ front\_node-\/>data;}
+\DoxyCodeLine{00227\ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00230\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classQueue_ae725ac8696b74e70f24a0f372314e220}{Queue<T>::front}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordflow}{if}\ (!front\_node)\ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Queue\ is\ empty"{}});}
+\DoxyCodeLine{00233\ \ \ \ \ \}}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordflow}{return}\ front\_node-\/>data;}
+\DoxyCodeLine{00235\ \}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00238\ T\&\ \mbox{\hyperlink{classQueue_ab7283c5c4968ff966a1aacc4c131d64f}{Queue<T>::back}}()\ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordflow}{if}\ (!back\_node)\ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Queue\ is\ empty"{}});}
+\DoxyCodeLine{00241\ \ \ \ \ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordflow}{return}\ back\_node-\/>data;}
+\DoxyCodeLine{00243\ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00246\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classQueue_ab7283c5c4968ff966a1aacc4c131d64f}{Queue<T>::back}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordflow}{if}\ (!back\_node)\ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Queue\ is\ empty"{}});}
+\DoxyCodeLine{00249\ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordflow}{return}\ back\_node-\/>data;}
+\DoxyCodeLine{00251\ \}}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00254\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classQueue_a50ca34ace10ec07e61a849a2c6da4d18}{Queue<T>::getSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{00256\ \}}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00259\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQueue_a225f5d08888ea72a4dfe73f235761e5d}{Queue<T>::isEmpty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordflow}{return}\ size\ ==\ 0;}
+\DoxyCodeLine{00261\ \}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00264\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_acb12e3d108397a77e412d43cdd0b2836}{Queue<T>::clear}}()\ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordflow}{while}\ (front\_node)\ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node}{Node}}*\ temp\ =\ front\_node;}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ front\_node\ =\ front\_node-\/>\mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}};}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00269\ \ \ \ \ \}}
+\DoxyCodeLine{00270\ \ \ \ \ back\_node\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00271\ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{00272\ \}}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00275\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a3ebc93d6f3dfdb6e866ce47dcf5560b4}{Queue<T>::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00276\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Front\ -\/>\ ["{}};}
+\DoxyCodeLine{00277\ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node}{Node}}*\ current\ =\ front\_node;}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ std::cout\ <<\ current-\/>\mbox{\hyperlink{structQueue_1_1Node_a829a6e3913781978a86848efd6e2b9bb}{data}};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}})\ std::cout\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}};}
+\DoxyCodeLine{00282\ \ \ \ \ \}}
+\DoxyCodeLine{00283\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]\ <-\/\ Back"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00284\ \}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00287\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a040f8ac478b7fda3717652fc5e814106}{Queue<T>::serialize}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00288\ \ \ \ \ serializeBinary(out);}
+\DoxyCodeLine{00289\ \}}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00292\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a1bab4df76141781dd76bead18485b58b}{Queue<T>::deserialize}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00293\ \ \ \ \ deserializeBinary(in);}
+\DoxyCodeLine{00294\ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \textcolor{comment}{//\ Важно:\ бинарная\ сериализация\ корректна\ только\ для\ тривиально\ копируемых\ типов}}
+\DoxyCodeLine{00297\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00298\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a9896f9fa62d9b265573498626d238ea6}{Queue<T>::serializeBinary}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00299\ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&size),\ \textcolor{keyword}{sizeof}(size));}
+\DoxyCodeLine{00300\ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node}{Node}}*\ current\ =\ front\_node;}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&current-\/>\mbox{\hyperlink{structQueue_1_1Node_a829a6e3913781978a86848efd6e2b9bb}{data}}),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}};}
+\DoxyCodeLine{00304\ \ \ \ \ \}}
+\DoxyCodeLine{00305\ \}}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \textcolor{comment}{//\ Важно:\ бинарная\ десериализация\ корректна\ только\ для\ тривиально\ копируемых\ типов}}
+\DoxyCodeLine{00308\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00309\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a424d92ada522e7d712010e882e5b2cf4}{Queue<T>::deserializeBinary}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00310\ \ \ \ \ clear();}
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size;}
+\DoxyCodeLine{00312\ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&new\_size),\ \textcolor{keyword}{sizeof}(new\_size));}
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ new\_size;\ ++i)\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ T\ value;}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&value),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ enqueue(value);}
+\DoxyCodeLine{00317\ \ \ \ \ \}}
+\DoxyCodeLine{00318\ \}}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00321\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_ad91a2741646a2b370b077bb567c34f8f}{Queue<T>::serializeText}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00322\ \ \ \ \ out\ <<\ size\ <<\ std::endl;}
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{structQueue_1_1Node}{Node}}*\ current\ =\ front\_node;}
+\DoxyCodeLine{00324\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ out\ <<\ current-\/>\mbox{\hyperlink{structQueue_1_1Node_a829a6e3913781978a86848efd6e2b9bb}{data}};}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}})\ out\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structQueue_1_1Node_a8a9c12657134d42f986fa637a7ba84f3}{next}};}
+\DoxyCodeLine{00328\ \ \ \ \ \}}
+\DoxyCodeLine{00329\ \ \ \ \ out\ <<\ std::endl;}
+\DoxyCodeLine{00330\ \}}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00332\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00333\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_aa238cf6bba18150cf4d8ecaa75a320b6}{Queue<T>::deserializeText}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00334\ \ \ \ \ clear();}
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size;}
+\DoxyCodeLine{00336\ \ \ \ \ in\ >>\ new\_size;}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ new\_size;\ ++i)\ \{}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ T\ value;}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ in\ >>\ value;}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ enqueue(value);}
+\DoxyCodeLine{00341\ \ \ \ \ \}}
+\DoxyCodeLine{00342\ \}}
+
+\end{DoxyCode}

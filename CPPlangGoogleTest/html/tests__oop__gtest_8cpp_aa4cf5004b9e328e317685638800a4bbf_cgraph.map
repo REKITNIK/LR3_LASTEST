@@ -1,0 +1,9 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,60,80"/>
+<area shape="rect" id="Node000002" href="$classHashTable.html#a6793afcbf7247e7ccfb7bc3e4c21d116" title="Получает доступ к значению по ключу (для чтения и записи)." alt="" coords="121,5,240,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,56,107,39,128,33,129,38,109,45,61,61"/>
+<area shape="rect" id="Node000003" href="$classHashTable.html#a274d09a6cd9ae51f693c23109706bbdd" title="Возвращает текущее количество элементов." alt="" coords="108,55,253,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,65,94,65,94,70,60,70"/>
+<area shape="rect" id="Node000004" href="$classHashTable.html#af52ef1459bd66438145bee59ac4f25ac" title="Вставляет или обновляет пару ключ&#45;значение. Если ключ уже существует, его значение обновляется...." alt="" coords="113,104,248,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="61,74,129,97,128,102,59,79"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,60,105"/>
+<area shape="rect" id="Node000002" href="$classQueue.html#acb12e3d108397a77e412d43cdd0b2836" title="Полностью очищает очередь. Удаляет все узлы и сбрасывает указатели." alt="" coords="120,5,224,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,78,107,40,119,34,121,38,109,44,52,82"/>
+<area shape="rect" id="Node000003" href="$classQueue.html#a528a3209c79384eac2afbdf6aa6eaf51" title="Добавляет элемент в конец очереди (enqueue)." alt="" coords="108,55,236,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,85,94,79,95,84,61,90"/>
+<area shape="rect" id="Node000004" href="$classQueue.html#ae725ac8696b74e70f24a0f372314e220" title="Возвращает ссылку на первый элемент очереди." alt="" coords="121,104,223,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="61,95,108,103,107,108,60,100"/>
+<area shape="rect" id="Node000005" href="$classQueue.html#a225f5d08888ea72a4dfe73f235761e5d" title="Проверяет, пуста ли очередь." alt="" coords="109,153,235,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="53,103,109,138,124,145,122,150,107,143,50,108"/>
+</map>

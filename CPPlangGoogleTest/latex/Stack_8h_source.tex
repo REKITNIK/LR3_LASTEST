@@ -1,0 +1,254 @@
+\doxysection{Stack.\+h}
+\hypertarget{Stack_8h_source}{}\label{Stack_8h_source}\mbox{\hyperlink{Stack_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}\ \ \textcolor{comment}{//\ Явно\ включено\ для\ поддержки\ std::string}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <utility>}\ \textcolor{comment}{//\ Для\ std::swap}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStack}{Stack}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structStack_1_1Node}{Node}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{structStack_1_1Node_a82acf1dda8928147863485b92550d8bd}{data}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStack_1_1Node}{Node}}*\ \mbox{\hyperlink{structStack_1_1Node_a5c729c2c9161711a6cd1ced0dbbe2296}{next}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStack_1_1Node_aa160b75193256a11297618244124354f}{Node}}(\textcolor{keyword}{const}\ T\&\ value)\ :\ \mbox{\hyperlink{structStack_1_1Node_a82acf1dda8928147863485b92550d8bd}{data}}(value),\ \mbox{\hyperlink{structStack_1_1Node_a5c729c2c9161711a6cd1ced0dbbe2296}{next}}(nullptr)\ \{\}}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structStack_1_1Node}{Node}}*\ \mbox{\hyperlink{classStack_adba0b21bb92c035dcff3dd48d9242984}{top\_node}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classStack_ad0ed9652e70553140504ad6c43c47c46}{size}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStack}{Stack}}\&\ other);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classStack}{Stack}}\&\ \mbox{\hyperlink{classStack_ae97cf63b6401d8af940644fa735d9412}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStack}{Stack}}\&\ other);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{classStack_a9e7a00875aefbdac560ab189b7bc61d1}{\string~Stack}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a3454655ab059b315d9ef24d074734f01}{push}}(\textcolor{keyword}{const}\ T\&\ element);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a2723aec5c7e2611b97fcffeb7709de33}{pop}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ T\&\ \mbox{\hyperlink{classStack_a8e99bab8b8f969fe5e029934ac14408a}{top}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classStack_a8e99bab8b8f969fe5e029934ac14408a}{top}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classStack_a4447f5eba0e8a0eae097aa3f471788f3}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classStack_a01e885dfcc4ee3282ce581e178354310}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a0992f5d5b74abd9c717e108ecd6dbb9c}{clear}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_adf50f058313f2b2885a8ca8e2bcccf59}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a307ee1d95dc1e4f6d8341a5ffc862df1}{serialize}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a57cfdd1660ad22dea4b07147653ed1f5}{deserialize}}(std::istream\&\ in);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a4118142a5a9902b949ad0c25ad469d04}{serializeBinary}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_acdbe375224a9c4bbff97460ee627b84f}{deserializeBinary}}(std::istream\&\ in);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a8a99e2d5e9a1459a978be907f0078c58}{serializeText}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a84257c93b106d75db1fcb26a33524a1d}{deserializeText}}(std::istream\&\ in);}
+\DoxyCodeLine{00144\ \};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00147\ \mbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack<T>::Stack}}()\ :\ top\_node(nullptr),\ size(0)\ \{\}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00150\ \mbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack<T>::Stack}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStack}{Stack}}\&\ other)\ :\ top\_node(nullptr),\ size(0)\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordflow}{if}\ (other.\mbox{\hyperlink{classStack_adba0b21bb92c035dcff3dd48d9242984}{top\_node}})\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Создаем\ временный\ массив\ для\ инвертирования\ порядка\ элементов.}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Это\ необходимо,\ так\ как\ push\ добавляет\ в\ начало\ списка.}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Чтобы\ копия\ соответствовала\ оригиналу\ (Top\ -\/>\ Bottom),\ нужно\ вставлять\ элементы,\ начиная\ с\ самого\ нижнего.}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ T*\ temp\ =\ \textcolor{keyword}{new}\ T[other.\mbox{\hyperlink{classStack_ad0ed9652e70553140504ad6c43c47c46}{size}}];}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStack_1_1Node}{Node}}*\ current\ =\ other.\mbox{\hyperlink{classStack_adba0b21bb92c035dcff3dd48d9242984}{top\_node}};}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ other.\mbox{\hyperlink{classStack_ad0ed9652e70553140504ad6c43c47c46}{size}};}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ temp[-\/-\/index]\ =\ current-\/>\mbox{\hyperlink{structStack_1_1Node_a82acf1dda8928147863485b92550d8bd}{data}};}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structStack_1_1Node_a5c729c2c9161711a6cd1ced0dbbe2296}{next}};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Вставляем\ элементы\ в\ правильном\ порядке}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ other.\mbox{\hyperlink{classStack_ad0ed9652e70553140504ad6c43c47c46}{size}};\ ++i)\ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStack_a3454655ab059b315d9ef24d074734f01}{push}}(temp[i]);}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ temp;}
+\DoxyCodeLine{00168\ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00172\ \mbox{\hyperlink{classStack}{Stack<T>}}\&\ \mbox{\hyperlink{classStack_ae97cf63b6401d8af940644fa735d9412}{Stack<T>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStack}{Stack}}\&\ other)\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Идиома\ Copy-\/and-\/Swap.}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 1.\ Создаем\ копию\ через\ конструктор\ копирования.}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Если\ здесь\ произойдет\ исключение\ (например,\ нехватка\ памяти\ при\ new\ T[]),}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ текущий\ объект\ останется\ нетронутым.}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStack}{Stack<T>}}\ temp(other);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 2.\ Обмениваем\ ресурсы.}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ std::swap(top\_node,\ temp.\mbox{\hyperlink{classStack_adba0b21bb92c035dcff3dd48d9242984}{top\_node}});}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ std::swap(size,\ temp.\mbox{\hyperlink{classStack_ad0ed9652e70553140504ad6c43c47c46}{size}});}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3.\ Деструктор\ temp\ очистит\ старую\ память.}}
+\DoxyCodeLine{00185\ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00187\ \}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00190\ \mbox{\hyperlink{classStack_a9e7a00875aefbdac560ab189b7bc61d1}{Stack<T>::\string~Stack}}()\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ clear();}
+\DoxyCodeLine{00192\ \}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00195\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a3454655ab059b315d9ef24d074734f01}{Stack<T>::push}}(\textcolor{keyword}{const}\ T\&\ element)\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{structStack_1_1Node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structStack_1_1Node}{Node}}(element);}
+\DoxyCodeLine{00197\ \ \ \ \ newNode-\/>\mbox{\hyperlink{structStack_1_1Node_a5c729c2c9161711a6cd1ced0dbbe2296}{next}}\ =\ top\_node;}
+\DoxyCodeLine{00198\ \ \ \ \ top\_node\ =\ newNode;}
+\DoxyCodeLine{00199\ \ \ \ \ ++size;}
+\DoxyCodeLine{00200\ \}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00203\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a2723aec5c7e2611b97fcffeb7709de33}{Stack<T>::pop}}()\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordflow}{if}\ (!top\_node)\ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Stack\ is\ empty"{}});}
+\DoxyCodeLine{00206\ \ \ \ \ \}}
+\DoxyCodeLine{00207\ \ \ \ \ \mbox{\hyperlink{structStack_1_1Node}{Node}}*\ temp\ =\ top\_node;}
+\DoxyCodeLine{00208\ \ \ \ \ top\_node\ =\ top\_node-\/>\mbox{\hyperlink{structStack_1_1Node_a5c729c2c9161711a6cd1ced0dbbe2296}{next}};}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00210\ \ \ \ \ -\/-\/size;}
+\DoxyCodeLine{00211\ \}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00214\ T\&\ \mbox{\hyperlink{classStack_a8e99bab8b8f969fe5e029934ac14408a}{Stack<T>::top}}()\ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{if}\ (!top\_node)\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Stack\ is\ empty"{}});}
+\DoxyCodeLine{00217\ \ \ \ \ \}}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordflow}{return}\ top\_node-\/>data;}
+\DoxyCodeLine{00219\ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00222\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classStack_a8e99bab8b8f969fe5e029934ac14408a}{Stack<T>::top}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordflow}{if}\ (!top\_node)\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Stack\ is\ empty"{}});}
+\DoxyCodeLine{00225\ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{return}\ top\_node-\/>data;}
+\DoxyCodeLine{00227\ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00230\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classStack_a4447f5eba0e8a0eae097aa3f471788f3}{Stack<T>::getSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{00232\ \}}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00235\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classStack_a01e885dfcc4ee3282ce581e178354310}{Stack<T>::isEmpty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordflow}{return}\ size\ ==\ 0;}
+\DoxyCodeLine{00237\ \}}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00240\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a0992f5d5b74abd9c717e108ecd6dbb9c}{Stack<T>::clear}}()\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordflow}{while}\ (top\_node)\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStack_1_1Node}{Node}}*\ temp\ =\ top\_node;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ top\_node\ =\ top\_node-\/>\mbox{\hyperlink{structStack_1_1Node_a5c729c2c9161711a6cd1ced0dbbe2296}{next}};}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00245\ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{00247\ \}}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00250\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_adf50f058313f2b2885a8ca8e2bcccf59}{Stack<T>::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00251\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Top\ -\/>\ ["{}};}
+\DoxyCodeLine{00252\ \ \ \ \ \mbox{\hyperlink{structStack_1_1Node}{Node}}*\ current\ =\ top\_node;}
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ std::cout\ <<\ current-\/>\mbox{\hyperlink{structStack_1_1Node_a82acf1dda8928147863485b92550d8bd}{data}};}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structStack_1_1Node_a5c729c2c9161711a6cd1ced0dbbe2296}{next}})\ std::cout\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structStack_1_1Node_a5c729c2c9161711a6cd1ced0dbbe2296}{next}};}
+\DoxyCodeLine{00257\ \ \ \ \ \}}
+\DoxyCodeLine{00258\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]\ <-\/\ Bottom"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00259\ \}}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00262\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a307ee1d95dc1e4f6d8341a5ffc862df1}{Stack<T>::serialize}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00263\ \ \ \ \ serializeBinary(out);}
+\DoxyCodeLine{00264\ \}}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00267\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a57cfdd1660ad22dea4b07147653ed1f5}{Stack<T>::deserialize}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ deserializeBinary(in);}
+\DoxyCodeLine{00269\ \}}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00272\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a4118142a5a9902b949ad0c25ad469d04}{Stack<T>::serializeBinary}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00273\ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&size),\ \textcolor{keyword}{sizeof}(size));}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{comment}{//\ Сохраняем\ элементы\ в\ обратном\ порядке\ (от\ дна\ к\ вершине),\ }}
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{comment}{//\ чтобы\ при\ чтении\ (deserialize)\ последовательные\ вызовы\ push\ восстановили\ стек\ корректно.}}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordflow}{if}\ (size\ >\ 0)\ \{}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ T*\ temp\ =\ \textcolor{keyword}{new}\ T[size];}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStack_1_1Node}{Node}}*\ current\ =\ top\_node;}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ size;}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ temp[-\/-\/index]\ =\ current-\/>\mbox{\hyperlink{structStack_1_1Node_a82acf1dda8928147863485b92550d8bd}{data}};}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structStack_1_1Node_a5c729c2c9161711a6cd1ced0dbbe2296}{next}};}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ size;\ ++i)\ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&temp[i]),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ temp;}
+\DoxyCodeLine{00290\ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00294\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_acdbe375224a9c4bbff97460ee627b84f}{Stack<T>::deserializeBinary}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00295\ \ \ \ \ clear();}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size;}
+\DoxyCodeLine{00297\ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&new\_size),\ \textcolor{keyword}{sizeof}(new\_size));}
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ new\_size;\ ++i)\ \{}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ T\ value;}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&value),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ push(value);}
+\DoxyCodeLine{00302\ \ \ \ \ \}}
+\DoxyCodeLine{00303\ \}}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00306\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a8a99e2d5e9a1459a978be907f0078c58}{Stack<T>::serializeText}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00307\ \ \ \ \ out\ <<\ size\ <<\ std::endl;}
+\DoxyCodeLine{00308\ \ \ \ \ }
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{comment}{//\ Сохраняем\ элементы\ в\ обратном\ порядке\ для\ сохранения\ структуры\ стека\ при\ десериализации}}
+\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keywordflow}{if}\ (size\ >\ 0)\ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ T*\ temp\ =\ \textcolor{keyword}{new}\ T[size];}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structStack_1_1Node}{Node}}*\ current\ =\ top\_node;}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ size;}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ temp[-\/-\/index]\ =\ current-\/>\mbox{\hyperlink{structStack_1_1Node_a82acf1dda8928147863485b92550d8bd}{data}};}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structStack_1_1Node_a5c729c2c9161711a6cd1ced0dbbe2296}{next}};}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ size;\ ++i)\ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ out\ <<\ temp[i];}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ size\ -\/\ 1)\ out\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ temp;}
+\DoxyCodeLine{00324\ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ out\ <<\ std::endl;}
+\DoxyCodeLine{00326\ \}}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00329\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStack_a84257c93b106d75db1fcb26a33524a1d}{Stack<T>::deserializeText}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00330\ \ \ \ \ clear();}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size;}
+\DoxyCodeLine{00332\ \ \ \ \ in\ >>\ new\_size;}
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ new\_size;\ ++i)\ \{}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ T\ value;}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ in\ >>\ value;}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ push(value);}
+\DoxyCodeLine{00337\ \ \ \ \ \}}
+\DoxyCodeLine{00338\ \}}
+
+\end{DoxyCode}

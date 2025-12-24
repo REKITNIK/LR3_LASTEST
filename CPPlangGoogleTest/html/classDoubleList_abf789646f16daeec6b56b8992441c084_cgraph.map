@@ -1,0 +1,5 @@
+<map id="DoubleList::DoubleList" name="DoubleList::DoubleList">
+<area shape="rect" id="Node000001" title="Копирующий конструктор. Создает глубокую копию списка." alt="" coords="5,5,173,31"/>
+<area shape="rect" id="Node000002" href="$classDoubleList.html#a0120f6c04110c280165197693f895d3f" title="Добавляет элемент в конец списка. Сложность: O(1)." alt="" coords="221,5,384,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,15,208,15,208,21,174,21"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="print_header" name="print_header">
+<area shape="rect" id="Node000001" title="Выводит заголовок секции бенчмарка в консоль и файл." alt="" coords="5,5,109,31"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#a65c1528308af9504cc4afd5122df9285" title="Глобальный поток вывода в файл. Инициализируется при запуске программы." alt="" coords="157,5,247,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,15,144,15,144,21,110,21"/>
+</map>

@@ -1,0 +1,414 @@
+\doxysection{Hash\+Table.\+h}
+\hypertarget{HashTable_8h_source}{}\label{HashTable_8h_source}\mbox{\hyperlink{HashTable_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}\ \ \textcolor{comment}{//\ Явно\ включено\ для\ поддержки\ std::string}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <utility>}\ \textcolor{comment}{//\ Для\ std::swap}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHashTable}{HashTable}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ K\ \mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ V\ \mbox{\hyperlink{structHashTable_1_1Entry_a12f529d2866dfef8ae3d6a9be8e00888}{value}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ \mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry_a7ed1b7e163581f478674cafa3bfb0ec1}{Entry}}(\textcolor{keyword}{const}\ K\&\ k,\ \textcolor{keyword}{const}\ V\&\ v)\ :\ \mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}}(k),\ \mbox{\hyperlink{structHashTable_1_1Entry_a12f529d2866dfef8ae3d6a9be8e00888}{value}}(v),\ \mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}}(nullptr)\ \{\}}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}**\ \mbox{\hyperlink{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}{buckets}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}{bucket\_count}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHashTable_a383bf09da6787a3f313649609964e320}{size}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{hash}}(\textcolor{keyword}{const}\ K\&\ key)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_ab1d5344e98e93d380fb150ee749bcb1d}{rehash}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classHashTable_ad15e311c5f223b9f767a5e0cd241f727}{HashTable}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classHashTable_ad15e311c5f223b9f767a5e0cd241f727}{HashTable}}(\textcolor{keywordtype}{size\_t}\ initial\_bucket\_count);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classHashTable_ad15e311c5f223b9f767a5e0cd241f727}{HashTable}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classHashTable}{HashTable}}\&\ other);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{classHashTable}{HashTable}}\&\ \mbox{\hyperlink{classHashTable_ab915e13e9564e959011bb4ec41b0de6d}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classHashTable}{HashTable}}\&\ other);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{classHashTable_a35e16fb83fce50ddc3d179a70de9b274}{\string~HashTable}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_af52ef1459bd66438145bee59ac4f25ac}{insert}}(\textcolor{keyword}{const}\ K\&\ key,\ \textcolor{keyword}{const}\ V\&\ value);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a53700bf1dcb17d1a9858f051f371de9f}{remove}}(\textcolor{keyword}{const}\ K\&\ key);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00091\ \ \ \ \ V\&\ \mbox{\hyperlink{classHashTable_a6793afcbf7247e7ccfb7bc3e4c21d116}{get}}(\textcolor{keyword}{const}\ K\&\ key);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{const}\ V\&\ \mbox{\hyperlink{classHashTable_a6793afcbf7247e7ccfb7bc3e4c21d116}{get}}(\textcolor{keyword}{const}\ K\&\ key)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHashTable_a02d65ad219e13bc3adb0ca55c89bc749}{find}}(\textcolor{keyword}{const}\ K\&\ key)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHashTable_a274d09a6cd9ae51f693c23109706bbdd}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHashTable_af85f143ab22558ff9a1baa6283c9b43f}{getBucketCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHashTable_ab27bfe4ba5b0c985ce555d5cb23c7d6b}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a21549f8f2e5da490485807531463e503}{clear}}();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classHashTable_a78c126f1c4e34809cc4961fdb700a065}{loadFactor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a22c44edafb471aea0156e5cbe2f2f5ec}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_afb3a7fb53385c7229c976c6120f1cfd7}{serialize}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a9129023e7811d55152ca87391a6149f3}{deserialize}}(std::istream\&\ in);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a688a91a3692a8298d30e238e43684b2a}{serializeBinary}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a6442c2ba8d54d9f0e9ea969c516b5c29}{deserializeBinary}}(std::istream\&\ in);}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_ad7bce88b1c182194932b6466d4b105e2}{serializeText}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_ad8ae4a7a2f5dafe447cd73435a72daec}{deserializeText}}(std::istream\&\ in);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00196\ \ \ \ \ V\&\ \mbox{\hyperlink{classHashTable_ad2cdf197e53b969772ae77b4bd482d91}{operator[]}}(\textcolor{keyword}{const}\ K\&\ key);}
+\DoxyCodeLine{00197\ \};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00200\ \mbox{\hyperlink{classHashTable_ad15e311c5f223b9f767a5e0cd241f727}{HashTable<K,\ V>::HashTable}}()\ :\ bucket\_count(16),\ size(0)\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \mbox{\hyperlink{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}{buckets}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*[\mbox{\hyperlink{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}{bucket\_count}}];}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}{bucket\_count}};\ ++i)\ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}{buckets}}[i]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
+\DoxyCodeLine{00205\ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00208\ \mbox{\hyperlink{classHashTable_ad15e311c5f223b9f767a5e0cd241f727}{HashTable<K,\ V>::HashTable}}(\textcolor{keywordtype}{size\_t}\ initial\_bucket\_count)}
+\DoxyCodeLine{00209\ \ \ \ \ :\ bucket\_count(initial\_bucket\_count\ >\ 0\ ?\ initial\_bucket\_count\ :\ 16),\ size(0)\ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \mbox{\hyperlink{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}{buckets}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*[\mbox{\hyperlink{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}{bucket\_count}}];}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}{bucket\_count}};\ ++i)\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}{buckets}}[i]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00213\ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00217\ \mbox{\hyperlink{classHashTable_ad15e311c5f223b9f767a5e0cd241f727}{HashTable<K,\ V>::HashTable}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classHashTable}{HashTable}}\&\ other)}
+\DoxyCodeLine{00218\ \ \ \ \ :\ bucket\_count(other.bucket\_count),\ size(0)\ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \mbox{\hyperlink{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}{buckets}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*[\mbox{\hyperlink{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}{bucket\_count}}];}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}{bucket\_count}};\ ++i)\ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}{buckets}}[i]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00222\ \ \ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ other.\mbox{\hyperlink{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}{bucket\_count}};\ ++i)\ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ other.\mbox{\hyperlink{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}{buckets}}[i];}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHashTable_af52ef1459bd66438145bee59ac4f25ac}{insert}}(current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}},\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a12f529d2866dfef8ae3d6a9be8e00888}{value}});}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00230\ \ \ \ \ \}}
+\DoxyCodeLine{00231\ \}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00234\ \mbox{\hyperlink{classHashTable}{HashTable<K,\ V>}}\&\ \mbox{\hyperlink{classHashTable_ab915e13e9564e959011bb4ec41b0de6d}{HashTable<K,\ V>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classHashTable}{HashTable}}\&\ other)\ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Идиома\ Copy-\/and-\/Swap\ для\ гарантии\ безопасности\ исключений.}}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 1.\ Создаем\ временную\ копию.\ Если\ здесь\ произойдет\ исключение\ (bad\_alloc),}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ текущий\ объект\ (this)\ останется\ нетронутым.}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHashTable}{HashTable}}\ temp(other);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 2.\ Меняем\ местами\ внутренние\ ресурсы\ this\ и\ временного\ объекта.}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Операции\ swap\ не\ выбрасывают\ исключений.}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ std::swap(buckets,\ temp.\mbox{\hyperlink{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}{buckets}});}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ std::swap(bucket\_count,\ temp.\mbox{\hyperlink{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}{bucket\_count}});}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ std::swap(size,\ temp.\mbox{\hyperlink{classHashTable_a383bf09da6787a3f313649609964e320}{size}});}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3.\ При\ выходе\ из\ if\ деструктор\ temp\ очистит\ старые\ ресурсы\ (которые\ теперь\ в\ temp).}}
+\DoxyCodeLine{00248\ \ \ \ \ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00250\ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00253\ \mbox{\hyperlink{classHashTable_a35e16fb83fce50ddc3d179a70de9b274}{HashTable<K,\ V>::\string~HashTable}}()\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ clear();}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keyword}{delete}[]\ buckets;}
+\DoxyCodeLine{00256\ \}}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00259\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{HashTable<K,\ V>::hash}}(\textcolor{keyword}{const}\ K\&\ key)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordflow}{return}\ std::hash<K>\{\}(key)\ \%\ bucket\_count;}
+\DoxyCodeLine{00261\ \}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00264\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_ab1d5344e98e93d380fb150ee749bcb1d}{HashTable<K,\ V>::rehash}}()\ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}**\ old\_buckets\ =\ buckets;}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ old\_bucket\_count\ =\ bucket\_count;}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ bucket\_count\ *=\ 2;}
+\DoxyCodeLine{00269\ \ \ \ \ buckets\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*[bucket\_count];}
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ bucket\_count;\ ++i)\ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ buckets[i]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00272\ \ \ \ \ \}}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ old\_bucket\_count;\ ++i)\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ old\_buckets[i];}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ next\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_index\ =\ hash(current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}});}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}}\ =\ buckets[new\_index];}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ buckets[new\_index]\ =\ current;}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ ++size;}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ next;}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00286\ \ \ \ \ \}}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keyword}{delete}[]\ old\_buckets;}
+\DoxyCodeLine{00289\ \}}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00292\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_af52ef1459bd66438145bee59ac4f25ac}{HashTable<K,\ V>::insert}}(\textcolor{keyword}{const}\ K\&\ key,\ \textcolor{keyword}{const}\ V\&\ value)\ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordflow}{if}\ (loadFactor()\ >\ 0.75)\ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ rehash();}
+\DoxyCodeLine{00295\ \ \ \ \ \}}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ hash(key);}
+\DoxyCodeLine{00298\ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ buckets[index];}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}}\ ==\ key)\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a12f529d2866dfef8ae3d6a9be8e00888}{value}}\ =\ value;}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00306\ \ \ \ \ \}}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ newEntry\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}(key,\ value);}
+\DoxyCodeLine{00309\ \ \ \ \ newEntry-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}}\ =\ buckets[index];}
+\DoxyCodeLine{00310\ \ \ \ \ buckets[index]\ =\ newEntry;}
+\DoxyCodeLine{00311\ \ \ \ \ ++size;}
+\DoxyCodeLine{00312\ \}}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00315\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a53700bf1dcb17d1a9858f051f371de9f}{HashTable<K,\ V>::remove}}(\textcolor{keyword}{const}\ K\&\ key)\ \{}
+\DoxyCodeLine{00316\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ hash(key);}
+\DoxyCodeLine{00317\ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ buckets[index];}
+\DoxyCodeLine{00318\ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ prev\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}}\ ==\ key)\ \{}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (prev)\ \{}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ prev-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}}\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buckets[index]\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ current;}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ -\/-\/size;}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ prev\ =\ current;}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00333\ \ \ \ \ \}}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Key\ not\ found"{}});}
+\DoxyCodeLine{00336\ \}}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00339\ V\&\ \mbox{\hyperlink{classHashTable_a6793afcbf7247e7ccfb7bc3e4c21d116}{HashTable<K,\ V>::get}}(\textcolor{keyword}{const}\ K\&\ key)\ \{}
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ hash(key);}
+\DoxyCodeLine{00341\ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ buckets[index];}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}}\ ==\ key)\ \{}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a12f529d2866dfef8ae3d6a9be8e00888}{value}};}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00348\ \ \ \ \ \}}
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Key\ not\ found"{}});}
+\DoxyCodeLine{00351\ \}}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00354\ \textcolor{keyword}{const}\ V\&\ \mbox{\hyperlink{classHashTable_a6793afcbf7247e7ccfb7bc3e4c21d116}{HashTable<K,\ V>::get}}(\textcolor{keyword}{const}\ K\&\ key)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00355\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ hash(key);}
+\DoxyCodeLine{00356\ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ buckets[index];}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}}\ ==\ key)\ \{}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a12f529d2866dfef8ae3d6a9be8e00888}{value}};}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00363\ \ \ \ \ \}}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Key\ not\ found"{}});}
+\DoxyCodeLine{00366\ \}}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00368\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00369\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHashTable_a02d65ad219e13bc3adb0ca55c89bc749}{HashTable<K,\ V>::find}}(\textcolor{keyword}{const}\ K\&\ key)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00370\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ hash(key);}
+\DoxyCodeLine{00371\ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ buckets[index];}
+\DoxyCodeLine{00372\ }
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}}\ ==\ key)\ \{}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00378\ \ \ \ \ \}}
+\DoxyCodeLine{00379\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00380\ \}}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00383\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHashTable_a274d09a6cd9ae51f693c23109706bbdd}{HashTable<K,\ V>::getSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{00385\ \}}
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00387\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00388\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classHashTable_af85f143ab22558ff9a1baa6283c9b43f}{HashTable<K,\ V>::getBucketCount}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00389\ \ \ \ \ \textcolor{keywordflow}{return}\ bucket\_count;}
+\DoxyCodeLine{00390\ \}}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00392\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00393\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHashTable_ab27bfe4ba5b0c985ce555d5cb23c7d6b}{HashTable<K,\ V>::isEmpty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00394\ \ \ \ \ \textcolor{keywordflow}{return}\ size\ ==\ 0;}
+\DoxyCodeLine{00395\ \}}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00398\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a21549f8f2e5da490485807531463e503}{HashTable<K,\ V>::clear}}()\ \{}
+\DoxyCodeLine{00399\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ bucket\_count;\ ++i)\ \{}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ buckets[i];}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ temp\ =\ current;}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ buckets[i]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00407\ \ \ \ \ \}}
+\DoxyCodeLine{00408\ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{00409\ \}}
+\DoxyCodeLine{00410\ }
+\DoxyCodeLine{00411\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00412\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classHashTable_a78c126f1c4e34809cc4961fdb700a065}{HashTable<K,\ V>::loadFactor}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00413\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(size)\ /\ bucket\_count;}
+\DoxyCodeLine{00414\ \}}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00417\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a22c44edafb471aea0156e5cbe2f2f5ec}{HashTable<K,\ V>::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00418\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}HashTable\ (size:\ "{}}\ <<\ size\ <<\ \textcolor{stringliteral}{"{},\ buckets:\ "{}}\ <<\ bucket\_count\ <<\ \textcolor{stringliteral}{"{}):"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00419\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ bucket\_count;\ ++i)\ \{}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (buckets[i])\ \{}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Bucket\ "{}}\ <<\ i\ <<\ \textcolor{stringliteral}{"{}:\ "{}};}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ buckets[i];}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}}\ <<\ \textcolor{stringliteral}{"{}:"{}}\ <<\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a12f529d2866dfef8ae3d6a9be8e00888}{value}}\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}})\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ -\/>\ "{}};}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00430\ \ \ \ \ \}}
+\DoxyCodeLine{00431\ \}}
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00433\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00434\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_afb3a7fb53385c7229c976c6120f1cfd7}{HashTable<K,\ V>::serialize}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00435\ \ \ \ \ serializeBinary(out);}
+\DoxyCodeLine{00436\ \}}
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00438\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00439\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a9129023e7811d55152ca87391a6149f3}{HashTable<K,\ V>::deserialize}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00440\ \ \ \ \ deserializeBinary(in);}
+\DoxyCodeLine{00441\ \}}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00443\ \textcolor{comment}{//\ Важно:\ бинарная\ сериализация\ корректна\ только\ для\ тривиально\ копируемых\ типов\ ключа\ и\ значения}}
+\DoxyCodeLine{00444\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00445\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a688a91a3692a8298d30e238e43684b2a}{HashTable<K,\ V>::serializeBinary}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00446\ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&size),\ \textcolor{keyword}{sizeof}(size));}
+\DoxyCodeLine{00447\ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&bucket\_count),\ \textcolor{keyword}{sizeof}(bucket\_count));}
+\DoxyCodeLine{00448\ }
+\DoxyCodeLine{00449\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ bucket\_count;\ ++i)\ \{}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ buckets[i];}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}}),\ \textcolor{keyword}{sizeof}(K));}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a12f529d2866dfef8ae3d6a9be8e00888}{value}}),\ \textcolor{keyword}{sizeof}(V));}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00456\ \ \ \ \ \}}
+\DoxyCodeLine{00457\ \}}
+\DoxyCodeLine{00458\ }
+\DoxyCodeLine{00459\ \textcolor{comment}{//\ Важно:\ бинарная\ десериализация\ корректна\ только\ для\ тривиально\ копируемых\ типов\ ключа\ и\ значения}}
+\DoxyCodeLine{00460\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00461\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_a6442c2ba8d54d9f0e9ea969c516b5c29}{HashTable<K,\ V>::deserializeBinary}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00462\ \ \ \ \ clear();}
+\DoxyCodeLine{00463\ \ \ \ \ \textcolor{keyword}{delete}[]\ buckets;}
+\DoxyCodeLine{00464\ }
+\DoxyCodeLine{00465\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size,\ new\_bucket\_count;}
+\DoxyCodeLine{00466\ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&new\_size),\ \textcolor{keyword}{sizeof}(new\_size));}
+\DoxyCodeLine{00467\ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&new\_bucket\_count),\ \textcolor{keyword}{sizeof}(new\_bucket\_count));}
+\DoxyCodeLine{00468\ }
+\DoxyCodeLine{00469\ \ \ \ \ bucket\_count\ =\ new\_bucket\_count;}
+\DoxyCodeLine{00470\ \ \ \ \ size\ =\ 0;\ }
+\DoxyCodeLine{00471\ \ \ \ \ buckets\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*[bucket\_count];}
+\DoxyCodeLine{00472\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ bucket\_count;\ ++i)\ \{}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ buckets[i]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00474\ \ \ \ \ \}}
+\DoxyCodeLine{00475\ }
+\DoxyCodeLine{00476\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ new\_size;\ ++i)\ \{}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ K\ key;}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ V\ value;}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&key),\ \textcolor{keyword}{sizeof}(K));}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&value),\ \textcolor{keyword}{sizeof}(V));}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ insert(key,\ value);}
+\DoxyCodeLine{00482\ \ \ \ \ \}}
+\DoxyCodeLine{00483\ \}}
+\DoxyCodeLine{00484\ }
+\DoxyCodeLine{00485\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00486\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_ad7bce88b1c182194932b6466d4b105e2}{HashTable<K,\ V>::serializeText}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00487\ \ \ \ \ out\ <<\ size\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ bucket\_count\ <<\ std::endl;}
+\DoxyCodeLine{00488\ }
+\DoxyCodeLine{00489\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ bucket\_count;\ ++i)\ \{}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ buckets[i];}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ out\ <<\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}}\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a12f529d2866dfef8ae3d6a9be8e00888}{value}}\ <<\ std::endl;}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00495\ \ \ \ \ \}}
+\DoxyCodeLine{00496\ \}}
+\DoxyCodeLine{00497\ }
+\DoxyCodeLine{00498\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00499\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHashTable_ad8ae4a7a2f5dafe447cd73435a72daec}{HashTable<K,\ V>::deserializeText}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00500\ \ \ \ \ clear();}
+\DoxyCodeLine{00501\ \ \ \ \ \textcolor{keyword}{delete}[]\ buckets;}
+\DoxyCodeLine{00502\ }
+\DoxyCodeLine{00503\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size,\ new\_bucket\_count;}
+\DoxyCodeLine{00504\ \ \ \ \ in\ >>\ new\_size\ >>\ new\_bucket\_count;}
+\DoxyCodeLine{00505\ }
+\DoxyCodeLine{00506\ \ \ \ \ bucket\_count\ =\ new\_bucket\_count;}
+\DoxyCodeLine{00507\ \ \ \ \ size\ =\ 0;\ }
+\DoxyCodeLine{00508\ \ \ \ \ buckets\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*[bucket\_count];}
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ bucket\_count;\ ++i)\ \{}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ buckets[i]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00511\ \ \ \ \ \}}
+\DoxyCodeLine{00512\ }
+\DoxyCodeLine{00513\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ new\_size;\ ++i)\ \{}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ K\ key;}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ V\ value;}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ in\ >>\ key\ >>\ value;}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ insert(key,\ value);}
+\DoxyCodeLine{00518\ \ \ \ \ \}}
+\DoxyCodeLine{00519\ \}}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00521\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ K,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{00522\ V\&\ \mbox{\hyperlink{classHashTable_ad2cdf197e53b969772ae77b4bd482d91}{HashTable<K,\ V>::operator[]}}(\textcolor{keyword}{const}\ K\&\ key)\ \{}
+\DoxyCodeLine{00523\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ hash(key);}
+\DoxyCodeLine{00524\ \ \ \ \ \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}*\ current\ =\ buckets[index];}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_ac573160bafe6501021a80ecb93242fa9}{key}}\ ==\ key)\ \{}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a12f529d2866dfef8ae3d6a9be8e00888}{value}};}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structHashTable_1_1Entry_a75ca926ab959426093b2c6b14ef01c68}{next}};}
+\DoxyCodeLine{00531\ \ \ \ \ \}}
+\DoxyCodeLine{00532\ }
+\DoxyCodeLine{00533\ \ \ \ \ insert(key,\ V\{\});}
+\DoxyCodeLine{00534\ \ \ \ \ \textcolor{keywordflow}{return}\ get(key);}
+\DoxyCodeLine{00535\ \}}
+
+\end{DoxyCode}

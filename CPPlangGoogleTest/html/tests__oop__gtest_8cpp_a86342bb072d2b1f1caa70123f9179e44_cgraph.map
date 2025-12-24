@@ -1,0 +1,13 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,60,129"/>
+<area shape="rect" id="Node000002" href="$classDoubleList.html#a3ebdcd207ea924f2d3affd6fbac166ee" title="Возвращает последний элемент." alt="" coords="124,5,255,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,102,69,71,107,40,119,33,121,38,109,44,72,75,46,105"/>
+<area shape="rect" id="Node000003" href="$classDoubleList.html#a93697f44852ce8c2ab37cbd9734186e7" title="Возвращает первый элемент." alt="" coords="124,55,255,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="59,105,107,89,131,82,132,87,109,94,61,110"/>
+<area shape="rect" id="Node000004" href="$classDoubleList.html#a4313b534733d4e98e3363c0ad5b1ae8b" title="Возвращает текущее количество элементов." alt="" coords="116,104,263,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="60,114,102,114,102,119,60,119"/>
+<area shape="rect" id="Node000005" href="$classDoubleList.html#a0120f6c04110c280165197693f895d3f" title="Добавляет элемент в конец списка. Сложность: O(1)." alt="" coords="108,153,271,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="61,123,109,138,136,147,134,152,107,143,59,128"/>
+<area shape="rect" id="Node000006" href="$classDoubleList.html#aa82b1d2319bb8c6dd02cda8ee33d8e15" title="Добавляет элемент в начало списка. Сложность: O(1)." alt="" coords="108,203,271,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="46,128,72,158,109,188,124,195,121,200,107,192,69,162,42,131"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="FullBinaryTree::insert" name="FullBinaryTree::insert">
+<area shape="rect" id="Node000001" title="Вставляет значение в дерево. Алгоритм ищет первый свободный лист (в порядке обхода в ширину) и добавл..." alt="" coords="360,153,519,179"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#acfc5c302221d1aa5aba0aac3799b253f" title="Тестирование производительности полного бинарного дерева (FullBinaryTree)." alt="" coords="108,5,312,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="419,144,373,93,344,67,311,44,285,33,287,28,313,40,347,62,377,89,423,141"/>
+<area shape="rect" id="Node000004" href="$benchmark_8cpp.html#af0c7e15db2d6abbb07fd570b9919e98a" title="Тестирование механизмов сериализации и десериализации." alt="" coords="119,55,301,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="408,148,363,120,311,94,276,83,278,77,313,89,366,115,411,143"/>
+<area shape="rect" id="Node000005" href="$tests__oop__gtest_8cpp.html#af6382756e0cd562bfd95151d52d72ff4" title=" " alt="" coords="183,104,237,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="366,153,237,125,238,120,367,148"/>
+<area shape="rect" id="Node000006" href="$tests__oop__gtest_8cpp.html#ab24a1b2d05c253ebdc6604019a2066ca" title=" " alt="" coords="183,153,237,179"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="346,169,238,169,238,163,346,163"/>
+<area shape="rect" id="Node000007" href="$tests__oop__gtest_8cpp.html#a61065cdfd1e6e37f60fb866b0ceed75b" title=" " alt="" coords="183,203,237,228"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="367,184,238,212,237,207,366,179"/>
+<area shape="rect" id="Node000008" href="$tests__oop__gtest_8cpp.html#a59389f45261631e7be3ed7a137aa4312" title=" " alt="" coords="183,252,237,277"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="410,189,365,216,313,242,274,255,238,263,237,258,273,249,311,237,363,211,407,184"/>
+<area shape="rect" id="Node000009" href="$tests__oop__gtest_8cpp.html#ae0e4ec899f1a5698a5576e0c253e05f5" title=" " alt="" coords="183,301,237,327"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="422,192,377,242,346,269,313,291,275,306,238,314,237,309,273,301,311,286,343,264,373,238,418,188"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,31,60,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,35,61,42,60,37,107,30"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="104,56,60,50,61,44,105,50"/>
+</map>

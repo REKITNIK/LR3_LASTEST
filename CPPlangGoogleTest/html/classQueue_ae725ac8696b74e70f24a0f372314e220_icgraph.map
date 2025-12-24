@@ -1,0 +1,13 @@
+<map id="Queue::front" name="Queue::front">
+<area shape="rect" id="Node000001" title="Возвращает ссылку на первый элемент очереди." alt="" coords="299,80,401,105"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#af4c86f76a20755f569e50b1c5d2b6535" title="Тестирование производительности очереди (Queue)." alt="" coords="108,5,251,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="313,76,250,44,220,33,222,28,252,40,315,71"/>
+<area shape="rect" id="Node000004" href="$tests__oop__gtest_8cpp.html#ae0dcb30994e3168dccead66ef792ccdf" title=" " alt="" coords="152,55,207,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="284,86,206,74,207,69,285,80"/>
+<area shape="rect" id="Node000005" href="$tests__oop__gtest_8cpp.html#a6caf34284315866812597d90b6a1c074" title=" " alt="" coords="152,104,207,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="285,104,207,116,206,110,284,99"/>
+<area shape="rect" id="Node000006" href="$tests__oop__gtest_8cpp.html#aa8492eebfc4447598e0531874d655d3e" title=" " alt="" coords="152,153,207,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="314,114,252,143,208,160,206,155,250,138,311,109"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

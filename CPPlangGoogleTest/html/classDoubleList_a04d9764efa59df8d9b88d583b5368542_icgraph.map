@@ -1,0 +1,5 @@
+<map id="DoubleList::popFront" name="DoubleList::popFront">
+<area shape="rect" id="Node000001" title="Удаляет первый элемент списка. Сложность: O(1)." alt="" coords="108,5,264,31"/>
+<area shape="rect" id="Node000002" href="$tests__oop__gtest_8cpp.html#a0c78a9d034b8a5176e9a9907459c627e" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

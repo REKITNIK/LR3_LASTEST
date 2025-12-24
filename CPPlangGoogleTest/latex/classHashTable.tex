@@ -1,0 +1,598 @@
+\doxysection{Hash\+Table\texorpdfstring{$<$}{<} K, V \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classHashTable}{}\label{classHashTable}\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+
+
+Шаблонный класс Хэш-\/таблицы (Hash Table).  
+
+
+
+
+{\ttfamily \#include $<$Hash\+Table.\+h$>$}
+
+
+
+Collaboration diagram for Hash\+Table\texorpdfstring{$<$}{<} K, V \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classHashTable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHashTable_ad15e311c5f223b9f767a5e0cd241f727}{Hash\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Создает таблицу с начальным размером 16 бакетов. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_aa9038b61c25afd4a1ccd292af39c94d1}{Hash\+Table}} (\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{size\+\_\+t}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{initial\+\_\+bucket\+\_\+count}})
+\begin{DoxyCompactList}\small\item\em Конструктор с заданным размером. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a4bff46e8e924ed0f4795bd63f02f98f6}{Hash\+Table}} (\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable}{Hash\+Table}} \&\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{other}})
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. Создает глубокую копию таблицы. Порядок элементов в цепочках может меняться (инвертироваться) относительно оригинала из-\/за особенностей вставки в начало списка. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable}{Hash\+Table}} \& \mbox{\hyperlink{classHashTable_ab915e13e9564e959011bb4ec41b0de6d}{operator=}} (\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable}{Hash\+Table}} \&\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{other}})
+\begin{DoxyCompactList}\small\item\em Оператор присваивания. Обеспечивает строгую гарантию безопасности исключений (Strong Exception Guarantee). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a35e16fb83fce50ddc3d179a70de9b274}{\texorpdfstring{$\sim$}{\string~}\+Hash\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. Освобождает всю выделенную память. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_af52ef1459bd66438145bee59ac4f25ac}{insert}} (\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&key, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} \&value)
+\begin{DoxyCompactList}\small\item\em Вставляет или обновляет пару ключ-\/значение. Если ключ уже существует, его значение обновляется. Если коэффициент заполнения превышает 0.\+75, происходит рехеширование. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_a53700bf1dcb17d1a9858f051f371de9f}{remove}} (\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&key)
+\begin{DoxyCompactList}\small\item\em Удаляет элемент по ключу. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} \& \mbox{\hyperlink{classHashTable_a6793afcbf7247e7ccfb7bc3e4c21d116}{get}} (\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&key)
+\begin{DoxyCompactList}\small\item\em Получает доступ к значению по ключу (для чтения и записи). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} \& \mbox{\hyperlink{classHashTable_a37d25e34ef72bb761087eb454b565b61}{get}} (\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&key) \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}}
+\begin{DoxyCompactList}\small\item\em Получает доступ к значению по ключу (только для чтения). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{bool}} \mbox{\hyperlink{classHashTable_a02d65ad219e13bc3adb0ca55c89bc749}{find}} (\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&key) \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}}
+\begin{DoxyCompactList}\small\item\em Проверяет наличие ключа в таблице. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{size\+\_\+t}} \mbox{\hyperlink{classHashTable_a274d09a6cd9ae51f693c23109706bbdd}{get\+Size}} () \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}}
+\begin{DoxyCompactList}\small\item\em Возвращает текущее количество элементов. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{size\+\_\+t}} \mbox{\hyperlink{classHashTable_af85f143ab22558ff9a1baa6283c9b43f}{get\+Bucket\+Count}} () \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}}
+\begin{DoxyCompactList}\small\item\em Возвращает текущее количество бакетов (размер массива). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{bool}} \mbox{\hyperlink{classHashTable_ab27bfe4ba5b0c985ce555d5cb23c7d6b}{is\+Empty}} () \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}}
+\begin{DoxyCompactList}\small\item\em Проверяет, пуста ли таблица. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_a21549f8f2e5da490485807531463e503}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Полностью очищает таблицу. Удаляет все элементы, но сохраняет массив бакетов (не меняет bucket\+\_\+count). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{double}} \mbox{\hyperlink{classHashTable_a78c126f1c4e34809cc4961fdb700a065}{load\+Factor}} () \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}}
+\begin{DoxyCompactList}\small\item\em Вычисляет текущий коэффициент заполнения (Load Factor). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_a22c44edafb471aea0156e5cbe2f2f5ec}{print}} () \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}}
+\begin{DoxyCompactList}\small\item\em Выводит содержимое непустых бакетов в консоль. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_afb3a7fb53385c7229c976c6120f1cfd7}{serialize}} (std\+::ostream \&\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{out}}) \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}}
+\begin{DoxyCompactList}\small\item\em Универсальная сериализация. По умолчанию делегирует вызов бинарной сериализации. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_a9129023e7811d55152ca87391a6149f3}{deserialize}} (std\+::istream \&\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{in}})
+\begin{DoxyCompactList}\small\item\em Универсальная десериализация. По умолчанию делегирует вызов бинарной десериализации. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_a688a91a3692a8298d30e238e43684b2a}{serialize\+Binary}} (std\+::ostream \&\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{out}}) \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}}
+\begin{DoxyCompactList}\small\item\em Бинарная сериализация. Сохраняет данные путем побайтового копирования памяти. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_a6442c2ba8d54d9f0e9ea969c516b5c29}{deserialize\+Binary}} (std\+::istream \&\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{in}})
+\begin{DoxyCompactList}\small\item\em Бинарная десериализация. Восстанавливает таблицу из бинарного формата. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_ad7bce88b1c182194932b6466d4b105e2}{serialize\+Text}} (std\+::ostream \&\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{out}}) \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}}
+\begin{DoxyCompactList}\small\item\em Текстовая сериализация. Сохраняет таблицу в читаемом текстовом виде. Формат\+: $<$размер$>$ \texorpdfstring{$<$}{<}кол-\/во бакетов\texorpdfstring{$>$}{>}, затем строки вида $<$ключ$>$ $<$значение$>$. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_ad8ae4a7a2f5dafe447cd73435a72daec}{deserialize\+Text}} (std\+::istream \&\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{in}})
+\begin{DoxyCompactList}\small\item\em Текстовая десериализация. Восстанавливает таблицу из текстового формата. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} \& \mbox{\hyperlink{classHashTable_ad2cdf197e53b969772ae77b4bd482d91}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&key)
+\begin{DoxyCompactList}\small\item\em Оператор доступа по индексу (ключу). Возвращает ссылку на значение по ключу. Если ключ отсутствует, вставляет новую пару с дефолтным значением типа V. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{hash}} (const K \&key) const
+\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable_ab1d5344e98e93d380fb150ee749bcb1d}{rehash}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structHashTable_1_1Entry}{Entry}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}{buckets}}
+\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{size\+\_\+t}} \mbox{\hyperlink{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}{bucket\+\_\+count}}
+\item 
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{size\+\_\+t}} \mbox{\hyperlink{classHashTable_a383bf09da6787a3f313649609964e320}{size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}}$>$\newline
+class Hash\+Table$<$ K, V $>$}
+Шаблонный класс Хэш-\/таблицы (Hash Table). 
+
+Реализует словарь (ассоциативный массив) на основе массива списков (метод цепочек). При возникновении коллизий элементы добавляются в начало связного списка соответствующего бакета. Автоматически расширяется (rehashing) при превышении коэффициента заполнения.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em K} & Тип ключа. Должен поддерживать сравнение (operator==) и хеширование (std\+::hash). \\
+\hline
+{\em V} & Тип значения. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHashTable_ad15e311c5f223b9f767a5e0cd241f727}\label{classHashTable_ad15e311c5f223b9f767a5e0cd241f727} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!HashTable@{HashTable}}
+\index{HashTable@{HashTable}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{HashTable()}{HashTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\mbox{\hyperlink{classHashTable}{\+::\+Hash\+Table}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию. Создает таблицу с начальным размером 16 бакетов. 
+
+\Hypertarget{classHashTable_aa9038b61c25afd4a1ccd292af39c94d1}\label{classHashTable_aa9038b61c25afd4a1ccd292af39c94d1} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!HashTable@{HashTable}}
+\index{HashTable@{HashTable}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{HashTable()}{HashTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\mbox{\hyperlink{classHashTable}{\+::\+Hash\+Table}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{size\+\_\+t}}}]{initial\+\_\+bucket\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор с заданным размером. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+\_\+bucket\+\_\+count} & Начальное количество бакетов. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHashTable_a4bff46e8e924ed0f4795bd63f02f98f6}\label{classHashTable_a4bff46e8e924ed0f4795bd63f02f98f6} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!HashTable@{HashTable}}
+\index{HashTable@{HashTable}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{HashTable()}{HashTable()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\mbox{\hyperlink{classHashTable}{\+::\+Hash\+Table}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Конструктор копирования. Создает глубокую копию таблицы. Порядок элементов в цепочках может меняться (инвертироваться) относительно оригинала из-\/за особенностей вставки в начало списка. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Таблица для копирования. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classHashTable_a4bff46e8e924ed0f4795bd63f02f98f6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHashTable_a35e16fb83fce50ddc3d179a70de9b274}\label{classHashTable_a35e16fb83fce50ddc3d179a70de9b274} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!````~HashTable@{\texorpdfstring{$\sim$}{\string~}HashTable}}
+\index{````~HashTable@{\texorpdfstring{$\sim$}{\string~}HashTable}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}HashTable()}{\string~HashTable()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classHashTable}{Hash\+Table}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. Освобождает всю выделенную память. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHashTable_a21549f8f2e5da490485807531463e503}\label{classHashTable_a21549f8f2e5da490485807531463e503} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!clear@{clear}}
+\index{clear@{clear}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Полностью очищает таблицу. Удаляет все элементы, но сохраняет массив бакетов (не меняет bucket\+\_\+count). 
+
+\Hypertarget{classHashTable_a9129023e7811d55152ca87391a6149f3}\label{classHashTable_a9129023e7811d55152ca87391a6149f3} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::deserialize (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Универсальная десериализация. По умолчанию делегирует вызов бинарной десериализации. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHashTable_a9129023e7811d55152ca87391a6149f3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHashTable_a6442c2ba8d54d9f0e9ea969c516b5c29}\label{classHashTable_a6442c2ba8d54d9f0e9ea969c516b5c29} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!deserializeBinary@{deserializeBinary}}
+\index{deserializeBinary@{deserializeBinary}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeBinary()}{deserializeBinary()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::deserialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Бинарная десериализация. Восстанавливает таблицу из бинарного формата. 
+
+\begin{DoxyNote}{Note}
+Требует использования POD-\/типов. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHashTable_ad8ae4a7a2f5dafe447cd73435a72daec}\label{classHashTable_ad8ae4a7a2f5dafe447cd73435a72daec} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!deserializeText@{deserializeText}}
+\index{deserializeText@{deserializeText}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeText()}{deserializeText()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::deserialize\+Text (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Текстовая десериализация. Восстанавливает таблицу из текстового формата. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHashTable_a02d65ad219e13bc3adb0ca55c89bc749}\label{classHashTable_a02d65ad219e13bc3adb0ca55c89bc749} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!find@{find}}
+\index{find@{find}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{bool}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет наличие ключа в таблице. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Искомый ключ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если ключ найден, иначе false. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHashTable_a02d65ad219e13bc3adb0ca55c89bc749_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHashTable_a6793afcbf7247e7ccfb7bc3e4c21d116}\label{classHashTable_a6793afcbf7247e7ccfb7bc3e4c21d116} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!get@{get}}
+\index{get@{get}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} \& \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Получает доступ к значению по ключу (для чтения и записи). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Искомый ключ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на значение. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если ключ не найден. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHashTable_a6793afcbf7247e7ccfb7bc3e4c21d116_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHashTable_a37d25e34ef72bb761087eb454b565b61}\label{classHashTable_a37d25e34ef72bb761087eb454b565b61} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!get@{get}}
+\index{get@{get}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} \& \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Получает доступ к значению по ключу (только для чтения). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Искомый ключ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Константная ссылка на значение. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если ключ не найден. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classHashTable_af85f143ab22558ff9a1baa6283c9b43f}\label{classHashTable_af85f143ab22558ff9a1baa6283c9b43f} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!getBucketCount@{getBucketCount}}
+\index{getBucketCount@{getBucketCount}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{getBucketCount()}{getBucketCount()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{size\+\_\+t}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::get\+Bucket\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущее количество бакетов (размер массива). 
+
+\begin{DoxyReturn}{Returns}
+Число бакетов. 
+\end{DoxyReturn}
+\Hypertarget{classHashTable_a274d09a6cd9ae51f693c23109706bbdd}\label{classHashTable_a274d09a6cd9ae51f693c23109706bbdd} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{size\+\_\+t}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущее количество элементов. 
+
+\begin{DoxyReturn}{Returns}
+Число пар ключ-\/значение. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{classHashTable_a274d09a6cd9ae51f693c23109706bbdd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHashTable_a64e89202bbac0d7982abec42ab1ed982}\label{classHashTable_a64e89202bbac0d7982abec42ab1ed982} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!hash@{hash}}
+\index{hash@{hash}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{hash()}{hash()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+size\+\_\+t \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ K, V $>$\+::hash (\begin{DoxyParamCaption}\item[{const K \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classHashTable_af52ef1459bd66438145bee59ac4f25ac}\label{classHashTable_af52ef1459bd66438145bee59ac4f25ac} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!insert@{insert}}
+\index{insert@{insert}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&}]{key,  }\item[{\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Вставляет или обновляет пару ключ-\/значение. Если ключ уже существует, его значение обновляется. Если коэффициент заполнения превышает 0.\+75, происходит рехеширование. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Ключ. \\
+\hline
+{\em value} & Значение. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHashTable_af52ef1459bd66438145bee59ac4f25ac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHashTable_ab27bfe4ba5b0c985ce555d5cb23c7d6b}\label{classHashTable_ab27bfe4ba5b0c985ce555d5cb23c7d6b} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{bool}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, пуста ли таблица. 
+
+\begin{DoxyReturn}{Returns}
+true, если таблица не содержит элементов. 
+\end{DoxyReturn}
+\Hypertarget{classHashTable_a78c126f1c4e34809cc4961fdb700a065}\label{classHashTable_a78c126f1c4e34809cc4961fdb700a065} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!loadFactor@{loadFactor}}
+\index{loadFactor@{loadFactor}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{loadFactor()}{loadFactor()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{double}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::load\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Вычисляет текущий коэффициент заполнения (Load Factor). 
+
+\begin{DoxyReturn}{Returns}
+Отношение количества элементов к количеству бакетов (size / bucket\+\_\+count). 
+\end{DoxyReturn}
+\Hypertarget{classHashTable_ab915e13e9564e959011bb4ec41b0de6d}\label{classHashTable_ab915e13e9564e959011bb4ec41b0de6d} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \& \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{\+::operator}}= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Оператор присваивания. Обеспечивает строгую гарантию безопасности исключений (Strong Exception Guarantee). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Таблица, значения которой присваиваются. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{classHashTable_ad2cdf197e53b969772ae77b4bd482d91}\label{classHashTable_ad2cdf197e53b969772ae77b4bd482d91} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} \& \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{\+::operator}}\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Оператор доступа по индексу (ключу). Возвращает ссылку на значение по ключу. Если ключ отсутствует, вставляет новую пару с дефолтным значением типа V. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Ключ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на значение. 
+\end{DoxyReturn}
+\Hypertarget{classHashTable_a22c44edafb471aea0156e5cbe2f2f5ec}\label{classHashTable_a22c44edafb471aea0156e5cbe2f2f5ec} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!print@{print}}
+\index{print@{print}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Выводит содержимое непустых бакетов в консоль. 
+
+\Hypertarget{classHashTable_ab1d5344e98e93d380fb150ee749bcb1d}\label{classHashTable_ab1d5344e98e93d380fb150ee749bcb1d} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!rehash@{rehash}}
+\index{rehash@{rehash}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{rehash()}{rehash()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::rehash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classHashTable_a53700bf1dcb17d1a9858f051f371de9f}\label{classHashTable_a53700bf1dcb17d1a9858f051f371de9f} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!remove@{remove}}
+\index{remove@{remove}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{const}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Удаляет элемент по ключу. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Ключ удаляемого элемента. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если ключ не найден. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHashTable_a53700bf1dcb17d1a9858f051f371de9f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHashTable_afb3a7fb53385c7229c976c6120f1cfd7}\label{classHashTable_afb3a7fb53385c7229c976c6120f1cfd7} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::serialize (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Универсальная сериализация. По умолчанию делегирует вызов бинарной сериализации. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHashTable_afb3a7fb53385c7229c976c6120f1cfd7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHashTable_a688a91a3692a8298d30e238e43684b2a}\label{classHashTable_a688a91a3692a8298d30e238e43684b2a} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!serializeBinary@{serializeBinary}}
+\index{serializeBinary@{serializeBinary}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{serializeBinary()}{serializeBinary()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::serialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Бинарная сериализация. Сохраняет данные путем побайтового копирования памяти. 
+
+\begin{DoxyNote}{Note}
+Работает корректно только для тривиально копируемых типов (POD) ключей и значений. Использование std\+::string или указателей приведет к некорректным данным. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHashTable_ad7bce88b1c182194932b6466d4b105e2}\label{classHashTable_ad7bce88b1c182194932b6466d4b105e2} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!serializeText@{serializeText}}
+\index{serializeText@{serializeText}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{serializeText()}{serializeText()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{void}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::serialize\+Text (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Текстовая сериализация. Сохраняет таблицу в читаемом текстовом виде. Формат\+: $<$размер$>$ \texorpdfstring{$<$}{<}кол-\/во бакетов\texorpdfstring{$>$}{>}, затем строки вида $<$ключ$>$ $<$значение$>$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classHashTable_aa9af2a834043bcd830e09ee83a7535a0}\label{classHashTable_aa9af2a834043bcd830e09ee83a7535a0} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!bucket\_count@{bucket\_count}}
+\index{bucket\_count@{bucket\_count}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{bucket\_count}{bucket\_count}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{size\+\_\+t}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::bucket\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classHashTable_aa5d0395109ec5f28cd43ec425a268f09}\label{classHashTable_aa5d0395109ec5f28cd43ec425a268f09} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!buckets@{buckets}}
+\index{buckets@{buckets}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{buckets}{buckets}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{structHashTable_1_1Entry}{Entry}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::buckets\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classHashTable_a383bf09da6787a3f313649609964e320}\label{classHashTable_a383bf09da6787a3f313649609964e320} 
+\index{HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}!size@{size}}
+\index{size@{size}!HashTable$<$ K, V $>$@{HashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}} , \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{typename}} \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$ \\
+\mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{size\+\_\+t}} \mbox{\hyperlink{classHashTable}{Hash\+Table}}$<$ \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{K}}, \mbox{\hyperlink{classHashTable_a64e89202bbac0d7982abec42ab1ed982}{V}} $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HashTable_8h}{Hash\+Table.\+h}}\end{DoxyCompactItemize}

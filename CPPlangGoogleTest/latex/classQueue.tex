@@ -1,0 +1,513 @@
+\doxysection{Queue\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classQueue}{}\label{classQueue}\index{Queue$<$ T $>$@{Queue$<$ T $>$}}
+
+
+Шаблонный класс Очереди (\doxylink{classQueue}{Queue}).  
+
+
+
+
+{\ttfamily \#include $<$Queue.\+h$>$}
+
+
+
+Collaboration diagram for Queue\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classQueue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structQueue_1_1Node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classQueue_af73bb29c868f7b37f369c668f114bd9f}{Queue}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Создает пустую очередь. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classQueue_a302dd47cfedbd5d52dc46fcd3a6b4577}{Queue}} (const \mbox{\hyperlink{classQueue}{Queue}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. Создает глубокую копию очереди, сохраняя порядок элементов. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classQueue}{Queue}} \& \mbox{\hyperlink{classQueue_ac0d0636575a2ac8ba8e9a7e4589ac075}{operator=}} (const \mbox{\hyperlink{classQueue}{Queue}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор присваивания. Обеспечивает строгую гарантию безопасности исключений. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classQueue_aa7eef1b427e24555780505de20e9acbc}{\texorpdfstring{$\sim$}{\string~}\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. Освобождает память всех узлов. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_a528a3209c79384eac2afbdf6aa6eaf51}{enqueue}} (const T \&element)
+\begin{DoxyCompactList}\small\item\em Добавляет элемент в конец очереди (enqueue). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_a25918244eb1e926c3958331a2cb33dac}{dequeue}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет элемент из начала очереди (dequeue). \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classQueue_ae725ac8696b74e70f24a0f372314e220}{front}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на первый элемент очереди. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classQueue_aad4d417c9fe6094039a63d56269e9a28}{front}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает константную ссылку на первый элемент очереди. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classQueue_ab7283c5c4968ff966a1aacc4c131d64f}{back}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на последний элемент очереди. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classQueue_a9d08c73b8623ffc33227b6476b899dd5}{back}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает константную ссылку на последний элемент очереди. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classQueue_a50ca34ace10ec07e61a849a2c6da4d18}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущий размер очереди. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classQueue_a225f5d08888ea72a4dfe73f235761e5d}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, пуста ли очередь. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_acb12e3d108397a77e412d43cdd0b2836}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Полностью очищает очередь. Удаляет все узлы и сбрасывает указатели. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_a3ebc93d6f3dfdb6e866ce47dcf5560b4}{print}} () const
+\begin{DoxyCompactList}\small\item\em Выводит содержимое очереди в консоль от начала к концу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_a040f8ac478b7fda3717652fc5e814106}{serialize}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Универсальная сериализация. По умолчанию вызывает бинарную сериализацию. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_a1bab4df76141781dd76bead18485b58b}{deserialize}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Универсальная десериализация. По умолчанию вызывает бинарную десериализацию. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_a9896f9fa62d9b265573498626d238ea6}{serialize\+Binary}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Бинарная сериализация. Сохраняет данные в бинарном виде для максимальной производительности. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_a424d92ada522e7d712010e882e5b2cf4}{deserialize\+Binary}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Бинарная десериализация. Восстанавливает очередь из бинарного формата. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_ad91a2741646a2b370b077bb567c34f8f}{serialize\+Text}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Текстовая сериализация. Сохраняет элементы через пробел в читаемом виде. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_aa238cf6bba18150cf4d8ecaa75a320b6}{deserialize\+Text}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Текстовая десериализация. Считывает элементы из текстового потока. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structQueue_1_1Node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQueue_ab19b627930ab2f2edae749bc870a9f64}{front\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em Указатель на начало очереди (отсюда забираем) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structQueue_1_1Node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQueue_a88d25b953295bd4923ec09afcb0b08eb}{back\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em Указатель на конец очереди (сюда добавляем) \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classQueue_ac200b8623f444bfa320836811f83f03a}{size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Queue$<$ T $>$}
+Шаблонный класс Очереди (\doxylink{classQueue}{Queue}). 
+
+Реализует структуру данных FIFO (First In, First Out) на основе односвязного списка. Элементы добавляются в "{}хвост"{} (back) и извлекаются из "{}головы"{} (front).
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Тип хранимых данных. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classQueue_af73bb29c868f7b37f369c668f114bd9f}\label{classQueue_af73bb29c868f7b37f369c668f114bd9f} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Queue()}{Queue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\mbox{\hyperlink{classQueue}{\+::\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию. Создает пустую очередь. 
+
+\Hypertarget{classQueue_a302dd47cfedbd5d52dc46fcd3a6b4577}\label{classQueue_a302dd47cfedbd5d52dc46fcd3a6b4577} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Queue()}{Queue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\mbox{\hyperlink{classQueue}{\+::\+Queue}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Конструктор копирования. Создает глубокую копию очереди, сохраняя порядок элементов. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Очередь для копирования. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classQueue_a302dd47cfedbd5d52dc46fcd3a6b4577_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classQueue_aa7eef1b427e24555780505de20e9acbc}\label{classQueue_aa7eef1b427e24555780505de20e9acbc} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!````~Queue@{\texorpdfstring{$\sim$}{\string~}Queue}}
+\index{````~Queue@{\texorpdfstring{$\sim$}{\string~}Queue}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Queue()}{\string~Queue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classQueue}{Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. Освобождает память всех узлов. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classQueue_ab7283c5c4968ff966a1aacc4c131d64f}\label{classQueue_ab7283c5c4968ff966a1aacc4c131d64f} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!back@{back}}
+\index{back@{back}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает ссылку на последний элемент очереди. 
+
+\begin{DoxyReturn}{Returns}
+Ссылка на элемент в хвосте (back). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если очередь пуста. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classQueue_ab7283c5c4968ff966a1aacc4c131d64f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classQueue_a9d08c73b8623ffc33227b6476b899dd5}\label{classQueue_a9d08c73b8623ffc33227b6476b899dd5} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!back@{back}}
+\index{back@{back}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает константную ссылку на последний элемент очереди. 
+
+\begin{DoxyReturn}{Returns}
+Константная ссылка на элемент в хвосте. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если очередь пуста. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classQueue_acb12e3d108397a77e412d43cdd0b2836}\label{classQueue_acb12e3d108397a77e412d43cdd0b2836} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Полностью очищает очередь. Удаляет все узлы и сбрасывает указатели. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classQueue_acb12e3d108397a77e412d43cdd0b2836_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classQueue_a25918244eb1e926c3958331a2cb33dac}\label{classQueue_a25918244eb1e926c3958331a2cb33dac} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::dequeue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Удаляет элемент из начала очереди (dequeue). 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если очередь пуста. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classQueue_a25918244eb1e926c3958331a2cb33dac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classQueue_a1bab4df76141781dd76bead18485b58b}\label{classQueue_a1bab4df76141781dd76bead18485b58b} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::deserialize (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Универсальная десериализация. По умолчанию вызывает бинарную десериализацию. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classQueue_a424d92ada522e7d712010e882e5b2cf4}\label{classQueue_a424d92ada522e7d712010e882e5b2cf4} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!deserializeBinary@{deserializeBinary}}
+\index{deserializeBinary@{deserializeBinary}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeBinary()}{deserializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::deserialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Бинарная десериализация. Восстанавливает очередь из бинарного формата. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classQueue_aa238cf6bba18150cf4d8ecaa75a320b6}\label{classQueue_aa238cf6bba18150cf4d8ecaa75a320b6} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!deserializeText@{deserializeText}}
+\index{deserializeText@{deserializeText}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeText()}{deserializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::deserialize\+Text (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Текстовая десериализация. Считывает элементы из текстового потока. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classQueue_a528a3209c79384eac2afbdf6aa6eaf51}\label{classQueue_a528a3209c79384eac2afbdf6aa6eaf51} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::enqueue (\begin{DoxyParamCaption}\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Добавляет элемент в конец очереди (enqueue). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Значение для вставки. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classQueue_a528a3209c79384eac2afbdf6aa6eaf51_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classQueue_ae725ac8696b74e70f24a0f372314e220}\label{classQueue_ae725ac8696b74e70f24a0f372314e220} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!front@{front}}
+\index{front@{front}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает ссылку на первый элемент очереди. 
+
+\begin{DoxyReturn}{Returns}
+Ссылка на элемент в голове (front). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если очередь пуста. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classQueue_ae725ac8696b74e70f24a0f372314e220_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classQueue_aad4d417c9fe6094039a63d56269e9a28}\label{classQueue_aad4d417c9fe6094039a63d56269e9a28} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!front@{front}}
+\index{front@{front}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает константную ссылку на первый элемент очереди. 
+
+\begin{DoxyReturn}{Returns}
+Константная ссылка на элемент в голове. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если очередь пуста. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classQueue_a50ca34ace10ec07e61a849a2c6da4d18}\label{classQueue_a50ca34ace10ec07e61a849a2c6da4d18} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущий размер очереди. 
+
+\begin{DoxyReturn}{Returns}
+Количество элементов. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classQueue_a50ca34ace10ec07e61a849a2c6da4d18_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classQueue_a225f5d08888ea72a4dfe73f235761e5d}\label{classQueue_a225f5d08888ea72a4dfe73f235761e5d} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, пуста ли очередь. 
+
+\begin{DoxyReturn}{Returns}
+true, если элементов нет, иначе false. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classQueue_a225f5d08888ea72a4dfe73f235761e5d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classQueue_ac0d0636575a2ac8ba8e9a7e4589ac075}\label{classQueue_ac0d0636575a2ac8ba8e9a7e4589ac075} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$ \& \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Оператор присваивания. Обеспечивает строгую гарантию безопасности исключений. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Очередь, содержимое которой присваивается. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{classQueue_a3ebc93d6f3dfdb6e866ce47dcf5560b4}\label{classQueue_a3ebc93d6f3dfdb6e866ce47dcf5560b4} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!print@{print}}
+\index{print@{print}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Выводит содержимое очереди в консоль от начала к концу. 
+
+\Hypertarget{classQueue_a040f8ac478b7fda3717652fc5e814106}\label{classQueue_a040f8ac478b7fda3717652fc5e814106} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::serialize (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Универсальная сериализация. По умолчанию вызывает бинарную сериализацию. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classQueue_a9896f9fa62d9b265573498626d238ea6}\label{classQueue_a9896f9fa62d9b265573498626d238ea6} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!serializeBinary@{serializeBinary}}
+\index{serializeBinary@{serializeBinary}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeBinary()}{serializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::serialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Бинарная сериализация. Сохраняет данные в бинарном виде для максимальной производительности. 
+
+\begin{DoxyNote}{Note}
+Корректно работает только с тривиально копируемыми типами (POD). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classQueue_ad91a2741646a2b370b077bb567c34f8f}\label{classQueue_ad91a2741646a2b370b077bb567c34f8f} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!serializeText@{serializeText}}
+\index{serializeText@{serializeText}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeText()}{serializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::serialize\+Text (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Текстовая сериализация. Сохраняет элементы через пробел в читаемом виде. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classQueue_a88d25b953295bd4923ec09afcb0b08eb}\label{classQueue_a88d25b953295bd4923ec09afcb0b08eb} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!back\_node@{back\_node}}
+\index{back\_node@{back\_node}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back\_node}{back\_node}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structQueue_1_1Node}{Node}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::back\+\_\+node\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на конец очереди (сюда добавляем) 
+
+\Hypertarget{classQueue_ab19b627930ab2f2edae749bc870a9f64}\label{classQueue_ab19b627930ab2f2edae749bc870a9f64} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!front\_node@{front\_node}}
+\index{front\_node@{front\_node}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front\_node}{front\_node}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structQueue_1_1Node}{Node}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::front\+\_\+node\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на начало очереди (отсюда забираем) 
+
+\Hypertarget{classQueue_ac200b8623f444bfa320836811f83f03a}\label{classQueue_ac200b8623f444bfa320836811f83f03a} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!size@{size}}
+\index{size@{size}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Queue_8h}{Queue.\+h}}\end{DoxyCompactItemize}

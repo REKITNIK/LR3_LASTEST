@@ -1,0 +1,13 @@
+<map id="ForwardList::getSize" name="ForwardList::getSize">
+<area shape="rect" id="Node000001" title="Возвращает текущее количество элементов." alt="" coords="335,80,488,105"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#a0f7ab8a577d6d9af00b446bf3d2986c4" title="Тестирование производительности односвязного списка (ForwardList)." alt="" coords="108,5,287,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="369,77,286,45,249,33,250,28,288,39,370,72"/>
+<area shape="rect" id="Node000004" href="$tests__oop__gtest_8cpp.html#ad66e0ea91b547e8a940e341a4e33e306" title=" " alt="" coords="170,55,225,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="320,85,225,73,225,68,321,79"/>
+<area shape="rect" id="Node000005" href="$tests__oop__gtest_8cpp.html#a151186ef398f8c2920165c41c6cc2d45" title=" " alt="" coords="170,104,225,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="321,105,225,116,225,111,320,100"/>
+<area shape="rect" id="Node000006" href="$tests__oop__gtest_8cpp.html#a050e67dc8918736c12c58de9d0972830" title=" " alt="" coords="170,153,225,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="368,113,288,143,226,162,224,157,286,138,366,108"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

@@ -1,0 +1,735 @@
+\doxysection{Double\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classDoubleList}{}\label{classDoubleList}\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+
+
+Класс двусвязного списка.  
+
+
+
+
+{\ttfamily \#include $<$Double\+List.\+h$>$}
+
+
+
+Collaboration diagram for Double\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classDoubleList__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structDoubleList_1_1Node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDoubleList_a5e2a099111bd3d429bdcadc166c47dfb}{Double\+List}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Создает пустой список. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDoubleList_abf789646f16daeec6b56b8992441c084}{Double\+List}} (const \mbox{\hyperlink{classDoubleList}{Double\+List}} \&other)
+\begin{DoxyCompactList}\small\item\em Копирующий конструктор. Создает глубокую копию списка. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDoubleList}{Double\+List}} \& \mbox{\hyperlink{classDoubleList_a2cf2f59a7089788e12a630074135291d}{operator=}} (const \mbox{\hyperlink{classDoubleList}{Double\+List}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор присваивания. Выполняет глубокое копирование с гарантией безопасности исключений (strong exception guarantee). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDoubleList_a39f16115b9244cc93a28abc0c980e794}{\texorpdfstring{$\sim$}{\string~}\+Double\+List}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. Освобождает всю память, занятую узлами списка. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_aa82b1d2319bb8c6dd02cda8ee33d8e15}{push\+Front}} (const T \&element)
+\begin{DoxyCompactList}\small\item\em Добавляет элемент в начало списка. Сложность\+: O(1). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a0120f6c04110c280165197693f895d3f}{push\+Back}} (const T \&element)
+\begin{DoxyCompactList}\small\item\em Добавляет элемент в конец списка. Сложность\+: O(1). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a1690b042ab1a2779f622ddcfb8896bc2}{insert}} (size\+\_\+t index, const T \&element)
+\begin{DoxyCompactList}\small\item\em Вставляет элемент по указанному индексу. Оптимизирован\+: выбирает направление перебора (от начала или от конца) в зависимости от индекса. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a04d9764efa59df8d9b88d583b5368542}{pop\+Front}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет первый элемент списка. Сложность\+: O(1). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a6e11f42f6814204e5892f473069e7a68}{pop\+Back}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет последний элемент списка. Сложность\+: O(1). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a0524c6320cbce0b26c9385c332d646e3}{remove}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Удаляет элемент по индексу. Оптимизирован\+: выбирает направление перебора (от начала или от конца). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_aa39a5dbfefc861a748ace6e684b38c8c}{remove\+Value}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Удаляет все элементы, равные заданному значению. Проходит по всему списку. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classDoubleList_a1218078c499df15767a2be3c2329d3cd}{get}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на элемент по индексу. Оптимизирован\+: выбирает направление перебора (от начала или от конца). \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classDoubleList_a17e8dcd2bbca6d05204b959732534616}{get}} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Возвращает константную ссылку на элемент по индексу. Оптимизирован\+: выбирает направление перебора (от начала или от конца). \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classDoubleList_a93697f44852ce8c2ab37cbd9734186e7}{front}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает первый элемент. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classDoubleList_af800649f00cd6a2186295c95aab72946}{front}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает первый элемент (const). \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classDoubleList_a3ebdcd207ea924f2d3affd6fbac166ee}{back}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает последний элемент. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classDoubleList_a48bc90b555d37cae590ae75f2420cf6f}{back}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает последний элемент (const). \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classDoubleList_a4313b534733d4e98e3363c0ad5b1ae8b}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее количество элементов. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDoubleList_ac1de2b21ebd85ec87f2b940232b482f0}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, пуст ли список. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a62436a8284f2fe053658314c12115e88}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Полностью очищает список, удаляя все узлы. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDoubleList_ad5971476ec3dcec2de5944169cc28cdb}{find}} (const T \&value) const
+\begin{DoxyCompactList}\small\item\em Проверяет наличие значения в списке. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a2a92f1544576bf4e7cb2826cb6ab7f19}{print}} () const
+\begin{DoxyCompactList}\small\item\em Выводит элементы списка в поток вывода (от головы к хвосту). Формат\+: \mbox{[}e1 \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} e2 \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} e3\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a39ff9cfeb0f9900f7cf52189be811171}{print\+Reverse}} () const
+\begin{DoxyCompactList}\small\item\em Выводит элементы списка в поток вывода в обратном порядке (от хвоста к голове). Формат\+: \mbox{[}e3 \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} e2 \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} e1\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a1115147f713f6de7b12604b7caeda3bf}{serialize}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Сериализация (обертка). По умолчанию вызывает serialize\+Binary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a8da91422eeb41da6b0882ad14b514a9d}{deserialize}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Десериализация (обертка). По умолчанию вызывает deserialize\+Binary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a057d2a0791ce1bc4c64c1b07574afb15}{serialize\+Binary}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Бинарная сериализация. Сохраняет размер и данные узлов. Структура связей не сохраняется, пересоздается при чтении. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a47bbcf20e9ec0ede31eab2841232d483}{deserialize\+Binary}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Бинарная десериализация. Очищает список и восстанавливает элементы. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a4756aba60e436a86aeed834309869b02}{serialize\+Text}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Текстовая сериализация. Формат\+: $<$размер$>$~\newline
+$<$значения через пробел$>$~\newline
+. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoubleList_a564b57a67a700eff9a98ceaecee02b5d}{deserialize\+Text}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Текстовая десериализация. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structDoubleList_1_1Node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDoubleList_aaad845e1d6f481a6d8117760482ac4d8}{head}}
+\begin{DoxyCompactList}\small\item\em Указатель на первый элемент \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDoubleList_1_1Node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDoubleList_a9877c1d12a34d1febcf24ba1647dd962}{tail}}
+\begin{DoxyCompactList}\small\item\em Указатель на последний элемент \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classDoubleList_adb35f02dc786dd9e59fa7a92edcdb3a6}{size}}
+\begin{DoxyCompactList}\small\item\em Текущее количество элементов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Double\+List$<$ T $>$}
+Класс двусвязного списка. 
+
+Поддерживает вставку и удаление элементов с обоих концов за O(1), а также доступ и модификацию по индексу за O(\+N).
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Тип элементов списка. Должен быть копируемым и конструируемым по умолчанию. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyWarning}{Warning}
+Бинарная сериализация корректна только для тривиально копируемых типов (POD). 
+\end{DoxyWarning}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDoubleList_a5e2a099111bd3d429bdcadc166c47dfb}\label{classDoubleList_a5e2a099111bd3d429bdcadc166c47dfb} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!DoubleList@{DoubleList}}
+\index{DoubleList@{DoubleList}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DoubleList()}{DoubleList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\mbox{\hyperlink{classDoubleList}{\+::\+Double\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию. Создает пустой список. 
+
+\Hypertarget{classDoubleList_abf789646f16daeec6b56b8992441c084}\label{classDoubleList_abf789646f16daeec6b56b8992441c084} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!DoubleList@{DoubleList}}
+\index{DoubleList@{DoubleList}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DoubleList()}{DoubleList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\mbox{\hyperlink{classDoubleList}{\+::\+Double\+List}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Копирующий конструктор. Создает глубокую копию списка. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Список-\/источник. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDoubleList_abf789646f16daeec6b56b8992441c084_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDoubleList_a39f16115b9244cc93a28abc0c980e794}\label{classDoubleList_a39f16115b9244cc93a28abc0c980e794} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!````~DoubleList@{\texorpdfstring{$\sim$}{\string~}DoubleList}}
+\index{````~DoubleList@{\texorpdfstring{$\sim$}{\string~}DoubleList}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DoubleList()}{\string~DoubleList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classDoubleList}{Double\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. Освобождает всю память, занятую узлами списка. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDoubleList_a3ebdcd207ea924f2d3affd6fbac166ee}\label{classDoubleList_a3ebdcd207ea924f2d3affd6fbac166ee} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!back@{back}}
+\index{back@{back}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает последний элемент. 
+
+\begin{DoxyReturn}{Returns}
+T\& Ссылка на последний элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если список пуст. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classDoubleList_a3ebdcd207ea924f2d3affd6fbac166ee_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDoubleList_a48bc90b555d37cae590ae75f2420cf6f}\label{classDoubleList_a48bc90b555d37cae590ae75f2420cf6f} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!back@{back}}
+\index{back@{back}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает последний элемент (const). 
+
+\begin{DoxyReturn}{Returns}
+const T\& Константная ссылка на последний элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если список пуст. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDoubleList_a62436a8284f2fe053658314c12115e88}\label{classDoubleList_a62436a8284f2fe053658314c12115e88} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Полностью очищает список, удаляя все узлы. 
+
+\Hypertarget{classDoubleList_a8da91422eeb41da6b0882ad14b514a9d}\label{classDoubleList_a8da91422eeb41da6b0882ad14b514a9d} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::deserialize (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Десериализация (обертка). По умолчанию вызывает deserialize\+Binary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoubleList_a47bbcf20e9ec0ede31eab2841232d483}\label{classDoubleList_a47bbcf20e9ec0ede31eab2841232d483} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!deserializeBinary@{deserializeBinary}}
+\index{deserializeBinary@{deserializeBinary}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeBinary()}{deserializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::deserialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Бинарная десериализация. Очищает список и восстанавливает элементы. 
+
+\begin{DoxyWarning}{Warning}
+Только для POD-\/типов. Требует конструктора по умолчанию для T. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoubleList_a564b57a67a700eff9a98ceaecee02b5d}\label{classDoubleList_a564b57a67a700eff9a98ceaecee02b5d} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!deserializeText@{deserializeText}}
+\index{deserializeText@{deserializeText}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeText()}{deserializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::deserialize\+Text (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Текстовая десериализация. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoubleList_ad5971476ec3dcec2de5944169cc28cdb}\label{classDoubleList_ad5971476ec3dcec2de5944169cc28cdb} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!find@{find}}
+\index{find@{find}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет наличие значения в списке. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Искомое значение. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Если значение найдено. 
+
+false Если значение не найдено. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDoubleList_ad5971476ec3dcec2de5944169cc28cdb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDoubleList_a93697f44852ce8c2ab37cbd9734186e7}\label{classDoubleList_a93697f44852ce8c2ab37cbd9734186e7} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!front@{front}}
+\index{front@{front}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает первый элемент. 
+
+\begin{DoxyReturn}{Returns}
+T\& Ссылка на первый элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если список пуст. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classDoubleList_a93697f44852ce8c2ab37cbd9734186e7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDoubleList_af800649f00cd6a2186295c95aab72946}\label{classDoubleList_af800649f00cd6a2186295c95aab72946} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!front@{front}}
+\index{front@{front}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает первый элемент (const). 
+
+\begin{DoxyReturn}{Returns}
+const T\& Константная ссылка на первый элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если список пуст. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDoubleList_a1218078c499df15767a2be3c2329d3cd}\label{classDoubleList_a1218078c499df15767a2be3c2329d3cd} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!get@{get}}
+\index{get@{get}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Возвращает ссылку на элемент по индексу. Оптимизирован\+: выбирает направление перебора (от начала или от конца). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс элемента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\& Ссылка на элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDoubleList_a1218078c499df15767a2be3c2329d3cd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDoubleList_a17e8dcd2bbca6d05204b959732534616}\label{classDoubleList_a17e8dcd2bbca6d05204b959732534616} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!get@{get}}
+\index{get@{get}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает константную ссылку на элемент по индексу. Оптимизирован\+: выбирает направление перебора (от начала или от конца). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс элемента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const T\& Константная ссылка на элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDoubleList_a4313b534733d4e98e3363c0ad5b1ae8b}\label{classDoubleList_a4313b534733d4e98e3363c0ad5b1ae8b} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущее количество элементов. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Размер списка. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDoubleList_a4313b534733d4e98e3363c0ad5b1ae8b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDoubleList_a1690b042ab1a2779f622ddcfb8896bc2}\label{classDoubleList_a1690b042ab1a2779f622ddcfb8896bc2} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index,  }\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Вставляет элемент по указанному индексу. Оптимизирован\+: выбирает направление перебора (от начала или от конца) в зависимости от индекса. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Позиция вставки (0 -\/ перед первым, size -\/ после последнего). \\
+\hline
+{\em element} & Добавляемое значение. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>} size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDoubleList_ac1de2b21ebd85ec87f2b940232b482f0}\label{classDoubleList_ac1de2b21ebd85ec87f2b940232b482f0} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, пуст ли список. 
+
+\begin{DoxyReturn}{Returns}
+true Если список пуст. 
+
+false Если в списке есть элементы. 
+\end{DoxyReturn}
+\Hypertarget{classDoubleList_a2cf2f59a7089788e12a630074135291d}\label{classDoubleList_a2cf2f59a7089788e12a630074135291d} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$ \& \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Оператор присваивания. Выполняет глубокое копирование с гарантией безопасности исключений (strong exception guarantee). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Список-\/источник. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{classDoubleList_a6e11f42f6814204e5892f473069e7a68}\label{classDoubleList_a6e11f42f6814204e5892f473069e7a68} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!popBack@{popBack}}
+\index{popBack@{popBack}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{popBack()}{popBack()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::pop\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Удаляет последний элемент списка. Сложность\+: O(1). 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если список пуст. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDoubleList_a6e11f42f6814204e5892f473069e7a68_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDoubleList_a04d9764efa59df8d9b88d583b5368542}\label{classDoubleList_a04d9764efa59df8d9b88d583b5368542} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!popFront@{popFront}}
+\index{popFront@{popFront}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{popFront()}{popFront()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::pop\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Удаляет первый элемент списка. Сложность\+: O(1). 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если список пуст. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classDoubleList_a04d9764efa59df8d9b88d583b5368542_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDoubleList_a2a92f1544576bf4e7cb2826cb6ab7f19}\label{classDoubleList_a2a92f1544576bf4e7cb2826cb6ab7f19} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!print@{print}}
+\index{print@{print}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Выводит элементы списка в поток вывода (от головы к хвосту). Формат\+: \mbox{[}e1 \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} e2 \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} e3\mbox{]}. 
+
+\Hypertarget{classDoubleList_a39ff9cfeb0f9900f7cf52189be811171}\label{classDoubleList_a39ff9cfeb0f9900f7cf52189be811171} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!printReverse@{printReverse}}
+\index{printReverse@{printReverse}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{printReverse()}{printReverse()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::print\+Reverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Выводит элементы списка в поток вывода в обратном порядке (от хвоста к голове). Формат\+: \mbox{[}e3 \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} e2 \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} e1\mbox{]}. 
+
+\Hypertarget{classDoubleList_a0120f6c04110c280165197693f895d3f}\label{classDoubleList_a0120f6c04110c280165197693f895d3f} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!pushBack@{pushBack}}
+\index{pushBack@{pushBack}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pushBack()}{pushBack()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::push\+Back (\begin{DoxyParamCaption}\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Добавляет элемент в конец списка. Сложность\+: O(1). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Добавляемое значение. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDoubleList_a0120f6c04110c280165197693f895d3f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDoubleList_aa82b1d2319bb8c6dd02cda8ee33d8e15}\label{classDoubleList_aa82b1d2319bb8c6dd02cda8ee33d8e15} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!pushFront@{pushFront}}
+\index{pushFront@{pushFront}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pushFront()}{pushFront()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::push\+Front (\begin{DoxyParamCaption}\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Добавляет элемент в начало списка. Сложность\+: O(1). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Добавляемое значение. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classDoubleList_aa82b1d2319bb8c6dd02cda8ee33d8e15_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDoubleList_a0524c6320cbce0b26c9385c332d646e3}\label{classDoubleList_a0524c6320cbce0b26c9385c332d646e3} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Удаляет элемент по индексу. Оптимизирован\+: выбирает направление перебора (от начала или от конца). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс удаляемого элемента. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDoubleList_aa39a5dbfefc861a748ace6e684b38c8c}\label{classDoubleList_aa39a5dbfefc861a748ace6e684b38c8c} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!removeValue@{removeValue}}
+\index{removeValue@{removeValue}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeValue()}{removeValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::remove\+Value (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Удаляет все элементы, равные заданному значению. Проходит по всему списку. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Значение для удаления. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoubleList_a1115147f713f6de7b12604b7caeda3bf}\label{classDoubleList_a1115147f713f6de7b12604b7caeda3bf} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::serialize (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Сериализация (обертка). По умолчанию вызывает serialize\+Binary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoubleList_a057d2a0791ce1bc4c64c1b07574afb15}\label{classDoubleList_a057d2a0791ce1bc4c64c1b07574afb15} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!serializeBinary@{serializeBinary}}
+\index{serializeBinary@{serializeBinary}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeBinary()}{serializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::serialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Бинарная сериализация. Сохраняет размер и данные узлов. Структура связей не сохраняется, пересоздается при чтении. 
+
+\begin{DoxyWarning}{Warning}
+Только для POD-\/типов. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDoubleList_a4756aba60e436a86aeed834309869b02}\label{classDoubleList_a4756aba60e436a86aeed834309869b02} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!serializeText@{serializeText}}
+\index{serializeText@{serializeText}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeText()}{serializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::serialize\+Text (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Текстовая сериализация. Формат\+: $<$размер$>$~\newline
+$<$значения через пробел$>$~\newline
+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classDoubleList_aaad845e1d6f481a6d8117760482ac4d8}\label{classDoubleList_aaad845e1d6f481a6d8117760482ac4d8} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!head@{head}}
+\index{head@{head}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structDoubleList_1_1Node}{Node}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::head\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на первый элемент 
+
+\Hypertarget{classDoubleList_adb35f02dc786dd9e59fa7a92edcdb3a6}\label{classDoubleList_adb35f02dc786dd9e59fa7a92edcdb3a6} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!size@{size}}
+\index{size@{size}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Текущее количество элементов 
+
+\Hypertarget{classDoubleList_a9877c1d12a34d1febcf24ba1647dd962}\label{classDoubleList_a9877c1d12a34d1febcf24ba1647dd962} 
+\index{DoubleList$<$ T $>$@{DoubleList$<$ T $>$}!tail@{tail}}
+\index{tail@{tail}!DoubleList$<$ T $>$@{DoubleList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structDoubleList_1_1Node}{Node}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDoubleList}{Double\+List}}$<$ T $>$\+::tail\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на последний элемент 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{DoubleList_8h}{Double\+List.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,32 @@
+<map id="benchmark_serialization" name="benchmark_serialization">
+<area shape="rect" id="Node000001" title="Тестирование механизмов сериализации и десериализации." alt="" coords="5,301,188,327"/>
+<area shape="rect" id="Node000002" href="$classArray.html#ac5b2023f1035ca2b6fe9fde5131df98e" title="Добавляет элемент в конец массива. Если ёмкости недостаточно, происходит перевыделение памяти." alt="" coords="289,5,377,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,300,111,251,136,180,154,142,176,105,203,70,234,40,254,28,274,21,276,26,256,33,238,44,207,73,181,108,159,145,141,182,116,252,103,301"/>
+<area shape="rect" id="Node000003" href="$classArray.html#ae3720036ec6a307ab809470047e2745b" title="Десериализация (обертка). По умолчанию вызывает deserializeBinary." alt="" coords="265,55,400,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="100,300,115,259,143,202,182,141,207,113,234,89,251,79,254,84,238,94,210,117,186,144,147,204,120,261,105,302"/>
+<area shape="rect" id="Node000004" href="$classFullBinaryTree.html#a867f25cd47cef37575192a4162e08cc7" title="Универсальная десериализация. По умолчанию делегирует вызов бинарной десериализации." alt="" coords="236,104,429,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="102,300,120,267,149,223,188,177,234,138,245,133,248,137,238,143,192,181,154,226,125,270,107,302"/>
+<area shape="rect" id="Node000005" href="$classHashTable.html#a9129023e7811d55152ca87391a6149f3" title="Универсальная десериализация. По умолчанию делегирует вызов бинарной десериализации." alt="" coords="249,153,417,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="106,299,157,245,194,214,235,188,250,181,252,186,237,192,197,218,161,249,110,303"/>
+<area shape="rect" id="Node000006" href="$classHashTable.html#af52ef1459bd66438145bee59ac4f25ac" title="Вставляет или обновляет пару ключ&#45;значение. Если ключ уже существует, его значение обновляется...." alt="" coords="265,203,400,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="116,299,169,268,235,237,257,229,259,234,237,242,171,273,119,304"/>
+<area shape="rect" id="Node000007" href="$classFullBinaryTree.html#a7e8c5f7034a2246a2e89d58236589679" title="Вставляет значение в дерево. Алгоритм ищет первый свободный лист (в порядке обхода в ширину) и добавл..." alt="" coords="253,252,412,277"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="158,299,257,278,258,283,159,304"/>
+<area shape="rect" id="Node000008" href="$benchmark_8cpp.html#a2a10ff76e86dd41833b8c23edf05af74" title="Выводит заголовок секции бенчмарка в консоль и файл." alt="" coords="281,301,385,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="188,311,267,311,267,317,188,317"/>
+<area shape="rect" id="Node000010" href="$benchmark_8cpp.html#a3ad66a01888bf14fee4e70b41f031a92" title="Форматированно выводит результаты теста в консоль и файл." alt="" coords="285,351,381,376"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="159,324,272,348,270,353,158,329"/>
+<area shape="rect" id="Node000011" href="$classArray.html#a3087c3fae545ef365ee892b1ef61200a" title="Сериализация (обертка). По умолчанию вызывает serializeBinary." alt="" coords="273,400,392,425"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="120,324,172,354,237,385,263,394,261,399,235,390,169,359,117,329"/>
+<area shape="rect" id="Node000012" href="$classFullBinaryTree.html#aa1e29023691c45bc8b133d08229f8663" title="Универсальная сериализация. По умолчанию делегирует вызов бинарной сериализации." alt="" coords="244,449,421,475"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="111,325,162,378,198,408,237,434,255,442,253,447,235,439,194,413,158,382,107,329"/>
+<area shape="rect" id="Node000013" href="$classHashTable.html#afb3a7fb53385c7229c976c6120f1cfd7" title="Универсальная сериализация. По умолчанию делегирует вызов бинарной сериализации." alt="" coords="257,499,409,524"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="107,326,125,358,154,401,192,446,238,484,251,491,248,496,234,488,188,450,150,404,121,361,102,328"/>
+<area shape="rect" id="Node000014" href="$classBenchmarkTimer.html#a7c05d8aa12448ca657a52449cd6e592e" title="Запускает или перезапускает таймер." alt="" coords="247,548,419,573"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="105,326,120,366,147,423,187,483,211,510,238,533,249,540,246,545,234,537,207,514,182,486,143,425,115,369,100,328"/>
+<area shape="rect" id="Node000015" href="$classBenchmarkTimer.html#a4ff66784d731157d09dbbc0d0a65cfd3" title="Останавливает таймер и возвращает прошедшее время." alt="" coords="247,597,418,623"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="103,326,116,375,141,445,159,482,181,519,207,553,238,583,247,589,244,593,234,587,203,557,177,522,155,485,136,447,111,377,98,328"/>
+<area shape="rect" id="Node000009" href="$benchmark_8cpp.html#a65c1528308af9504cc4afd5122df9285" title="Глобальный поток вывода в файл. Инициализируется при запуске программы." alt="" coords="477,327,567,352"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="385,318,464,329,463,334,385,324"/>
+<area shape="poly" id="edge10_Node000010_Node000009" title=" " alt="" coords="381,355,463,344,464,349,381,360"/>
+</map>

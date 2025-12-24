@@ -1,0 +1,5 @@
+<map id="Queue::Queue" name="Queue::Queue">
+<area shape="rect" id="Node000001" title="Конструктор копирования. Создает глубокую копию очереди, сохраняя порядок элементов." alt="" coords="5,5,120,31"/>
+<area shape="rect" id="Node000002" href="$classQueue.html#a528a3209c79384eac2afbdf6aa6eaf51" title="Добавляет элемент в конец очереди (enqueue)." alt="" coords="168,5,296,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,15,155,15,155,21,120,21"/>
+</map>

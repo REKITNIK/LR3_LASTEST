@@ -1,0 +1,7 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,60,56"/>
+<area shape="rect" id="Node000002" href="$classFullBinaryTree.html#a7e8c5f7034a2246a2e89d58236589679" title="Вставляет значение в дерево. Алгоритм ищет первый свободный лист (в порядке обхода в ширину) и добавл..." alt="" coords="141,5,300,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,37,128,28,128,33,61,42"/>
+<area shape="rect" id="Node000003" href="$classFullBinaryTree.html#a1654d58fe495a41954ed12a2019e423a" title="Проверяет корректность структуры полного бинарного дерева." alt="" coords="108,55,333,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="61,44,108,50,107,56,60,49"/>
+</map>

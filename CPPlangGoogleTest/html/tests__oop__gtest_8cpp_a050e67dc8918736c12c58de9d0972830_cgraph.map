@@ -1,0 +1,11 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,60,105"/>
+<area shape="rect" id="Node000002" href="$classForwardList.html#a2a33482eeace97545add1e1e5fd87f16" title="Возвращает первый элемент." alt="" coords="135,5,271,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,78,74,58,107,40,125,32,127,37,109,44,77,62,51,82"/>
+<area shape="rect" id="Node000003" href="$classForwardList.html#a437bf2f19361585506c6599cf2ab6848" title="Возвращает текущее количество элементов." alt="" coords="127,55,280,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,86,113,78,114,83,61,91"/>
+<area shape="rect" id="Node000004" href="$classForwardList.html#a735c434c283ebe30faa46794fcd35a04" title="Добавляет элемент в конец списка. Сложность: O(N), так как требуется проход до последнего элемента." alt="" coords="119,104,287,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="61,94,106,100,105,106,60,99"/>
+<area shape="rect" id="Node000005" href="$classForwardList.html#ab17f3a45377f0d4c5f7faf11c79cbaea" title="Удаляет все вхождения заданного значения. Проходит по всему списку." alt="" coords="108,153,299,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="52,104,78,121,109,138,131,147,129,152,107,143,76,126,49,108"/>
+</map>

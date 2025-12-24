@@ -1,0 +1,548 @@
+\doxysection{Full\+Binary\+Tree\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classFullBinaryTree}{}\label{classFullBinaryTree}\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+
+
+Шаблонный класс полного бинарного дерева (Full Binary Tree).  
+
+
+
+
+{\ttfamily \#include $<$Full\+Binary\+Tree.\+h$>$}
+
+
+
+Collaboration diagram for Full\+Binary\+Tree\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classFullBinaryTree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFullBinaryTree_af828d9d274fa38f4d47d32cffe2ffd0b}{Full\+Binary\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Создает пустое дерево. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFullBinaryTree_ac4cdadd95eb74f7dc85ae1551f957265}{Full\+Binary\+Tree}} (const \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. Создает полную (глубокую) копию переданного дерева. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}} \& \mbox{\hyperlink{classFullBinaryTree_aeea147a551ac43da5d534830a4d1a68d}{operator=}} (const \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор присваивания. Выполняет глубокое копирование содержимого. Гарантирует строгую безопасность исключений\+: если копирование не удастся, исходное дерево останется неизменным. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFullBinaryTree_a7fa90924aee3f7938b3c68f0f3b57103}{\texorpdfstring{$\sim$}{\string~}\+Full\+Binary\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. Освобождает всю память, выделенную под узлы дерева. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_a7e8c5f7034a2246a2e89d58236589679}{insert}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Вставляет значение в дерево. Алгоритм ищет первый свободный лист (в порядке обхода в ширину) и добавляет к нему два дочерних узла с переданным значением, сохраняя инвариант полноты дерева. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_aca496e711fc6a66705f6312149df9d2c}{remove}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Удаляет значение из дерева. Если удаляемый узел — лист, удаляется также его "{}брат"{}. Если узел внутренний, его значение замещается значением самого правого листа, после чего удаляется этот лист и его брат. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFullBinaryTree_a3f6b24ac9a399db225f4251166d3d8df}{find}} (const T \&value) const
+\begin{DoxyCompactList}\small\item\em Ищет значение в дереве. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFullBinaryTree_a1654d58fe495a41954ed12a2019e423a}{is\+Full\+Binary\+Tree}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет корректность структуры полного бинарного дерева. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classFullBinaryTree_aec51f1cc7085c2fea0368a7eb50a11fe}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее количество узлов. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFullBinaryTree_ae0a1a7c2ccda6775516391ac9ccc7aa5}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, пусто ли дерево. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_a48d691febdca55b9ce567f95af314a3d}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Очищает дерево. Удаляет все узлы и сбрасывает размер до 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_ac9ce60e12fcc259340e506cd68c431c5}{print}} () const
+\begin{DoxyCompactList}\small\item\em Выводит содержимое дерева в стандартный поток вывода (обход в ширину). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_a729b1e90256245db160e0435daab3ca7}{print\+In\+Order}} () const
+\begin{DoxyCompactList}\small\item\em Выводит содержимое дерева (симметричный обход / In-\/\+Order). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_aa1e29023691c45bc8b133d08229f8663}{serialize}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Универсальная сериализация. По умолчанию делегирует вызов бинарной сериализации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_a867f25cd47cef37575192a4162e08cc7}{deserialize}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Универсальная десериализация. По умолчанию делегирует вызов бинарной десериализации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_afc7f40fcc784ca3a6e45496acbf3cef5}{serialize\+Binary}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Бинарная сериализация. Обеспечивает максимальную производительность и компактность за счет прямого дампа памяти узлов. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_a98792b6b181853f2f190a63201ae13a3}{deserialize\+Binary}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Бинарная десериализация. Восстанавливает дерево из бинарного формата. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_a4ce38270512e2f7805fb74a263462f52}{serialize\+Text}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Текстовая сериализация. Сохраняет структуру дерева в читаемом текстовом формате. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFullBinaryTree_ad7c6d97414068980fbd95766f2baa945}{deserialize\+Text}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Текстовая десериализация. Восстанавливает дерево из текстового представления. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFullBinaryTree_aeb3ee047e1b02a2570cc0f80df938ab8}{destroy\+Tree}} (\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}node)
+\item 
+\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFullBinaryTree_a41fb1f31c6dfe73052600fe34c3d93d0}{copy\+Tree}} (\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}node)
+\item 
+bool \mbox{\hyperlink{classFullBinaryTree_a2e839878fe990fc8a4d3f27c71d007bb}{is\+Full\+Binary\+Tree\+Helper}} (\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}node) const
+\item 
+void \mbox{\hyperlink{classFullBinaryTree_ae35885efa8be0b43004b8ad5e695cdc8}{print\+In\+Order\+Helper}} (\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}node) const
+\item 
+void \mbox{\hyperlink{classFullBinaryTree_ae354934e2a8a7c6d17e116f3a818b5af}{serialize\+Helper}} (\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}node, std\+::ostream \&out) const
+\item 
+\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFullBinaryTree_aab6c8cd4e7c6d416eb29a937b513a799}{deserialize\+Helper}} (std\+::istream \&in)
+\item 
+void \mbox{\hyperlink{classFullBinaryTree_a10abcfb9c3d953542bc4689564146f52}{serialize\+Binary\+Helper}} (\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}node, std\+::ostream \&out) const
+\item 
+\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFullBinaryTree_a48ee29a1c332ecff1afb441953f51cfb}{deserialize\+Binary\+Helper}} (std\+::istream \&in)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFullBinaryTree_ae57b0f3d8aedbd440720b9a89f164f89}{root}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classFullBinaryTree_a4411313e28d30c65b5ce9cc924c2f668}{size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Full\+Binary\+Tree$<$ T $>$}
+Шаблонный класс полного бинарного дерева (Full Binary Tree). 
+
+Реализует структуру данных, где каждый узел имеет либо 0, либо 2 потомка. Вставка новых элементов происходит таким образом, чтобы дерево заполнялось равномерно, поддерживая свойство полноты.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Тип хранимых данных. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFullBinaryTree_af828d9d274fa38f4d47d32cffe2ffd0b}\label{classFullBinaryTree_af828d9d274fa38f4d47d32cffe2ffd0b} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!FullBinaryTree@{FullBinaryTree}}
+\index{FullBinaryTree@{FullBinaryTree}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{FullBinaryTree()}{FullBinaryTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\mbox{\hyperlink{classFullBinaryTree}{\+::\+Full\+Binary\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию. Создает пустое дерево. 
+
+\Hypertarget{classFullBinaryTree_ac4cdadd95eb74f7dc85ae1551f957265}\label{classFullBinaryTree_ac4cdadd95eb74f7dc85ae1551f957265} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!FullBinaryTree@{FullBinaryTree}}
+\index{FullBinaryTree@{FullBinaryTree}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{FullBinaryTree()}{FullBinaryTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\mbox{\hyperlink{classFullBinaryTree}{\+::\+Full\+Binary\+Tree}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Конструктор копирования. Создает полную (глубокую) копию переданного дерева. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Дерево, из которого производится копирование. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFullBinaryTree_ac4cdadd95eb74f7dc85ae1551f957265_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classFullBinaryTree_a7fa90924aee3f7938b3c68f0f3b57103}\label{classFullBinaryTree_a7fa90924aee3f7938b3c68f0f3b57103} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!````~FullBinaryTree@{\texorpdfstring{$\sim$}{\string~}FullBinaryTree}}
+\index{````~FullBinaryTree@{\texorpdfstring{$\sim$}{\string~}FullBinaryTree}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FullBinaryTree()}{\string~FullBinaryTree()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. Освобождает всю память, выделенную под узлы дерева. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFullBinaryTree_a48d691febdca55b9ce567f95af314a3d}\label{classFullBinaryTree_a48d691febdca55b9ce567f95af314a3d} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Очищает дерево. Удаляет все узлы и сбрасывает размер до 0. 
+
+\Hypertarget{classFullBinaryTree_a41fb1f31c6dfe73052600fe34c3d93d0}\label{classFullBinaryTree_a41fb1f31c6dfe73052600fe34c3d93d0} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!copyTree@{copyTree}}
+\index{copyTree@{copyTree}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{copyTree()}{copyTree()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::\+Node \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::copy\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFullBinaryTree_a41fb1f31c6dfe73052600fe34c3d93d0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classFullBinaryTree_a867f25cd47cef37575192a4162e08cc7}\label{classFullBinaryTree_a867f25cd47cef37575192a4162e08cc7} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::deserialize (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Универсальная десериализация. По умолчанию делегирует вызов бинарной десериализации. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFullBinaryTree_a867f25cd47cef37575192a4162e08cc7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classFullBinaryTree_a98792b6b181853f2f190a63201ae13a3}\label{classFullBinaryTree_a98792b6b181853f2f190a63201ae13a3} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!deserializeBinary@{deserializeBinary}}
+\index{deserializeBinary@{deserializeBinary}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeBinary()}{deserializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::deserialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Бинарная десериализация. Восстанавливает дерево из бинарного формата. 
+
+\begin{DoxyNote}{Note}
+Ожидает данные тривиально копируемых типов (POD). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFullBinaryTree_a48ee29a1c332ecff1afb441953f51cfb}\label{classFullBinaryTree_a48ee29a1c332ecff1afb441953f51cfb} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!deserializeBinaryHelper@{deserializeBinaryHelper}}
+\index{deserializeBinaryHelper@{deserializeBinaryHelper}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeBinaryHelper()}{deserializeBinaryHelper()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::\+Node \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::deserialize\+Binary\+Helper (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classFullBinaryTree_aab6c8cd4e7c6d416eb29a937b513a799}\label{classFullBinaryTree_aab6c8cd4e7c6d416eb29a937b513a799} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!deserializeHelper@{deserializeHelper}}
+\index{deserializeHelper@{deserializeHelper}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeHelper()}{deserializeHelper()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::\+Node \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::deserialize\+Helper (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classFullBinaryTree_ad7c6d97414068980fbd95766f2baa945}\label{classFullBinaryTree_ad7c6d97414068980fbd95766f2baa945} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!deserializeText@{deserializeText}}
+\index{deserializeText@{deserializeText}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeText()}{deserializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::deserialize\+Text (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Текстовая десериализация. Восстанавливает дерево из текстового представления. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFullBinaryTree_aeb3ee047e1b02a2570cc0f80df938ab8}\label{classFullBinaryTree_aeb3ee047e1b02a2570cc0f80df938ab8} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!destroyTree@{destroyTree}}
+\index{destroyTree@{destroyTree}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{destroyTree()}{destroyTree()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::destroy\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classFullBinaryTree_a3f6b24ac9a399db225f4251166d3d8df}\label{classFullBinaryTree_a3f6b24ac9a399db225f4251166d3d8df} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!find@{find}}
+\index{find@{find}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Ищет значение в дереве. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Искомое значение. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если значение найдено, иначе false. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFullBinaryTree_a3f6b24ac9a399db225f4251166d3d8df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classFullBinaryTree_aec51f1cc7085c2fea0368a7eb50a11fe}\label{classFullBinaryTree_aec51f1cc7085c2fea0368a7eb50a11fe} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущее количество узлов. 
+
+\begin{DoxyReturn}{Returns}
+Размер дерева. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFullBinaryTree_aec51f1cc7085c2fea0368a7eb50a11fe_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classFullBinaryTree_a7e8c5f7034a2246a2e89d58236589679}\label{classFullBinaryTree_a7e8c5f7034a2246a2e89d58236589679} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Вставляет значение в дерево. Алгоритм ищет первый свободный лист (в порядке обхода в ширину) и добавляет к нему два дочерних узла с переданным значением, сохраняя инвариант полноты дерева. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Значение для вставки. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFullBinaryTree_a7e8c5f7034a2246a2e89d58236589679_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classFullBinaryTree_ae0a1a7c2ccda6775516391ac9ccc7aa5}\label{classFullBinaryTree_ae0a1a7c2ccda6775516391ac9ccc7aa5} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, пусто ли дерево. 
+
+\begin{DoxyReturn}{Returns}
+true, если в дереве нет узлов. 
+\end{DoxyReturn}
+\Hypertarget{classFullBinaryTree_a1654d58fe495a41954ed12a2019e423a}\label{classFullBinaryTree_a1654d58fe495a41954ed12a2019e423a} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!isFullBinaryTree@{isFullBinaryTree}}
+\index{isFullBinaryTree@{isFullBinaryTree}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isFullBinaryTree()}{isFullBinaryTree()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::is\+Full\+Binary\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет корректность структуры полного бинарного дерева. 
+
+\begin{DoxyReturn}{Returns}
+true, если у каждого узла либо 0, либо 2 потомка. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFullBinaryTree_a1654d58fe495a41954ed12a2019e423a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classFullBinaryTree_a2e839878fe990fc8a4d3f27c71d007bb}\label{classFullBinaryTree_a2e839878fe990fc8a4d3f27c71d007bb} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!isFullBinaryTreeHelper@{isFullBinaryTreeHelper}}
+\index{isFullBinaryTreeHelper@{isFullBinaryTreeHelper}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isFullBinaryTreeHelper()}{isFullBinaryTreeHelper()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::is\+Full\+Binary\+Tree\+Helper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}}]{node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classFullBinaryTree_aeea147a551ac43da5d534830a4d1a68d}\label{classFullBinaryTree_aeea147a551ac43da5d534830a4d1a68d} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$ \& \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Оператор присваивания. Выполняет глубокое копирование содержимого. Гарантирует строгую безопасность исключений\+: если копирование не удастся, исходное дерево останется неизменным. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Дерево для присваивания. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{classFullBinaryTree_ac9ce60e12fcc259340e506cd68c431c5}\label{classFullBinaryTree_ac9ce60e12fcc259340e506cd68c431c5} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!print@{print}}
+\index{print@{print}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Выводит содержимое дерева в стандартный поток вывода (обход в ширину). 
+
+\Hypertarget{classFullBinaryTree_a729b1e90256245db160e0435daab3ca7}\label{classFullBinaryTree_a729b1e90256245db160e0435daab3ca7} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!printInOrder@{printInOrder}}
+\index{printInOrder@{printInOrder}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{printInOrder()}{printInOrder()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::print\+In\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Выводит содержимое дерева (симметричный обход / In-\/\+Order). 
+
+\Hypertarget{classFullBinaryTree_ae35885efa8be0b43004b8ad5e695cdc8}\label{classFullBinaryTree_ae35885efa8be0b43004b8ad5e695cdc8} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!printInOrderHelper@{printInOrderHelper}}
+\index{printInOrderHelper@{printInOrderHelper}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{printInOrderHelper()}{printInOrderHelper()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::print\+In\+Order\+Helper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}}]{node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classFullBinaryTree_aca496e711fc6a66705f6312149df9d2c}\label{classFullBinaryTree_aca496e711fc6a66705f6312149df9d2c} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Удаляет значение из дерева. Если удаляемый узел — лист, удаляется также его "{}брат"{}. Если узел внутренний, его значение замещается значением самого правого листа, после чего удаляется этот лист и его брат. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Значение для удаления. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFullBinaryTree_aca496e711fc6a66705f6312149df9d2c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classFullBinaryTree_aa1e29023691c45bc8b133d08229f8663}\label{classFullBinaryTree_aa1e29023691c45bc8b133d08229f8663} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::serialize (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Универсальная сериализация. По умолчанию делегирует вызов бинарной сериализации. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFullBinaryTree_aa1e29023691c45bc8b133d08229f8663_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classFullBinaryTree_afc7f40fcc784ca3a6e45496acbf3cef5}\label{classFullBinaryTree_afc7f40fcc784ca3a6e45496acbf3cef5} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!serializeBinary@{serializeBinary}}
+\index{serializeBinary@{serializeBinary}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeBinary()}{serializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::serialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Бинарная сериализация. Обеспечивает максимальную производительность и компактность за счет прямого дампа памяти узлов. 
+
+\begin{DoxyNote}{Note}
+Предназначена для тривиально копируемых типов (POD). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFullBinaryTree_a10abcfb9c3d953542bc4689564146f52}\label{classFullBinaryTree_a10abcfb9c3d953542bc4689564146f52} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!serializeBinaryHelper@{serializeBinaryHelper}}
+\index{serializeBinaryHelper@{serializeBinaryHelper}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeBinaryHelper()}{serializeBinaryHelper()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::serialize\+Binary\+Helper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}}]{node,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classFullBinaryTree_ae354934e2a8a7c6d17e116f3a818b5af}\label{classFullBinaryTree_ae354934e2a8a7c6d17e116f3a818b5af} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!serializeHelper@{serializeHelper}}
+\index{serializeHelper@{serializeHelper}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeHelper()}{serializeHelper()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::serialize\+Helper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}} \texorpdfstring{$\ast$}{*}}]{node,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classFullBinaryTree_a4ce38270512e2f7805fb74a263462f52}\label{classFullBinaryTree_a4ce38270512e2f7805fb74a263462f52} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!serializeText@{serializeText}}
+\index{serializeText@{serializeText}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeText()}{serializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::serialize\+Text (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Текстовая сериализация. Сохраняет структуру дерева в читаемом текстовом формате. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classFullBinaryTree_ae57b0f3d8aedbd440720b9a89f164f89}\label{classFullBinaryTree_ae57b0f3d8aedbd440720b9a89f164f89} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!root@{root}}
+\index{root@{root}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::root\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classFullBinaryTree_a4411313e28d30c65b5ce9cc924c2f668}\label{classFullBinaryTree_a4411313e28d30c65b5ce9cc924c2f668} 
+\index{FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}!size@{size}}
+\index{size@{size}!FullBinaryTree$<$ T $>$@{FullBinaryTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classFullBinaryTree}{Full\+Binary\+Tree}}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FullBinaryTree_8h}{Full\+Binary\+Tree.\+h}}\end{DoxyCompactItemize}

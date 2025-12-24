@@ -1,0 +1,5 @@
+<map id="HashTable::HashTable" name="HashTable::HashTable">
+<area shape="rect" id="Node000001" title="Конструктор копирования. Создает глубокую копию таблицы. Порядок элементов в цепочках может меняться ..." alt="" coords="5,5,169,31"/>
+<area shape="rect" id="Node000002" href="$classHashTable.html#af52ef1459bd66438145bee59ac4f25ac" title="Вставляет или обновляет пару ключ&#45;значение. Если ключ уже существует, его значение обновляется...." alt="" coords="217,5,352,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,15,204,15,204,21,170,21"/>
+</map>

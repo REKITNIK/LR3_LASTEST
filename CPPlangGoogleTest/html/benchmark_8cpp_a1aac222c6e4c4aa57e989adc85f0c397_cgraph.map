@@ -1,0 +1,22 @@
+<map id="benchmark_stack" name="benchmark_stack">
+<area shape="rect" id="Node000001" title="Тестирование производительности стека (Stack)." alt="" coords="5,179,143,204"/>
+<area shape="rect" id="Node000002" href="$classStack.html#a4447f5eba0e8a0eae097aa3f471788f3" title="Возвращает текущее количество элементов." alt="" coords="219,5,334,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,177,119,111,151,73,189,40,205,31,207,36,192,44,155,77,124,115,84,180"/>
+<area shape="rect" id="Node000003" href="$classStack.html#a2723aec5c7e2611b97fcffeb7709de33" title="Удаляет элемент с вершины стека (pop)." alt="" coords="231,55,322,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,177,128,134,157,110,189,89,217,77,219,82,192,94,160,114,131,138,88,180"/>
+<area shape="rect" id="Node000004" href="$benchmark_8cpp.html#a2a10ff76e86dd41833b8c23edf05af74" title="Выводит заголовок секции бенчмарка в консоль и файл." alt="" coords="225,104,329,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="100,176,190,138,212,131,214,136,192,143,103,181"/>
+<area shape="rect" id="Node000006" href="$benchmark_8cpp.html#a3ad66a01888bf14fee4e70b41f031a92" title="Форматированно выводит результаты теста в консоль и файл." alt="" coords="229,153,325,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="143,180,215,171,215,176,143,185"/>
+<area shape="rect" id="Node000007" href="$classStack.html#a3454655ab059b315d9ef24d074734f01" title="Помещает элемент на вершину стека (push)." alt="" coords="228,203,325,228"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="143,197,215,205,214,211,143,202"/>
+<area shape="rect" id="Node000008" href="$classBenchmarkTimer.html#a7c05d8aa12448ca657a52449cd6e592e" title="Запускает или перезапускает таймер." alt="" coords="191,252,363,277"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="105,202,192,237,218,246,216,251,190,242,103,207"/>
+<area shape="rect" id="Node000009" href="$classBenchmarkTimer.html#a4ff66784d731157d09dbbc0d0a65cfd3" title="Останавливает таймер и возвращает прошедшее время." alt="" coords="191,301,362,327"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="89,203,132,244,161,267,192,286,209,294,207,299,189,291,158,271,129,248,86,207"/>
+<area shape="rect" id="Node000010" href="$classStack.html#a8e99bab8b8f969fe5e029934ac14408a" title="Возвращает ссылку на элемент на вершине стека." alt="" coords="233,351,320,376"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="84,203,124,266,155,304,192,336,221,350,219,355,189,340,151,308,120,270,80,205"/>
+<area shape="rect" id="Node000005" href="$benchmark_8cpp.html#a65c1528308af9504cc4afd5122df9285" title="Глобальный поток вывода в файл. Инициализируется при запуске программы." alt="" coords="411,129,500,155"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="329,121,398,131,397,136,329,127"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="324,157,396,147,397,152,325,162"/>
+</map>

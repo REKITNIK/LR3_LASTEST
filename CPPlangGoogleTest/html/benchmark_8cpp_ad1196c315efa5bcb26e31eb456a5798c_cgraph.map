@@ -1,0 +1,22 @@
+<map id="benchmark_hash_table" name="benchmark_hash_table">
+<area shape="rect" id="Node000001" title="Тестирование производительности хеш&#45;таблицы (HashTable)." alt="" coords="5,179,179,204"/>
+<area shape="rect" id="Node000002" href="$classHashTable.html#a02d65ad219e13bc3adb0ca55c89bc749" title="Проверяет наличие ключа в таблице." alt="" coords="252,5,373,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,177,147,111,183,73,225,40,238,33,240,38,228,44,187,77,151,115,103,180"/>
+<area shape="rect" id="Node000003" href="$classHashTable.html#a6793afcbf7247e7ccfb7bc3e4c21d116" title="Получает доступ к значению по ключу (для чтения и записи)." alt="" coords="253,55,372,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,176,156,134,189,110,225,89,241,82,243,87,228,94,192,114,159,138,109,180"/>
+<area shape="rect" id="Node000004" href="$classHashTable.html#af52ef1459bd66438145bee59ac4f25ac" title="Вставляет или обновляет пару ключ&#45;значение. Если ключ уже существует, его значение обновляется...." alt="" coords="245,104,380,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="124,176,226,138,250,131,251,136,228,143,126,181"/>
+<area shape="rect" id="Node000005" href="$benchmark_8cpp.html#a2a10ff76e86dd41833b8c23edf05af74" title="Выводит заголовок секции бенчмарка в консоль и файл." alt="" coords="261,153,365,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="179,179,247,171,247,176,179,184"/>
+<area shape="rect" id="Node000007" href="$benchmark_8cpp.html#a3ad66a01888bf14fee4e70b41f031a92" title="Форматированно выводит результаты теста в консоль и файл." alt="" coords="265,203,361,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="179,198,251,206,251,211,179,203"/>
+<area shape="rect" id="Node000008" href="$classHashTable.html#a53700bf1dcb17d1a9858f051f371de9f" title="Удаляет элемент по ключу." alt="" coords="239,252,386,277"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="128,202,228,237,255,245,253,251,226,242,126,207"/>
+<area shape="rect" id="Node000009" href="$classBenchmarkTimer.html#a7c05d8aa12448ca657a52449cd6e592e" title="Запускает или перезапускает таймер." alt="" coords="227,301,399,327"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="109,202,160,243,193,266,228,286,247,294,245,299,225,291,190,271,156,247,106,206"/>
+<area shape="rect" id="Node000010" href="$classBenchmarkTimer.html#a4ff66784d731157d09dbbc0d0a65cfd3" title="Останавливает таймер и возвращает прошедшее время." alt="" coords="227,351,398,376"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="103,202,151,266,187,304,228,336,242,343,240,348,225,340,183,308,147,270,99,206"/>
+<area shape="rect" id="Node000006" href="$benchmark_8cpp.html#a65c1528308af9504cc4afd5122df9285" title="Глобальный поток вывода в файл. Инициализируется при запуске программы." alt="" coords="447,179,536,204"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="365,171,434,181,433,186,365,176"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="360,206,432,196,433,202,361,212"/>
+</map>

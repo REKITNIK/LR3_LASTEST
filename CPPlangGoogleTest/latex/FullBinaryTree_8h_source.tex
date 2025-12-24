@@ -1,0 +1,439 @@
+\doxysection{Full\+Binary\+Tree.\+h}
+\hypertarget{FullBinaryTree_8h_source}{}\label{FullBinaryTree_8h_source}\mbox{\hyperlink{FullBinaryTree_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}\ \textcolor{comment}{//\ Явно\ включено\ для\ поддержки\ std::string}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFullBinaryTree}{FullBinaryTree}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{structFullBinaryTree_1_1Node_a599bf98a07c9681db2f9ec079fa00180}{data}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ \mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ \mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node_af5e865e390b218b3edb631e22c91517f}{Node}}(\textcolor{keyword}{const}\ T\&\ value)\ :\ \mbox{\hyperlink{structFullBinaryTree_1_1Node_a599bf98a07c9681db2f9ec079fa00180}{data}}(value),\ \mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}(nullptr),\ \mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}}(nullptr)\ \{\}}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ \mbox{\hyperlink{classFullBinaryTree_ae57b0f3d8aedbd440720b9a89f164f89}{root}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classFullBinaryTree_a4411313e28d30c65b5ce9cc924c2f668}{size}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_aeb3ee047e1b02a2570cc0f80df938ab8}{destroyTree}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node);}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ \mbox{\hyperlink{classFullBinaryTree_a41fb1f31c6dfe73052600fe34c3d93d0}{copyTree}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFullBinaryTree_a2e839878fe990fc8a4d3f27c71d007bb}{isFullBinaryTreeHelper}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_ae35885efa8be0b43004b8ad5e695cdc8}{printInOrderHelper}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_ae354934e2a8a7c6d17e116f3a818b5af}{serializeHelper}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node,\ std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ \mbox{\hyperlink{classFullBinaryTree_aab6c8cd4e7c6d416eb29a937b513a799}{deserializeHelper}}(std::istream\&\ in);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a10abcfb9c3d953542bc4689564146f52}{serializeBinaryHelper}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node,\ std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ \mbox{\hyperlink{classFullBinaryTree_a48ee29a1c332ecff1afb441953f51cfb}{deserializeBinaryHelper}}(std::istream\&\ in);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classFullBinaryTree_af828d9d274fa38f4d47d32cffe2ffd0b}{FullBinaryTree}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classFullBinaryTree_af828d9d274fa38f4d47d32cffe2ffd0b}{FullBinaryTree}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFullBinaryTree}{FullBinaryTree}}\&\ other);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{classFullBinaryTree}{FullBinaryTree}}\&\ \mbox{\hyperlink{classFullBinaryTree_aeea147a551ac43da5d534830a4d1a68d}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFullBinaryTree}{FullBinaryTree}}\&\ other);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{classFullBinaryTree_a7fa90924aee3f7938b3c68f0f3b57103}{\string~FullBinaryTree}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a7e8c5f7034a2246a2e89d58236589679}{insert}}(\textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_aca496e711fc6a66705f6312149df9d2c}{remove}}(\textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFullBinaryTree_a3f6b24ac9a399db225f4251166d3d8df}{find}}(\textcolor{keyword}{const}\ T\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFullBinaryTree_a1654d58fe495a41954ed12a2019e423a}{isFullBinaryTree}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classFullBinaryTree_aec51f1cc7085c2fea0368a7eb50a11fe}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFullBinaryTree_ae0a1a7c2ccda6775516391ac9ccc7aa5}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a48d691febdca55b9ce567f95af314a3d}{clear}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_ac9ce60e12fcc259340e506cd68c431c5}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a729b1e90256245db160e0435daab3ca7}{printInOrder}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_aa1e29023691c45bc8b133d08229f8663}{serialize}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a867f25cd47cef37575192a4162e08cc7}{deserialize}}(std::istream\&\ in);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_afc7f40fcc784ca3a6e45496acbf3cef5}{serializeBinary}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a98792b6b181853f2f190a63201ae13a3}{deserializeBinary}}(std::istream\&\ in);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a4ce38270512e2f7805fb74a263462f52}{serializeText}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_ad7c6d97414068980fbd95766f2baa945}{deserializeText}}(std::istream\&\ in);}
+\DoxyCodeLine{00170\ \};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00173\ \mbox{\hyperlink{classFullBinaryTree_af828d9d274fa38f4d47d32cffe2ffd0b}{FullBinaryTree<T>::FullBinaryTree}}()\ :\ root(nullptr),\ size(0)\ \{\}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00176\ \mbox{\hyperlink{classFullBinaryTree_af828d9d274fa38f4d47d32cffe2ffd0b}{FullBinaryTree<T>::FullBinaryTree}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFullBinaryTree}{FullBinaryTree}}\&\ other)\ :\ root(nullptr),\ size(other.size)\ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{classFullBinaryTree_ae57b0f3d8aedbd440720b9a89f164f89}{root}}\ =\ \mbox{\hyperlink{classFullBinaryTree_a41fb1f31c6dfe73052600fe34c3d93d0}{copyTree}}(other.\mbox{\hyperlink{classFullBinaryTree_ae57b0f3d8aedbd440720b9a89f164f89}{root}});}
+\DoxyCodeLine{00178\ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00181\ \mbox{\hyperlink{classFullBinaryTree}{FullBinaryTree<T>}}\&\ \mbox{\hyperlink{classFullBinaryTree_aeea147a551ac43da5d534830a4d1a68d}{FullBinaryTree<T>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFullBinaryTree}{FullBinaryTree}}\&\ other)\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Сначала\ пытаемся\ создать\ копию\ нового\ дерева.}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Если\ здесь\ произойдет\ исключение\ (например,\ нехватка\ памяти),}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ текущий\ объект\ (this)\ останется\ в\ валидном\ состоянии.}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ newRoot\ =\ copyTree(other.\mbox{\hyperlink{classFullBinaryTree_ae57b0f3d8aedbd440720b9a89f164f89}{root}});}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Если\ копирование\ прошло\ успешно,\ освобождаем\ старую\ память}}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ clear();}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Применяем\ новые\ данные}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ root\ =\ newRoot;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ size\ =\ other.\mbox{\hyperlink{classFullBinaryTree_a4411313e28d30c65b5ce9cc924c2f668}{size}};}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00196\ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00199\ \mbox{\hyperlink{classFullBinaryTree_a7fa90924aee3f7938b3c68f0f3b57103}{FullBinaryTree<T>::\string~FullBinaryTree}}()\ \{}
+\DoxyCodeLine{00200\ \ \ \ \ clear();}
+\DoxyCodeLine{00201\ \}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00204\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_aeb3ee047e1b02a2570cc0f80df938ab8}{FullBinaryTree<T>::destroyTree}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node)\ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{if}\ (node)\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ destroyTree(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}});}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ destroyTree(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}});}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ node;}
+\DoxyCodeLine{00209\ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00213\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{FullBinaryTree<T>::Node}}*\ \mbox{\hyperlink{classFullBinaryTree_a41fb1f31c6dfe73052600fe34c3d93d0}{FullBinaryTree<T>::copyTree}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node)\ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{if}\ (!node)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a599bf98a07c9681db2f9ec079fa00180}{data}});}
+\DoxyCodeLine{00217\ \ \ \ \ newNode-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ =\ copyTree(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}});}
+\DoxyCodeLine{00218\ \ \ \ \ newNode-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}}\ =\ copyTree(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}});}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordflow}{return}\ newNode;}
+\DoxyCodeLine{00220\ \}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00223\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a7e8c5f7034a2246a2e89d58236589679}{FullBinaryTree<T>::insert}}(\textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{if}\ (!root)\ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Первая\ вставка:\ создаем\ только\ корень\ как\ лист\ (0\ потомков)}}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ root\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}(value);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ size\ =\ 1;}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00229\ \ \ \ \ \}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{comment}{//\ Находим\ первый\ лист\ (0\ потомков),\ используя\ обход\ в\ ширину}}
+\DoxyCodeLine{00232\ \ \ \ \ std::queue<Node*>\ q;}
+\DoxyCodeLine{00233\ \ \ \ \ q.push(root);}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordflow}{while}\ (!q.empty())\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ current\ =\ q.front();}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ q.pop();}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Если\ узел\ является\ листом\ (нет\ детей),\ добавляем\ двух\ детей\ для\ сохранения\ полноты\ дерева}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ \&\&\ !current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}})\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}(value);}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}(value);}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ size\ +=\ 2;}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Продолжаем\ обход\ только\ по\ узлам,\ у\ которых\ есть\ дети}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}})\ q.push(current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}});}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}})\ q.push(current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}});}
+\DoxyCodeLine{00250\ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \}}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00254\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_aca496e711fc6a66705f6312149df9d2c}{FullBinaryTree<T>::remove}}(\textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordflow}{if}\ (!root)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{comment}{//\ Находим\ узел\ для\ удаления\ и\ его\ родителя}}
+\DoxyCodeLine{00258\ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ parent\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ target\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00260\ \ \ \ \ std::queue<std::pair<Node*,\ Node*>>\ q;\ \textcolor{comment}{//\ пара\ (узел,\ родитель)}}
+\DoxyCodeLine{00261\ \ \ \ \ q.push(\{root,\ \textcolor{keyword}{nullptr}\});}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{while}\ (!q.empty()\ \&\&\ !target)\ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [current,\ par]\ =\ q.front();}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ q.pop();}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>data\ ==\ value)\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ target\ =\ current;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ parent\ =\ par;}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>left)\ q.push(\{current-\/>left,\ current\});}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>right)\ q.push(\{current-\/>right,\ current\});}
+\DoxyCodeLine{00275\ \ \ \ \ \}}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordflow}{if}\ (!target)\ \textcolor{keywordflow}{return};\ \textcolor{comment}{//\ Значение\ не\ найдено}}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{comment}{//\ Если\ удаляемый\ узел\ —\ лист,\ нужно\ удалить\ и\ его\ брата\ для\ сохранения\ полноты\ дерева}}
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordflow}{if}\ (!target-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ \&\&\ !target-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}})\ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parent)\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Удаляем\ обоих\ детей\ родителя}}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ parent-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}};}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ parent-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}};}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ parent-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ =\ parent-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ size\ -\/=\ 2;}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Удаление\ корня\ (который\ является\ листом)}}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ root;}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ root\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00293\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (target-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ \&\&\ target-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}})\ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Если\ у\ цели\ два\ ребенка,\ находим\ самый\ правый\ лист\ и\ заменяем\ данные\ цели}}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ rightmostParent\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ rightmost\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ std::queue<std::pair<Node*,\ Node*>>\ leafQueue;}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ leafQueue.push(\{root,\ \textcolor{keyword}{nullptr}\});}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!leafQueue.empty())\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [current,\ par]\ =\ leafQueue.front();}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ leafQueue.pop();}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!current-\/>left\ \&\&\ !current-\/>right)\ \{}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rightmost\ =\ current;}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rightmostParent\ =\ par;}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>left)\ leafQueue.push(\{current-\/>left,\ current\});}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>right)\ leafQueue.push(\{current-\/>right,\ current\});}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rightmost\ \&\&\ rightmost\ !=\ target)\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Заменяем\ данные\ цели\ данными\ самого\ правого\ листа}}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ target-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a599bf98a07c9681db2f9ec079fa00180}{data}}\ =\ rightmost-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a599bf98a07c9681db2f9ec079fa00180}{data}};}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Удаляем\ самый\ правый\ лист\ и\ его\ брата}}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rightmostParent)\ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ rightmostParent-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}};}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ rightmostParent-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}};}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rightmostParent-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ =\ rightmostParent-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ size\ -\/=\ 2;}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ \}}
+\DoxyCodeLine{00326\ \ \ \ \ \textcolor{comment}{//\ Примечание:\ Если\ у\ узла\ только\ один\ ребенок,\ это\ нарушает\ свойство\ полного\ бинарного\ дерева.}}
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{comment}{//\ Этот\ случай\ не\ должен\ возникать\ в\ корректно\ поддерживаемом\ дереве.}}
+\DoxyCodeLine{00328\ \}}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00331\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFullBinaryTree_a3f6b24ac9a399db225f4251166d3d8df}{FullBinaryTree<T>::find}}(\textcolor{keyword}{const}\ T\&\ value)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keywordflow}{if}\ (!root)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ \ \ \ \ std::queue<Node*>\ q;}
+\DoxyCodeLine{00335\ \ \ \ \ q.push(root);}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keywordflow}{while}\ (!q.empty())\ \{}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ current\ =\ q.front();}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ q.pop();}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a599bf98a07c9681db2f9ec079fa00180}{data}}\ ==\ value)\ \{}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}})\ q.push(current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}});}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}})\ q.push(current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}});}
+\DoxyCodeLine{00347\ \ \ \ \ \}}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00349\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00350\ \}}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00353\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFullBinaryTree_a2e839878fe990fc8a4d3f27c71d007bb}{FullBinaryTree<T>::isFullBinaryTreeHelper}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{keywordflow}{if}\ (!node)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{comment}{//\ У\ узла\ в\ полном\ бинарном\ дереве\ должно\ быть\ либо\ 0,\ либо\ 2\ потомка}}
+\DoxyCodeLine{00357\ \ \ \ \ \textcolor{keywordflow}{if}\ ((!node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ \&\&\ node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}})\ ||\ (node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ \&\&\ !node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}}))\ \{}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00359\ \ \ \ \ \}}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \ \ \ \ \textcolor{keywordflow}{return}\ isFullBinaryTreeHelper(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}})\ \&\&\ isFullBinaryTreeHelper(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}});}
+\DoxyCodeLine{00362\ \}}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00365\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFullBinaryTree_a1654d58fe495a41954ed12a2019e423a}{FullBinaryTree<T>::isFullBinaryTree}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordflow}{return}\ isFullBinaryTreeHelper(root);}
+\DoxyCodeLine{00367\ \}}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00370\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classFullBinaryTree_aec51f1cc7085c2fea0368a7eb50a11fe}{FullBinaryTree<T>::getSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{00372\ \}}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00375\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFullBinaryTree_ae0a1a7c2ccda6775516391ac9ccc7aa5}{FullBinaryTree<T>::isEmpty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00376\ \ \ \ \ \textcolor{keywordflow}{return}\ size\ ==\ 0;}
+\DoxyCodeLine{00377\ \}}
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00379\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00380\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a48d691febdca55b9ce567f95af314a3d}{FullBinaryTree<T>::clear}}()\ \{}
+\DoxyCodeLine{00381\ \ \ \ \ destroyTree(root);}
+\DoxyCodeLine{00382\ \ \ \ \ root\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00383\ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{00384\ \}}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00387\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_ac9ce60e12fcc259340e506cd68c431c5}{FullBinaryTree<T>::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00388\ \ \ \ \ \textcolor{keywordflow}{if}\ (!root)\ \{}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Empty\ tree"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00391\ \ \ \ \ \}}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Level-\/order\ traversal:\ "{}};}
+\DoxyCodeLine{00394\ \ \ \ \ std::queue<Node*>\ q;}
+\DoxyCodeLine{00395\ \ \ \ \ q.push(root);}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordflow}{while}\ (!q.empty())\ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ current\ =\ q.front();}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ q.pop();}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ std::cout\ <<\ current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a599bf98a07c9681db2f9ec079fa00180}{data}}\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}})\ q.push(current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}});}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}})\ q.push(current-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}});}
+\DoxyCodeLine{00405\ \ \ \ \ \}}
+\DoxyCodeLine{00406\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00407\ \}}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00410\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_ae35885efa8be0b43004b8ad5e695cdc8}{FullBinaryTree<T>::printInOrderHelper}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keywordflow}{if}\ (node)\ \{}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ printInOrderHelper(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}});}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ std::cout\ <<\ node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a599bf98a07c9681db2f9ec079fa00180}{data}}\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ printInOrderHelper(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}});}
+\DoxyCodeLine{00415\ \ \ \ \ \}}
+\DoxyCodeLine{00416\ \}}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00419\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a729b1e90256245db160e0435daab3ca7}{FullBinaryTree<T>::printInOrder}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00420\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}In-\/order\ traversal:\ "{}};}
+\DoxyCodeLine{00421\ \ \ \ \ printInOrderHelper(root);}
+\DoxyCodeLine{00422\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00423\ \}}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00426\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_ae354934e2a8a7c6d17e116f3a818b5af}{FullBinaryTree<T>::serializeHelper}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node,\ std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00427\ \ \ \ \ \textcolor{keywordflow}{if}\ (!node)\ \{}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}null\ "{}};}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00430\ \ \ \ \ \}}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ \ \ out\ <<\ node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a599bf98a07c9681db2f9ec079fa00180}{data}}\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00433\ \ \ \ \ serializeHelper(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}},\ out);}
+\DoxyCodeLine{00434\ \ \ \ \ serializeHelper(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}},\ out);}
+\DoxyCodeLine{00435\ \}}
+\DoxyCodeLine{00436\ }
+\DoxyCodeLine{00437\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00438\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_aa1e29023691c45bc8b133d08229f8663}{FullBinaryTree<T>::serialize}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00439\ \ \ \ \ \textcolor{comment}{//\ По\ умолчанию\ используется\ бинарная\ сериализация}}
+\DoxyCodeLine{00440\ \ \ \ \ serializeBinary(out);}
+\DoxyCodeLine{00441\ \}}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00443\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00444\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a867f25cd47cef37575192a4162e08cc7}{FullBinaryTree<T>::deserialize}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00445\ \ \ \ \ \textcolor{comment}{//\ По\ умолчанию\ используется\ бинарная\ десериализация}}
+\DoxyCodeLine{00446\ \ \ \ \ deserializeBinary(in);}
+\DoxyCodeLine{00447\ \}}
+\DoxyCodeLine{00448\ }
+\DoxyCodeLine{00449\ \textcolor{comment}{//\ Важно:\ бинарная\ сериализация\ корректна\ только\ для\ тривиально\ копируемых\ типов}}
+\DoxyCodeLine{00450\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00451\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_afc7f40fcc784ca3a6e45496acbf3cef5}{FullBinaryTree<T>::serializeBinary}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00452\ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&size),\ \textcolor{keyword}{sizeof}(size));}
+\DoxyCodeLine{00453\ \ \ \ \ serializeBinaryHelper(root,\ out);}
+\DoxyCodeLine{00454\ \}}
+\DoxyCodeLine{00455\ }
+\DoxyCodeLine{00456\ \textcolor{comment}{//\ Важно:\ бинарная\ десериализация\ корректна\ только\ для\ тривиально\ копируемых\ типов}}
+\DoxyCodeLine{00457\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00458\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a98792b6b181853f2f190a63201ae13a3}{FullBinaryTree<T>::deserializeBinary}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00459\ \ \ \ \ clear();}
+\DoxyCodeLine{00460\ \ \ \ \ }
+\DoxyCodeLine{00461\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size;}
+\DoxyCodeLine{00462\ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&new\_size),\ \textcolor{keyword}{sizeof}(new\_size));}
+\DoxyCodeLine{00463\ \ \ \ \ size\ =\ new\_size;}
+\DoxyCodeLine{00464\ \ \ \ \ }
+\DoxyCodeLine{00465\ \ \ \ \ root\ =\ deserializeBinaryHelper(in);}
+\DoxyCodeLine{00466\ \}}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00469\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a4ce38270512e2f7805fb74a263462f52}{FullBinaryTree<T>::serializeText}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00470\ \ \ \ \ out\ <<\ size\ <<\ std::endl;}
+\DoxyCodeLine{00471\ \ \ \ \ serializeHelper(root,\ out);}
+\DoxyCodeLine{00472\ \ \ \ \ out\ <<\ std::endl;}
+\DoxyCodeLine{00473\ \}}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00476\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_ad7c6d97414068980fbd95766f2baa945}{FullBinaryTree<T>::deserializeText}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00477\ \ \ \ \ clear();}
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00479\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size;}
+\DoxyCodeLine{00480\ \ \ \ \ in\ >>\ new\_size;}
+\DoxyCodeLine{00481\ \ \ \ \ size\ =\ new\_size;}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \ \ \ \ root\ =\ deserializeHelper(in);}
+\DoxyCodeLine{00484\ \}}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00486\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00487\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{FullBinaryTree<T>::Node}}*\ \mbox{\hyperlink{classFullBinaryTree_aab6c8cd4e7c6d416eb29a937b513a799}{FullBinaryTree<T>::deserializeHelper}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00488\ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{00489\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(in\ >>\ token)\ ||\ token\ ==\ \textcolor{stringliteral}{"{}null"{}})\ \{}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00491\ \ \ \ \ \}}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00493\ \ \ \ \ std::istringstream\ iss(token);}
+\DoxyCodeLine{00494\ \ \ \ \ T\ value;}
+\DoxyCodeLine{00495\ \ \ \ \ iss\ >>\ value;}
+\DoxyCodeLine{00496\ }
+\DoxyCodeLine{00497\ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}(value);}
+\DoxyCodeLine{00498\ \ \ \ \ node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ =\ deserializeHelper(in);}
+\DoxyCodeLine{00499\ \ \ \ \ node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}}\ =\ deserializeHelper(in);}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00501\ \ \ \ \ \textcolor{keywordflow}{return}\ node;}
+\DoxyCodeLine{00502\ \}}
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00504\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00505\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFullBinaryTree_a10abcfb9c3d953542bc4689564146f52}{FullBinaryTree<T>::serializeBinaryHelper}}(\mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node,\ std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00506\ \ \ \ \ \textcolor{keywordflow}{if}\ (!node)\ \{}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_null\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&is\_null),\ \textcolor{keyword}{sizeof}(is\_null));}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00510\ \ \ \ \ \}}
+\DoxyCodeLine{00511\ }
+\DoxyCodeLine{00512\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_null\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00513\ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&is\_null),\ \textcolor{keyword}{sizeof}(is\_null));}
+\DoxyCodeLine{00514\ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a599bf98a07c9681db2f9ec079fa00180}{data}}),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00515\ \ \ \ \ serializeBinaryHelper(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}},\ out);}
+\DoxyCodeLine{00516\ \ \ \ \ serializeBinaryHelper(node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}},\ out);}
+\DoxyCodeLine{00517\ \}}
+\DoxyCodeLine{00518\ }
+\DoxyCodeLine{00519\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00520\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{FullBinaryTree<T>::Node}}*\ \mbox{\hyperlink{classFullBinaryTree_a48ee29a1c332ecff1afb441953f51cfb}{FullBinaryTree<T>::deserializeBinaryHelper}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00521\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_null;}
+\DoxyCodeLine{00522\ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&is\_null),\ \textcolor{keyword}{sizeof}(is\_null));}
+\DoxyCodeLine{00523\ \ \ \ \ }
+\DoxyCodeLine{00524\ \ \ \ \ \textcolor{keywordflow}{if}\ (is\_null)\ \{}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00526\ \ \ \ \ \}}
+\DoxyCodeLine{00527\ }
+\DoxyCodeLine{00528\ \ \ \ \ T\ value;}
+\DoxyCodeLine{00529\ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&value),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00530\ }
+\DoxyCodeLine{00531\ \ \ \ \ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}*\ node\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structFullBinaryTree_1_1Node}{Node}}(value);}
+\DoxyCodeLine{00532\ \ \ \ \ node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_aa6690b904f21ee6bb1f72de14cccb1e0}{left}}\ =\ deserializeBinaryHelper(in);}
+\DoxyCodeLine{00533\ \ \ \ \ node-\/>\mbox{\hyperlink{structFullBinaryTree_1_1Node_a116d2e6e7d553008e475e4cd0c451456}{right}}\ =\ deserializeBinaryHelper(in);}
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00535\ \ \ \ \ \textcolor{keywordflow}{return}\ node;}
+\DoxyCodeLine{00536\ \}}
+
+\end{DoxyCode}

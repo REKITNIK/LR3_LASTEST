@@ -1,0 +1,5 @@
+<map id="print_comparison_summary" name="print_comparison_summary">
+<area shape="rect" id="Node000001" title="Выводит сводную таблицу сравнения структур данных." alt="" coords="5,5,209,31"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#a65c1528308af9504cc4afd5122df9285" title="Глобальный поток вывода в файл. Инициализируется при запуске программы." alt="" coords="257,5,347,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,15,243,15,243,21,210,21"/>
+</map>

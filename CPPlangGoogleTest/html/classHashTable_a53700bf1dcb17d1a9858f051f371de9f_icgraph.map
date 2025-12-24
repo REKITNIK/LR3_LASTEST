@@ -1,0 +1,9 @@
+<map id="HashTable::remove" name="HashTable::remove">
+<area shape="rect" id="Node000001" title="Удаляет элемент по ключу." alt="" coords="329,31,476,56"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#ad1196c315efa5bcb26e31eb456a5798c" title="Тестирование производительности хеш&#45;таблицы (HashTable)." alt="" coords="108,5,281,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="315,35,281,31,282,26,316,30"/>
+<area shape="rect" id="Node000004" href="$tests__oop__gtest_8cpp.html#a650e79b9d05426bd68b8990c55bcd252" title=" " alt="" coords="167,55,222,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="316,56,223,67,222,62,315,51"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

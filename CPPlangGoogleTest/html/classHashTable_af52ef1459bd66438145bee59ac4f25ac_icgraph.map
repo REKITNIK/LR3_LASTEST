@@ -1,0 +1,22 @@
+<map id="HashTable::insert" name="HashTable::insert">
+<area shape="rect" id="Node000001" title="Вставляет или обновляет пару ключ&#45;значение. Если ключ уже существует, его значение обновляется...." alt="" coords="339,179,473,204"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#ad1196c315efa5bcb26e31eb456a5798c" title="Тестирование производительности хеш&#45;таблицы (HashTable)." alt="" coords="113,5,286,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="390,168,351,105,322,72,289,44,267,33,269,28,292,40,326,68,355,102,395,165"/>
+<area shape="rect" id="Node000004" href="$benchmark_8cpp.html#af0c7e15db2d6abbb07fd570b9919e98a" title="Тестирование механизмов сериализации и десериализации." alt="" coords="108,55,291,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="383,170,342,131,289,94,263,83,265,78,292,89,345,127,386,166"/>
+<area shape="rect" id="Node000005" href="$classHashTable.html#a4bff46e8e924ed0f4795bd63f02f98f6" title="Конструктор копирования. Создает глубокую копию таблицы. Порядок элементов в цепочках может меняться ..." alt="" coords="117,104,281,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="366,175,290,143,253,132,255,127,292,138,368,170"/>
+<area shape="rect" id="Node000006" href="$tests__oop__gtest_8cpp.html#afb00b085ae4e6ccf8ed71c99fe263ba3" title=" " alt="" coords="172,153,227,179"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="325,184,227,172,227,167,325,179"/>
+<area shape="rect" id="Node000007" href="$tests__oop__gtest_8cpp.html#a650e79b9d05426bd68b8990c55bcd252" title=" " alt="" coords="172,203,227,228"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="325,203,227,215,227,210,325,198"/>
+<area shape="rect" id="Node000008" href="$tests__oop__gtest_8cpp.html#aa4cf5004b9e328e317685638800a4bbf" title=" " alt="" coords="172,252,227,277"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="365,212,292,242,228,261,226,256,290,237,363,207"/>
+<area shape="rect" id="Node000009" href="$tests__oop__gtest_8cpp.html#aab28dce5200462e320ea321903fbd5de" title=" " alt="" coords="172,301,227,327"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="386,216,345,254,292,291,259,304,228,312,226,307,257,299,289,286,341,250,382,212"/>
+<area shape="rect" id="Node000010" href="$tests__oop__gtest_8cpp.html#a201d357db5a9df5c29b16aad6ea564ce" title=" " alt="" coords="172,351,227,376"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="394,218,354,279,326,312,292,340,260,355,228,363,226,358,258,350,289,336,322,308,350,276,390,215"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Точка входа в программу." alt="" coords="5,31,60,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="102,35,61,42,60,37,102,30"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="97,55,60,50,61,45,98,50"/>
+</map>

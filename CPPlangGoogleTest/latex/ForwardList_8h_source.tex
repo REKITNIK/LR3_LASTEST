@@ -1,0 +1,369 @@
+\doxysection{Forward\+List.\+h}
+\hypertarget{ForwardList_8h_source}{}\label{ForwardList_8h_source}\mbox{\hyperlink{ForwardList_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classForwardList}{ForwardList}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structForwardList_1_1Node}{Node}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ \mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node_a86fa5f5b44c19f7c7114497bcf50d083}{Node}}(\textcolor{keyword}{const}\ T\&\ value)\ :\ \mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}}(value),\ \mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}(nullptr)\ \{\}}
+\DoxyCodeLine{00021\ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ \mbox{\hyperlink{classForwardList_adeff7edb0a8f50094e091ff7b043ca47}{head}};\ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classForwardList_a79e1677269aaea987bc45668b64f3f31}{size}};\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classForwardList_a63658815ea79219cbd75ef8eada99560}{ForwardList}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classForwardList_a63658815ea79219cbd75ef8eada99560}{ForwardList}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classForwardList}{ForwardList}}\&\ other);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classForwardList}{ForwardList}}\&\ \mbox{\hyperlink{classForwardList_a180ff1bc0adf5f9a9af03aeddd0e9c66}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classForwardList}{ForwardList}}\&\ other);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classForwardList_a16e7a7eee73944b77009304d99fe73fb}{\string~ForwardList}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_ab04509efbd050c6237beecd3485ce45c}{pushFront}}(\textcolor{keyword}{const}\ T\&\ element);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a735c434c283ebe30faa46794fcd35a04}{pushBack}}(\textcolor{keyword}{const}\ T\&\ element);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a3adc30fd5cd9165a1c598c6ca904ce14}{insert}}(\textcolor{keywordtype}{size\_t}\ index,\ \textcolor{keyword}{const}\ T\&\ element);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_adb4ced17af38bb83137cc4739f52ef9f}{popFront}}();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a6bdbedc3a5394c852260e354f6d9f899}{remove}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_ab17f3a45377f0d4c5f7faf11c79cbaea}{removeValue}}(\textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00116\ \ \ \ \ T\&\ \mbox{\hyperlink{classForwardList_aef4d867a98cc017739687e2f7a0df6a2}{get}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classForwardList_aef4d867a98cc017739687e2f7a0df6a2}{get}}(\textcolor{keywordtype}{size\_t}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00132\ \ \ \ \ T\&\ \mbox{\hyperlink{classForwardList_a2a33482eeace97545add1e1e5fd87f16}{front}}();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classForwardList_a2a33482eeace97545add1e1e5fd87f16}{front}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classForwardList_a437bf2f19361585506c6599cf2ab6848}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classForwardList_a41cd7980adc16337e7939fa71eeac89f}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a407dc6ae99920dcc0e9f72096c76aa48}{clear}}();}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classForwardList_a4ff5eebc880e9849b7282d9bc2b6ae67}{find}}(\textcolor{keyword}{const}\ T\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_ad4dd31d28eb632a5bc28aaa30b0ad943}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_afa25f3ed6b59a229649a727cee5368a4}{serialize}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a8426819d6e8ef171c990ebeda2a6cb08}{deserialize}}(std::istream\&\ in);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a5df4da8bc1907dfb78d1ddff493ae703}{serializeBinary}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a8ad79259c6aaeb8eaf0a6a803cd241a5}{deserializeBinary}}(std::istream\&\ in);}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_ade5ea500cc7258c52bd3b3f545dbdb0b}{serializeText}}(std::ostream\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a6590c326ac9fc037fd07da0e6aed4b49}{deserializeText}}(std::istream\&\ in);}
+\DoxyCodeLine{00220\ \};}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00223\ \mbox{\hyperlink{classForwardList_a63658815ea79219cbd75ef8eada99560}{ForwardList<T>::ForwardList}}()\ :\ head(nullptr),\ size(0)\ \{\}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00226\ \mbox{\hyperlink{classForwardList_a63658815ea79219cbd75ef8eada99560}{ForwardList<T>::ForwardList}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classForwardList}{ForwardList}}\&\ other)\ :\ head(nullptr),\ size(0)\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordflow}{if}\ (!other.\mbox{\hyperlink{classForwardList_adeff7edb0a8f50094e091ff7b043ca47}{head}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{comment}{//\ Оптимизированное\ копирование\ O(N)\ без\ pushBack}}
+\DoxyCodeLine{00230\ \ \ \ \ \mbox{\hyperlink{classForwardList_adeff7edb0a8f50094e091ff7b043ca47}{head}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}(other.\mbox{\hyperlink{classForwardList_adeff7edb0a8f50094e091ff7b043ca47}{head}}-\/>\mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}});}
+\DoxyCodeLine{00231\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ \mbox{\hyperlink{classForwardList_adeff7edb0a8f50094e091ff7b043ca47}{head}};}
+\DoxyCodeLine{00232\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ otherCurrent\ =\ other.\mbox{\hyperlink{classForwardList_adeff7edb0a8f50094e091ff7b043ca47}{head}}-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00233\ \ \ \ \ }
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordflow}{while}\ (otherCurrent)\ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}(otherCurrent-\/>\mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}});}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ otherCurrent\ =\ otherCurrent-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \mbox{\hyperlink{classForwardList_a79e1677269aaea987bc45668b64f3f31}{size}}\ =\ other.\mbox{\hyperlink{classForwardList_a79e1677269aaea987bc45668b64f3f31}{size}};}
+\DoxyCodeLine{00240\ \}}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00243\ \mbox{\hyperlink{classForwardList}{ForwardList<T>}}\&\ \mbox{\hyperlink{classForwardList_a180ff1bc0adf5f9a9af03aeddd0e9c66}{ForwardList<T>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classForwardList}{ForwardList}}\&\ other)\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Идиома\ copy-\/and-\/swap}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classForwardList}{ForwardList}}\ temp(other);}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ tHead\ =\ head;\ head\ =\ temp.\mbox{\hyperlink{classForwardList_adeff7edb0a8f50094e091ff7b043ca47}{head}};\ temp.\mbox{\hyperlink{classForwardList_adeff7edb0a8f50094e091ff7b043ca47}{head}}\ =\ tHead;}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ tSize\ =\ size;\ size\ =\ temp.\mbox{\hyperlink{classForwardList_a79e1677269aaea987bc45668b64f3f31}{size}};\ temp.\mbox{\hyperlink{classForwardList_a79e1677269aaea987bc45668b64f3f31}{size}}\ =\ tSize;}
+\DoxyCodeLine{00250\ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00252\ \}}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00255\ \mbox{\hyperlink{classForwardList_a16e7a7eee73944b77009304d99fe73fb}{ForwardList<T>::\string~ForwardList}}()\ \{}
+\DoxyCodeLine{00256\ \ \ \ \ clear();}
+\DoxyCodeLine{00257\ \}}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00260\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_ab04509efbd050c6237beecd3485ce45c}{ForwardList<T>::pushFront}}(\textcolor{keyword}{const}\ T\&\ element)\ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}(element);}
+\DoxyCodeLine{00262\ \ \ \ \ newNode-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}\ =\ head;}
+\DoxyCodeLine{00263\ \ \ \ \ head\ =\ newNode;}
+\DoxyCodeLine{00264\ \ \ \ \ ++size;}
+\DoxyCodeLine{00265\ \}}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00268\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a735c434c283ebe30faa46794fcd35a04}{ForwardList<T>::pushBack}}(\textcolor{keyword}{const}\ T\&\ element)\ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}(element);}
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordflow}{if}\ (!head)\ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ head\ =\ newNode;}
+\DoxyCodeLine{00272\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}})\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}\ =\ newNode;}
+\DoxyCodeLine{00278\ \ \ \ \ \}}
+\DoxyCodeLine{00279\ \ \ \ \ ++size;}
+\DoxyCodeLine{00280\ \}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00283\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a3adc30fd5cd9165a1c598c6ca904ce14}{ForwardList<T>::insert}}(\textcolor{keywordtype}{size\_t}\ index,\ \textcolor{keyword}{const}\ T\&\ element)\ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >\ size)\ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Index\ out\ of\ range"{}});}
+\DoxyCodeLine{00286\ \ \ \ \ \}}
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ ==\ 0)\ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ pushFront(element);}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00290\ \ \ \ \ \}}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}(element);}
+\DoxyCodeLine{00293\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ index\ -\/\ 1;\ ++i)\ \{}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00296\ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \ \ \ \ newNode-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00298\ \ \ \ \ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}\ =\ newNode;}
+\DoxyCodeLine{00299\ \ \ \ \ ++size;}
+\DoxyCodeLine{00300\ \}}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00303\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_adb4ced17af38bb83137cc4739f52ef9f}{ForwardList<T>::popFront}}()\ \{}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordflow}{if}\ (!head)\ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}List\ is\ empty"{}});}
+\DoxyCodeLine{00306\ \ \ \ \ \}}
+\DoxyCodeLine{00307\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ temp\ =\ head;}
+\DoxyCodeLine{00308\ \ \ \ \ head\ =\ head-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00310\ \ \ \ \ -\/-\/size;}
+\DoxyCodeLine{00311\ \}}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00314\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a6bdbedc3a5394c852260e354f6d9f899}{ForwardList<T>::remove}}(\textcolor{keywordtype}{size\_t}\ index)\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ size)\ \{}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Index\ out\ of\ range"{}});}
+\DoxyCodeLine{00317\ \ \ \ \ \}}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ ==\ 0)\ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ popFront();}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00321\ \ \ \ \ \}}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00324\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ index\ -\/\ 1;\ ++i)\ \{}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00326\ \ \ \ \ \}}
+\DoxyCodeLine{00327\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ temp\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00328\ \ \ \ \ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}\ =\ temp-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00330\ \ \ \ \ -\/-\/size;}
+\DoxyCodeLine{00331\ \}}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00334\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_ab17f3a45377f0d4c5f7faf11c79cbaea}{ForwardList<T>::removeValue}}(\textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordflow}{while}\ (head\ \&\&\ head-\/>data\ ==\ value)\ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ popFront();}
+\DoxyCodeLine{00337\ \ \ \ \ \}}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keywordflow}{if}\ (!head)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordflow}{while}\ (current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}})\ \{}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}-\/>\mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}}\ ==\ value)\ \{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ temp\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}\ =\ temp-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ -\/-\/size;}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00351\ \ \ \ \ \}}
+\DoxyCodeLine{00352\ \}}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00355\ T\&\ \mbox{\hyperlink{classForwardList_aef4d867a98cc017739687e2f7a0df6a2}{ForwardList<T>::get}}(\textcolor{keywordtype}{size\_t}\ index)\ \{}
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ size)\ \{}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Index\ out\ of\ range"{}});}
+\DoxyCodeLine{00358\ \ \ \ \ \}}
+\DoxyCodeLine{00359\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00360\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ index;\ ++i)\ \{}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00362\ \ \ \ \ \}}
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordflow}{return}\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}};}
+\DoxyCodeLine{00364\ \}}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00367\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classForwardList_aef4d867a98cc017739687e2f7a0df6a2}{ForwardList<T>::get}}(\textcolor{keywordtype}{size\_t}\ index)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ size)\ \{}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Index\ out\ of\ range"{}});}
+\DoxyCodeLine{00370\ \ \ \ \ \}}
+\DoxyCodeLine{00371\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ index;\ ++i)\ \{}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00374\ \ \ \ \ \}}
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keywordflow}{return}\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}};}
+\DoxyCodeLine{00376\ \}}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00379\ T\&\ \mbox{\hyperlink{classForwardList_a2a33482eeace97545add1e1e5fd87f16}{ForwardList<T>::front}}()\ \{}
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keywordflow}{if}\ (!head)\ \{}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}List\ is\ empty"{}});}
+\DoxyCodeLine{00382\ \ \ \ \ \}}
+\DoxyCodeLine{00383\ \ \ \ \ \textcolor{keywordflow}{return}\ head-\/>data;}
+\DoxyCodeLine{00384\ \}}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00387\ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{classForwardList_a2a33482eeace97545add1e1e5fd87f16}{ForwardList<T>::front}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00388\ \ \ \ \ \textcolor{keywordflow}{if}\ (!head)\ \{}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}List\ is\ empty"{}});}
+\DoxyCodeLine{00390\ \ \ \ \ \}}
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{keywordflow}{return}\ head-\/>data;}
+\DoxyCodeLine{00392\ \}}
+\DoxyCodeLine{00393\ }
+\DoxyCodeLine{00394\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00395\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classForwardList_a437bf2f19361585506c6599cf2ab6848}{ForwardList<T>::getSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{00397\ \}}
+\DoxyCodeLine{00398\ }
+\DoxyCodeLine{00399\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00400\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classForwardList_a41cd7980adc16337e7939fa71eeac89f}{ForwardList<T>::isEmpty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{keywordflow}{return}\ size\ ==\ 0;}
+\DoxyCodeLine{00402\ \}}
+\DoxyCodeLine{00403\ }
+\DoxyCodeLine{00404\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00405\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a407dc6ae99920dcc0e9f72096c76aa48}{ForwardList<T>::clear}}()\ \{}
+\DoxyCodeLine{00406\ \ \ \ \ \textcolor{keywordflow}{while}\ (head)\ \{}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ temp\ =\ head;}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ head\ =\ head-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00410\ \ \ \ \ \}}
+\DoxyCodeLine{00411\ \ \ \ \ head\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00412\ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{00413\ \}}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00415\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00416\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classForwardList_a4ff5eebc880e9849b7282d9bc2b6ae67}{ForwardList<T>::find}}(\textcolor{keyword}{const}\ T\&\ value)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00417\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00418\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}}\ ==\ value)\ \{}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00423\ \ \ \ \ \}}
+\DoxyCodeLine{00424\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00425\ \}}
+\DoxyCodeLine{00426\ }
+\DoxyCodeLine{00427\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00428\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_ad4dd31d28eb632a5bc28aaa30b0ad943}{ForwardList<T>::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00429\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00430\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00431\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ std::cout\ <<\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}};}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}})\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ -\/>\ "{}};}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00435\ \ \ \ \ \}}
+\DoxyCodeLine{00436\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00437\ \}}
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00439\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00440\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_afa25f3ed6b59a229649a727cee5368a4}{ForwardList<T>::serialize}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00441\ \ \ \ \ serializeBinary(out);}
+\DoxyCodeLine{00442\ \}}
+\DoxyCodeLine{00443\ }
+\DoxyCodeLine{00444\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00445\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a8426819d6e8ef171c990ebeda2a6cb08}{ForwardList<T>::deserialize}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00446\ \ \ \ \ deserializeBinary(in);}
+\DoxyCodeLine{00447\ \}}
+\DoxyCodeLine{00448\ }
+\DoxyCodeLine{00449\ \textcolor{comment}{//\ Важно:\ бинарная\ сериализация\ корректна\ только\ для\ тривиально\ копируемых\ типов}}
+\DoxyCodeLine{00450\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00451\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a5df4da8bc1907dfb78d1ddff493ae703}{ForwardList<T>::serializeBinary}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00452\ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&size),\ \textcolor{keyword}{sizeof}(size));}
+\DoxyCodeLine{00453\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00454\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ out.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}}),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00457\ \ \ \ \ \}}
+\DoxyCodeLine{00458\ \}}
+\DoxyCodeLine{00459\ }
+\DoxyCodeLine{00460\ \textcolor{comment}{//\ Важно:\ бинарная\ десериализация\ корректна\ только\ для\ тривиально\ копируемых\ типов}}
+\DoxyCodeLine{00461\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00462\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a8ad79259c6aaeb8eaf0a6a803cd241a5}{ForwardList<T>::deserializeBinary}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00463\ \ \ \ \ clear();}
+\DoxyCodeLine{00464\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size;}
+\DoxyCodeLine{00465\ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&new\_size),\ \textcolor{keyword}{sizeof}(new\_size));}
+\DoxyCodeLine{00466\ \ \ \ \ \textcolor{keywordflow}{if}\ (new\_size\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \ \ \ \ \textcolor{comment}{//\ Читаем\ первый\ элемент}}
+\DoxyCodeLine{00469\ \ \ \ \ T\ value;}
+\DoxyCodeLine{00470\ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&value),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00471\ \ \ \ \ head\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}(value);}
+\DoxyCodeLine{00472\ \ \ \ \ size\ =\ 1;}
+\DoxyCodeLine{00473\ }
+\DoxyCodeLine{00474\ \ \ \ \ \textcolor{comment}{//\ Читаем\ остальные,\ поддерживая\ указатель\ на\ хвост}}
+\DoxyCodeLine{00475\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00476\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 1;\ i\ <\ new\_size;\ ++i)\ \{}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ in.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&value),\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}(value);}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ size++;}
+\DoxyCodeLine{00481\ \ \ \ \ \}}
+\DoxyCodeLine{00482\ \}}
+\DoxyCodeLine{00483\ }
+\DoxyCodeLine{00484\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00485\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_ade5ea500cc7258c52bd3b3f545dbdb0b}{ForwardList<T>::serializeText}}(std::ostream\&\ out)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00486\ \ \ \ \ out\ <<\ size\ <<\ std::endl;}
+\DoxyCodeLine{00487\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00488\ \ \ \ \ \textcolor{keywordflow}{while}\ (current)\ \{}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ out\ <<\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a025987da4e9ce9d3d4c324502a8212d1}{data}};}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}})\ out\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00492\ \ \ \ \ \}}
+\DoxyCodeLine{00493\ \ \ \ \ out\ <<\ std::endl;}
+\DoxyCodeLine{00494\ \}}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00496\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00497\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classForwardList_a6590c326ac9fc037fd07da0e6aed4b49}{ForwardList<T>::deserializeText}}(std::istream\&\ in)\ \{}
+\DoxyCodeLine{00498\ \ \ \ \ clear();}
+\DoxyCodeLine{00499\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_size;}
+\DoxyCodeLine{00500\ \ \ \ \ in\ >>\ new\_size;}
+\DoxyCodeLine{00501\ \ \ \ \ \textcolor{keywordflow}{if}\ (new\_size\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00502\ }
+\DoxyCodeLine{00503\ \ \ \ \ \textcolor{comment}{//\ Читаем\ первый\ элемент}}
+\DoxyCodeLine{00504\ \ \ \ \ T\ value;}
+\DoxyCodeLine{00505\ \ \ \ \ in\ >>\ value;}
+\DoxyCodeLine{00506\ \ \ \ \ head\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}(value);}
+\DoxyCodeLine{00507\ \ \ \ \ size\ =\ 1;}
+\DoxyCodeLine{00508\ }
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{comment}{//\ Читаем\ остальные}}
+\DoxyCodeLine{00510\ \ \ \ \ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{00511\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 1;\ i\ <\ new\_size;\ ++i)\ \{}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ in\ >>\ value;}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structForwardList_1_1Node}{Node}}(value);}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structForwardList_1_1Node_a34168b25e5f686ce0f3e2ba2641f720f}{next}};}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ size++;}
+\DoxyCodeLine{00516\ \ \ \ \ \}}
+\DoxyCodeLine{00517\ \}}
+
+\end{DoxyCode}

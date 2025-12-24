@@ -1,0 +1,94 @@
+\doxysection{Benchmark\+Timer Class Reference}
+\hypertarget{classBenchmarkTimer}{}\label{classBenchmarkTimer}\index{BenchmarkTimer@{BenchmarkTimer}}
+
+
+Класс для измерения времени выполнения операций.  
+
+
+
+
+Collaboration diagram for Benchmark\+Timer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classBenchmarkTimer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBenchmarkTimer_a7c05d8aa12448ca657a52449cd6e592e}{start}} ()
+\begin{DoxyCompactList}\small\item\em Запускает или перезапускает таймер. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBenchmarkTimer_a4ff66784d731157d09dbbc0d0a65cfd3}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Останавливает таймер и возвращает прошедшее время. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classBenchmarkTimer_a3bed1b1cd261f7e5301ff953dc1b88d1}{start\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em Время начала отсчета. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для измерения времени выполнения операций. 
+
+Использует std\+::chrono\+::high\+\_\+resolution\+\_\+clock для точного замера интервалов. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBenchmarkTimer_a7c05d8aa12448ca657a52449cd6e592e}\label{classBenchmarkTimer_a7c05d8aa12448ca657a52449cd6e592e} 
+\index{BenchmarkTimer@{BenchmarkTimer}!start@{start}}
+\index{start@{start}!BenchmarkTimer@{BenchmarkTimer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Benchmark\+Timer\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Запускает или перезапускает таймер. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBenchmarkTimer_a7c05d8aa12448ca657a52449cd6e592e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBenchmarkTimer_a4ff66784d731157d09dbbc0d0a65cfd3}\label{classBenchmarkTimer_a4ff66784d731157d09dbbc0d0a65cfd3} 
+\index{BenchmarkTimer@{BenchmarkTimer}!stop@{stop}}
+\index{stop@{stop}!BenchmarkTimer@{BenchmarkTimer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily double Benchmark\+Timer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Останавливает таймер и возвращает прошедшее время. 
+
+\begin{DoxyReturn}{Returns}
+Время выполнения в миллисекундах. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBenchmarkTimer_a4ff66784d731157d09dbbc0d0a65cfd3_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBenchmarkTimer_a3bed1b1cd261f7e5301ff953dc1b88d1}\label{classBenchmarkTimer_a3bed1b1cd261f7e5301ff953dc1b88d1} 
+\index{BenchmarkTimer@{BenchmarkTimer}!start\_time@{start\_time}}
+\index{start\_time@{start\_time}!BenchmarkTimer@{BenchmarkTimer}}
+\doxysubsubsection{\texorpdfstring{start\_time}{start\_time}}
+{\footnotesize\ttfamily std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point Benchmark\+Timer\+::start\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Время начала отсчета. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{benchmark_8cpp}{benchmark.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,60,80"/>
+<area shape="rect" id="Node000002" href="$classArray.html#ac5b2023f1035ca2b6fe9fde5131df98e" title="Добавляет элемент в конец массива. Если ёмкости недостаточно, происходит перевыделение памяти." alt="" coords="120,5,208,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,55,116,33,118,38,61,60"/>
+<area shape="rect" id="Node000003" href="$classArray.html#a0bcd4e5fe860a4591e1e645b65b2ee52" title="Возвращает ссылку на элемент по индексу (с проверкой)." alt="" coords="121,55,207,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,65,107,65,107,70,60,70"/>
+<area shape="rect" id="Node000004" href="$classArray.html#a9aded290a9d0f80e2a086e277af39dea" title="Возвращает текущее количество элементов." alt="" coords="108,104,220,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="61,75,118,97,116,102,59,80"/>
+</map>

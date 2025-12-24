@@ -1,0 +1,628 @@
+\doxysection{Forward\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classForwardList}{}\label{classForwardList}\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+
+
+Класс односвязного списка.  
+
+
+
+
+{\ttfamily \#include $<$Forward\+List.\+h$>$}
+
+
+
+Collaboration diagram for Forward\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classForwardList__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structForwardList_1_1Node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classForwardList_a63658815ea79219cbd75ef8eada99560}{Forward\+List}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Создает пустой список. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classForwardList_a71504ca7b1f5ed29a81e04cff6afd4bd}{Forward\+List}} (const \mbox{\hyperlink{classForwardList}{Forward\+List}} \&other)
+\begin{DoxyCompactList}\small\item\em Копирующий конструктор. Создает глубокую копию списка. Оптимизирован для работы за O(\+N). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classForwardList}{Forward\+List}} \& \mbox{\hyperlink{classForwardList_a180ff1bc0adf5f9a9af03aeddd0e9c66}{operator=}} (const \mbox{\hyperlink{classForwardList}{Forward\+List}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор присваивания. Выполняет глубокое копирование с гарантией безопасности исключений (strong exception guarantee). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classForwardList_a16e7a7eee73944b77009304d99fe73fb}{\texorpdfstring{$\sim$}{\string~}\+Forward\+List}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. Освобождает память всех узлов. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_ab04509efbd050c6237beecd3485ce45c}{push\+Front}} (const T \&element)
+\begin{DoxyCompactList}\small\item\em Добавляет элемент в начало списка. Сложность\+: O(1). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_a735c434c283ebe30faa46794fcd35a04}{push\+Back}} (const T \&element)
+\begin{DoxyCompactList}\small\item\em Добавляет элемент в конец списка. Сложность\+: O(\+N), так как требуется проход до последнего элемента. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_a3adc30fd5cd9165a1c598c6ca904ce14}{insert}} (size\+\_\+t index, const T \&element)
+\begin{DoxyCompactList}\small\item\em Вставляет элемент по указанному индексу. Сложность\+: O(\+N). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_adb4ced17af38bb83137cc4739f52ef9f}{pop\+Front}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет первый элемент списка. Сложность\+: O(1). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_a6bdbedc3a5394c852260e354f6d9f899}{remove}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Удаляет элемент по индексу. Сложность\+: O(\+N). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_ab17f3a45377f0d4c5f7faf11c79cbaea}{remove\+Value}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Удаляет все вхождения заданного значения. Проходит по всему списку. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classForwardList_aef4d867a98cc017739687e2f7a0df6a2}{get}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на элемент по индексу. Линейный поиск от головы списка. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classForwardList_abd216d32e8167b8470901358307cb54c}{get}} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Возвращает константную ссылку на элемент по индексу. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classForwardList_a2a33482eeace97545add1e1e5fd87f16}{front}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает первый элемент. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classForwardList_a1300f02f08e345975bd15f9d26ba8950}{front}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает первый элемент (const). \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classForwardList_a437bf2f19361585506c6599cf2ab6848}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает текущее количество элементов. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classForwardList_a41cd7980adc16337e7939fa71eeac89f}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, пуст ли список. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_a407dc6ae99920dcc0e9f72096c76aa48}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Полностью очищает список. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classForwardList_a4ff5eebc880e9849b7282d9bc2b6ae67}{find}} (const T \&value) const
+\begin{DoxyCompactList}\small\item\em Проверяет наличие значения в списке. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_ad4dd31d28eb632a5bc28aaa30b0ad943}{print}} () const
+\begin{DoxyCompactList}\small\item\em Выводит элементы списка в поток вывода. Формат\+: \mbox{[}e1 -\/\texorpdfstring{$>$}{>} e2 -\/\texorpdfstring{$>$}{>} e3\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_afa25f3ed6b59a229649a727cee5368a4}{serialize}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Сериализация (обертка). По умолчанию вызывает serialize\+Binary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_a8426819d6e8ef171c990ebeda2a6cb08}{deserialize}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Десериализация (обертка). По умолчанию вызывает deserialize\+Binary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_a5df4da8bc1907dfb78d1ddff493ae703}{serialize\+Binary}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Бинарная сериализация. Сохраняет размер и данные узлов. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_a8ad79259c6aaeb8eaf0a6a803cd241a5}{deserialize\+Binary}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Бинарная десериализация. Очищает список и восстанавливает элементы. Оптимизирована для работы за O(\+N). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_ade5ea500cc7258c52bd3b3f545dbdb0b}{serialize\+Text}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Текстовая сериализация. Формат\+: $<$размер$>$~\newline
+$<$значения через пробел$>$~\newline
+. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForwardList_a6590c326ac9fc037fd07da0e6aed4b49}{deserialize\+Text}} (std\+::istream \&in)
+\begin{DoxyCompactList}\small\item\em Текстовая десериализация. Оптимизирована для работы за O(\+N). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structForwardList_1_1Node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classForwardList_adeff7edb0a8f50094e091ff7b043ca47}{head}}
+\begin{DoxyCompactList}\small\item\em Указатель на начало списка \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classForwardList_a79e1677269aaea987bc45668b64f3f31}{size}}
+\begin{DoxyCompactList}\small\item\em Текущее количество элементов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Forward\+List$<$ T $>$}
+Класс односвязного списка. 
+
+Реализует последовательный контейнер с эффективной вставкой/удалением в начале (O(1)). Доступ к произвольным элементам и вставка в конец выполняются за O(\+N).
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Тип элементов списка. Должен быть копируемым и конструируемым по умолчанию. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyWarning}{Warning}
+Бинарная сериализация корректна только для тривиально копируемых типов (POD). 
+\end{DoxyWarning}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classForwardList_a63658815ea79219cbd75ef8eada99560}\label{classForwardList_a63658815ea79219cbd75ef8eada99560} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!ForwardList@{ForwardList}}
+\index{ForwardList@{ForwardList}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ForwardList()}{ForwardList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\mbox{\hyperlink{classForwardList}{\+::\+Forward\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию. Создает пустой список. 
+
+\Hypertarget{classForwardList_a71504ca7b1f5ed29a81e04cff6afd4bd}\label{classForwardList_a71504ca7b1f5ed29a81e04cff6afd4bd} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!ForwardList@{ForwardList}}
+\index{ForwardList@{ForwardList}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ForwardList()}{ForwardList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\mbox{\hyperlink{classForwardList}{\+::\+Forward\+List}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Копирующий конструктор. Создает глубокую копию списка. Оптимизирован для работы за O(\+N). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Список-\/источник. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classForwardList_a16e7a7eee73944b77009304d99fe73fb}\label{classForwardList_a16e7a7eee73944b77009304d99fe73fb} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!````~ForwardList@{\texorpdfstring{$\sim$}{\string~}ForwardList}}
+\index{````~ForwardList@{\texorpdfstring{$\sim$}{\string~}ForwardList}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ForwardList()}{\string~ForwardList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classForwardList}{Forward\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор. Освобождает память всех узлов. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classForwardList_a407dc6ae99920dcc0e9f72096c76aa48}\label{classForwardList_a407dc6ae99920dcc0e9f72096c76aa48} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Полностью очищает список. 
+
+\Hypertarget{classForwardList_a8426819d6e8ef171c990ebeda2a6cb08}\label{classForwardList_a8426819d6e8ef171c990ebeda2a6cb08} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::deserialize (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Десериализация (обертка). По умолчанию вызывает deserialize\+Binary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classForwardList_a8ad79259c6aaeb8eaf0a6a803cd241a5}\label{classForwardList_a8ad79259c6aaeb8eaf0a6a803cd241a5} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!deserializeBinary@{deserializeBinary}}
+\index{deserializeBinary@{deserializeBinary}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeBinary()}{deserializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::deserialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Бинарная десериализация. Очищает список и восстанавливает элементы. Оптимизирована для работы за O(\+N). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classForwardList_a6590c326ac9fc037fd07da0e6aed4b49}\label{classForwardList_a6590c326ac9fc037fd07da0e6aed4b49} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!deserializeText@{deserializeText}}
+\index{deserializeText@{deserializeText}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deserializeText()}{deserializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::deserialize\+Text (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Текстовая десериализация. Оптимизирована для работы за O(\+N). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Поток ввода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classForwardList_a4ff5eebc880e9849b7282d9bc2b6ae67}\label{classForwardList_a4ff5eebc880e9849b7282d9bc2b6ae67} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!find@{find}}
+\index{find@{find}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет наличие значения в списке. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Искомое значение. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Если значение найдено. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classForwardList_a4ff5eebc880e9849b7282d9bc2b6ae67_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classForwardList_a2a33482eeace97545add1e1e5fd87f16}\label{classForwardList_a2a33482eeace97545add1e1e5fd87f16} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!front@{front}}
+\index{front@{front}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает первый элемент. 
+
+\begin{DoxyReturn}{Returns}
+T\& Ссылка на первый элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если список пуст. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classForwardList_a2a33482eeace97545add1e1e5fd87f16_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classForwardList_a1300f02f08e345975bd15f9d26ba8950}\label{classForwardList_a1300f02f08e345975bd15f9d26ba8950} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!front@{front}}
+\index{front@{front}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает первый элемент (const). 
+
+\begin{DoxyReturn}{Returns}
+const T\& Константная ссылка на первый элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если список пуст. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classForwardList_aef4d867a98cc017739687e2f7a0df6a2}\label{classForwardList_aef4d867a98cc017739687e2f7a0df6a2} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!get@{get}}
+\index{get@{get}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Возвращает ссылку на элемент по индексу. Линейный поиск от головы списка. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс элемента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\& Ссылка на элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classForwardList_aef4d867a98cc017739687e2f7a0df6a2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classForwardList_abd216d32e8167b8470901358307cb54c}\label{classForwardList_abd216d32e8167b8470901358307cb54c} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!get@{get}}
+\index{get@{get}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает константную ссылку на элемент по индексу. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс элемента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const T\& Константная ссылка на элемент. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classForwardList_a437bf2f19361585506c6599cf2ab6848}\label{classForwardList_a437bf2f19361585506c6599cf2ab6848} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает текущее количество элементов. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Размер списка. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classForwardList_a437bf2f19361585506c6599cf2ab6848_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classForwardList_a3adc30fd5cd9165a1c598c6ca904ce14}\label{classForwardList_a3adc30fd5cd9165a1c598c6ca904ce14} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index,  }\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Вставляет элемент по указанному индексу. Сложность\+: O(\+N). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Позиция вставки. \\
+\hline
+{\em element} & Добавляемое значение. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>} size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classForwardList_a41cd7980adc16337e7939fa71eeac89f}\label{classForwardList_a41cd7980adc16337e7939fa71eeac89f} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, пуст ли список. 
+
+\begin{DoxyReturn}{Returns}
+true Если список пуст. 
+
+false Если в списке есть элементы. 
+\end{DoxyReturn}
+\Hypertarget{classForwardList_a180ff1bc0adf5f9a9af03aeddd0e9c66}\label{classForwardList_a180ff1bc0adf5f9a9af03aeddd0e9c66} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$ \& \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Оператор присваивания. Выполняет глубокое копирование с гарантией безопасности исключений (strong exception guarantee). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Список-\/источник. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{classForwardList_adb4ced17af38bb83137cc4739f52ef9f}\label{classForwardList_adb4ced17af38bb83137cc4739f52ef9f} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!popFront@{popFront}}
+\index{popFront@{popFront}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{popFront()}{popFront()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::pop\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Удаляет первый элемент списка. Сложность\+: O(1). 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если список пуст. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classForwardList_adb4ced17af38bb83137cc4739f52ef9f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classForwardList_ad4dd31d28eb632a5bc28aaa30b0ad943}\label{classForwardList_ad4dd31d28eb632a5bc28aaa30b0ad943} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!print@{print}}
+\index{print@{print}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Выводит элементы списка в поток вывода. Формат\+: \mbox{[}e1 -\/\texorpdfstring{$>$}{>} e2 -\/\texorpdfstring{$>$}{>} e3\mbox{]}. 
+
+\Hypertarget{classForwardList_a735c434c283ebe30faa46794fcd35a04}\label{classForwardList_a735c434c283ebe30faa46794fcd35a04} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!pushBack@{pushBack}}
+\index{pushBack@{pushBack}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pushBack()}{pushBack()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::push\+Back (\begin{DoxyParamCaption}\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Добавляет элемент в конец списка. Сложность\+: O(\+N), так как требуется проход до последнего элемента. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Добавляемое значение. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classForwardList_a735c434c283ebe30faa46794fcd35a04_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classForwardList_ab04509efbd050c6237beecd3485ce45c}\label{classForwardList_ab04509efbd050c6237beecd3485ce45c} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!pushFront@{pushFront}}
+\index{pushFront@{pushFront}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pushFront()}{pushFront()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::push\+Front (\begin{DoxyParamCaption}\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Добавляет элемент в начало списка. Сложность\+: O(1). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Добавляемое значение. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classForwardList_ab04509efbd050c6237beecd3485ce45c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classForwardList_a6bdbedc3a5394c852260e354f6d9f899}\label{classForwardList_a6bdbedc3a5394c852260e354f6d9f899} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Удаляет элемент по индексу. Сложность\+: O(\+N). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс удаляемого элемента. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Если index \texorpdfstring{$>$}{>}= size. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classForwardList_ab17f3a45377f0d4c5f7faf11c79cbaea}\label{classForwardList_ab17f3a45377f0d4c5f7faf11c79cbaea} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!removeValue@{removeValue}}
+\index{removeValue@{removeValue}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeValue()}{removeValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::remove\+Value (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Удаляет все вхождения заданного значения. Проходит по всему списку. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Значение для удаления. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classForwardList_ab17f3a45377f0d4c5f7faf11c79cbaea_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classForwardList_afa25f3ed6b59a229649a727cee5368a4}\label{classForwardList_afa25f3ed6b59a229649a727cee5368a4} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::serialize (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Сериализация (обертка). По умолчанию вызывает serialize\+Binary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classForwardList_a5df4da8bc1907dfb78d1ddff493ae703}\label{classForwardList_a5df4da8bc1907dfb78d1ddff493ae703} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!serializeBinary@{serializeBinary}}
+\index{serializeBinary@{serializeBinary}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeBinary()}{serializeBinary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::serialize\+Binary (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Бинарная сериализация. Сохраняет размер и данные узлов. 
+
+\begin{DoxyWarning}{Warning}
+Только для POD-\/типов. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classForwardList_ade5ea500cc7258c52bd3b3f545dbdb0b}\label{classForwardList_ade5ea500cc7258c52bd3b3f545dbdb0b} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!serializeText@{serializeText}}
+\index{serializeText@{serializeText}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{serializeText()}{serializeText()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::serialize\+Text (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Текстовая сериализация. Формат\+: $<$размер$>$~\newline
+$<$значения через пробел$>$~\newline
+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Поток вывода. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classForwardList_adeff7edb0a8f50094e091ff7b043ca47}\label{classForwardList_adeff7edb0a8f50094e091ff7b043ca47} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!head@{head}}
+\index{head@{head}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structForwardList_1_1Node}{Node}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::head\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на начало списка 
+
+\Hypertarget{classForwardList_a79e1677269aaea987bc45668b64f3f31}\label{classForwardList_a79e1677269aaea987bc45668b64f3f31} 
+\index{ForwardList$<$ T $>$@{ForwardList$<$ T $>$}!size@{size}}
+\index{size@{size}!ForwardList$<$ T $>$@{ForwardList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classForwardList}{Forward\+List}}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Текущее количество элементов 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ForwardList_8h}{Forward\+List.\+h}}\end{DoxyCompactItemize}

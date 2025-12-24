@@ -1,0 +1,5 @@
+<map id="print_result" name="print_result">
+<area shape="rect" id="Node000001" title="Форматированно выводит результаты теста в консоль и файл." alt="" coords="5,5,101,31"/>
+<area shape="rect" id="Node000002" href="$benchmark_8cpp.html#a65c1528308af9504cc4afd5122df9285" title="Глобальный поток вывода в файл. Инициализируется при запуске программы." alt="" coords="149,5,239,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,15,136,15,136,21,101,21"/>
+</map>

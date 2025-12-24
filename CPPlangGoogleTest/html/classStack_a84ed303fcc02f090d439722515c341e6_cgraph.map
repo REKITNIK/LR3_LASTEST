@@ -1,0 +1,5 @@
+<map id="Stack::Stack" name="Stack::Stack">
+<area shape="rect" id="Node000001" title="Конструктор копирования. Создает глубокую копию стека, сохраняя исходный порядок элементов." alt="" coords="5,5,108,31"/>
+<area shape="rect" id="Node000002" href="$classStack.html#a3454655ab059b315d9ef24d074734f01" title="Помещает элемент на вершину стека (push)." alt="" coords="156,5,253,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,15,142,15,142,21,108,21"/>
+</map>

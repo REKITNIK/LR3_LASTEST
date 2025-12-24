@@ -1,0 +1,13 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,60,129"/>
+<area shape="rect" id="Node000002" href="$classArray.html#ac5b2023f1035ca2b6fe9fde5131df98e" title="Добавляет элемент в конец массива. Если ёмкости недостаточно, происходит перевыделение памяти." alt="" coords="131,5,219,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,102,69,71,106,40,118,34,120,38,110,44,73,75,46,106"/>
+<area shape="rect" id="Node000003" href="$classArray.html#ae3720036ec6a307ab809470047e2745b" title="Десериализация (обертка). По умолчанию вызывает deserializeBinary." alt="" coords="108,55,243,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="59,105,124,82,126,87,61,110"/>
+<area shape="rect" id="Node000004" href="$classArray.html#a0bcd4e5fe860a4591e1e645b65b2ee52" title="Возвращает ссылку на элемент по индексу (с проверкой)." alt="" coords="133,104,218,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="60,114,119,114,119,119,60,119"/>
+<area shape="rect" id="Node000005" href="$classArray.html#a9aded290a9d0f80e2a086e277af39dea" title="Возвращает текущее количество элементов." alt="" coords="119,153,231,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="61,123,126,146,124,151,59,128"/>
+<area shape="rect" id="Node000006" href="$classArray.html#a3087c3fae545ef365ee892b1ef61200a" title="Сериализация (обертка). По умолчанию вызывает serializeBinary." alt="" coords="116,203,235,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="46,128,73,158,110,188,122,195,119,199,106,192,69,161,42,132"/>
+</map>

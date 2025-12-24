@@ -1,0 +1,5 @@
+<map id="Queue::clear" name="Queue::clear">
+<area shape="rect" id="Node000001" title="Полностью очищает очередь. Удаляет все узлы и сбрасывает указатели." alt="" coords="108,5,212,31"/>
+<area shape="rect" id="Node000002" href="$tests__oop__gtest_8cpp.html#ae0dcb30994e3168dccead66ef792ccdf" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

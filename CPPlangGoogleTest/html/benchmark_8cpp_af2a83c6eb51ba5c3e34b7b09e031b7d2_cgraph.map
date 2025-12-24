@@ -1,0 +1,22 @@
+<map id="benchmark_array" name="benchmark_array">
+<area shape="rect" id="Node000001" title="Тестирование производительности динамического массива (Array)." alt="" coords="5,179,141,204"/>
+<area shape="rect" id="Node000002" href="$classArray.html#ac5b2023f1035ca2b6fe9fde5131df98e" title="Добавляет элемент в конец массива. Если ёмкости недостаточно, происходит перевыделение памяти." alt="" coords="231,5,319,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,177,118,111,150,73,188,40,217,26,220,31,191,44,154,77,123,115,83,180"/>
+<area shape="rect" id="Node000003" href="$classArray.html#a0bcd4e5fe860a4591e1e645b65b2ee52" title="Возвращает ссылку на элемент по индексу (с проверкой)." alt="" coords="233,55,318,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="84,177,127,134,156,110,188,89,219,76,221,81,191,94,159,114,130,138,88,180"/>
+<area shape="rect" id="Node000004" href="$classArray.html#a9aded290a9d0f80e2a086e277af39dea" title="Возвращает текущее количество элементов." alt="" coords="219,104,331,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="100,176,188,138,211,131,213,136,190,143,102,181"/>
+<area shape="rect" id="Node000005" href="$benchmark_8cpp.html#a2a10ff76e86dd41833b8c23edf05af74" title="Выводит заголовок секции бенчмарка в консоль и файл." alt="" coords="223,153,327,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="141,180,210,171,210,177,142,185"/>
+<area shape="rect" id="Node000007" href="$benchmark_8cpp.html#a3ad66a01888bf14fee4e70b41f031a92" title="Форматированно выводит результаты теста в консоль и файл." alt="" coords="227,203,323,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="142,197,214,205,213,211,141,202"/>
+<area shape="rect" id="Node000008" href="$classArray.html#a83693f57a17e6772b000fb19443b6b59" title="Удаляет элемент по индексу. Элементы после index сдвигаются влево." alt="" coords="218,252,333,277"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="104,202,190,237,216,245,214,250,188,242,102,206"/>
+<area shape="rect" id="Node000009" href="$classBenchmarkTimer.html#a7c05d8aa12448ca657a52449cd6e592e" title="Запускает или перезапускает таймер." alt="" coords="189,301,361,327"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="89,203,131,244,160,267,191,286,207,294,205,299,188,291,157,271,128,248,85,207"/>
+<area shape="rect" id="Node000010" href="$classBenchmarkTimer.html#a4ff66784d731157d09dbbc0d0a65cfd3" title="Останавливает таймер и возвращает прошедшее время." alt="" coords="190,351,361,376"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="83,203,123,266,154,304,191,336,203,343,200,348,188,340,150,308,119,270,79,205"/>
+<area shape="rect" id="Node000006" href="$benchmark_8cpp.html#a65c1528308af9504cc4afd5122df9285" title="Глобальный поток вывода в файл. Инициализируется при запуске программы." alt="" coords="409,179,499,204"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="328,171,396,181,395,186,327,176"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="323,206,395,196,396,202,324,212"/>
+</map>

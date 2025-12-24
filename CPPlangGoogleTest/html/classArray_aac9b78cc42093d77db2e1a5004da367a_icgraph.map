@@ -1,0 +1,5 @@
+<map id="Array::insert" name="Array::insert">
+<area shape="rect" id="Node000001" title="Вставляет элемент по указанному индексу. Элементы, начиная с index, сдвигаются вправо." alt="" coords="108,5,209,31"/>
+<area shape="rect" id="Node000002" href="$tests__oop__gtest_8cpp.html#a2ce3e8ca2d4cb3f3ec5aeab4738d9912" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
